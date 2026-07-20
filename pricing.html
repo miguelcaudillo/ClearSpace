@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Instant Price Calculator — ClearSpace Home Cleaning | West Jordan & Salt Lake City, UT</title>
+<meta name="description" content="See your exact house-cleaning price in seconds. Choose home size, rooms, service type, and frequency — flat-rate pricing for the Salt Lake valley.">
+<meta name="theme-color" content="#059669">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23059669'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.calc-shell{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:start;margin-top:34px}
+@media(max-width:880px){.calc-shell{grid-template-columns:1fr}}
+.price-panel{position:sticky;top:86px}
+@media(max-width:880px){.price-panel{position:static}}
+.sqft-row{display:flex;align-items:center;gap:14px;margin:6px 0 20px}
+.sqft-row input[type=range]{flex:1;accent-color:var(--em-600)}
+.sqft-val{min-width:110px;text-align:right;font-family:var(--font-head);font-weight:800;color:var(--em-800)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-in">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">✦</span>
+      <span>Clear<b>Space</b><i class="brand-sub" data-es="LIMPIEZA DEL HOGAR">HOME CLEANING</i></span>
+    </a>
+    <nav class="header-nav">
+      <a href="index.html#services" class="hide-m" data-es="Servicios">Services</a>
+      <a href="index.html#areas" class="hide-m" data-es="Zonas">Areas</a>
+      <span class="lang-toggle" role="group" aria-label="Language">
+        <button data-lang="en" onclick="Lang.set('en')">EN</button>
+        <button data-lang="es" onclick="Lang.set('es')">ES</button>
+      </span>
+      <a class="btn btn-primary btn-sm" href="index.html#quote" data-es="Cotización gratis">Free quote</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-mini">
+  <div class="wrap">
+    <span class="eyebrow" data-es="Calculadora de precios">Price calculator</span>
+    <h1 class="section-title" data-es="Tu precio, antes de comprometerte.">Your price, before you commit.</h1>
+    <p class="section-sub" style="margin-bottom:0" data-es="Ajusta lo que quieras — el precio se actualiza en vivo. Lo que ves es lo que pagas.">Adjust anything — the price updates live. What you see is what you pay.</p>
+
+    <div class="calc-shell">
+      <div class="panel">
+        <span class="field-label" data-es="Tipo de servicio">Service type</span>
+        <div class="seg" id="segService"></div>
+
+        <span class="field-label" data-es="Tamaño del hogar">Home size</span>
+        <div class="sqft-row">
+          <input type="range" id="sqftRange" min="500" max="4500" step="50" value="1500" aria-label="Square feet">
+          <span class="sqft-val"><span id="sqftVal">1,500</span> ft²</span>
+        </div>
+
+        <span class="field-label" data-es="Cuartos">Rooms</span>
+        <div class="stepper-row">
+          <div class="stepper"><span class="st-lab" data-es="Recámaras">Bedrooms</span><span class="st-ctl"><button aria-label="Fewer bedrooms" onclick="Calc.step('bedrooms',-1)">−</button><b id="stBed">2</b><button aria-label="More bedrooms" onclick="Calc.step('bedrooms',1)">+</button></span></div>
+          <div class="stepper"><span class="st-lab" data-es="Baños">Bathrooms</span><span class="st-ctl"><button aria-label="Fewer bathrooms" onclick="Calc.step('bathrooms',-1)">−</button><b id="stBath">1</b><button aria-label="More bathrooms" onclick="Calc.step('bathrooms',1)">+</button></span></div>
+        </div>
+
+        <span class="field-label" data-es="Extras">Add-ons</span>
+        <div class="addons" id="addonGrid"></div>
+
+        <span class="field-label" data-es="Frecuencia">Frequency</span>
+        <div class="seg" id="segFreq"></div>
+      </div>
+
+      <div class="price-panel">
+        <div class="price-hero">
+          <span class="ph-lab" data-es="Tu estimado">Your estimate</span>
+          <div class="price-big"><sup>$</sup><span id="priceNum">0</span></div>
+          <div class="price-freq" id="priceFreq">one-time visit</div>
+          <div class="price-break" id="priceBreak"></div>
+          <a class="btn btn-primary" href="index.html#quote" data-es="Reservar esta limpieza →">Book this clean →</a>
+          <p class="price-note" data-es="Precio final confirmado antes de tu primera visita — sin cargos ocultos.">Final price confirmed before your first visit — no hidden fees.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <a href="index.html" class="brand"><span class="brand-mark">✦</span><span>Clear<b>Space</b></span></a>
+    <p>© 2026 ClearSpace Home Cleaning · West Jordan, UT</p>
+  </div>
+</footer>
+
+<script src="pricing-config.js"></script>
+<script src="assets/site.js"></script>
+<script>
+"use strict";
+/* Calculator — every number comes from pricing-config.js via clearspaceQuote(). */
+var Calc = (function () {
+  var P = CLEARSPACE_CONFIG.pricing;
+  var state = { service: "standard", sqft: 1500, bedrooms: 2, bathrooms: 1, frequency: "onetime", addons: [] };
+
+  function t(obj) { return Lang.get() === "es" ? obj.es : obj.en; }
+
+  function renderSegs() {
+    var s = document.getElementById("segService");
+    s.innerHTML = "";
+    Object.keys(P.services).forEach(function (k) {
+      var b = document.createElement("button");
+      b.textContent = t(P.services[k]);
+      b.className = state.service === k ? "active" : "";
+      b.onclick = function () { state.service = k; render(); };
+      s.appendChild(b);
+    });
+    var f = document.getElementById("segFreq");
+    f.innerHTML = "";
+    Object.keys(P.frequencies).forEach(function (k) {
+      var fr = P.frequencies[k];
+      var b = document.createElement("button");
+      b.textContent = t(fr) + (fr.disc ? " −" + Math.round(fr.disc * 100) + "%" : "");
+      b.className = state.frequency === k ? "active" : "";
+      b.onclick = function () { state.frequency = k; render(); };
+      f.appendChild(b);
+    });
+    var g = document.getElementById("addonGrid");
+    g.innerHTML = "";
+    P.addons.forEach(function (a) {
+      var d = document.createElement("div");
+      d.className = "addon" + (state.addons.indexOf(a.id) >= 0 ? " on" : "");
+      d.setAttribute("role", "button");
+      d.setAttribute("tabindex", "0");
+      d.innerHTML = "<span>" + t(a) + "</span><span class='ad-price'>+$" + a.price + "</span>";
+      d.onclick = function () {
+        var i = state.addons.indexOf(a.id);
+        if (i >= 0) state.addons.splice(i, 1); else state.addons.push(a.id);
+        render();
+      };
+      d.onkeydown = function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); d.onclick(); } };
+      g.appendChild(d);
+    });
+  }
+
+  function render() {
+    renderSegs();
+    document.getElementById("stBed").textContent = state.bedrooms;
+    document.getElementById("stBath").textContent = state.bathrooms;
+    document.getElementById("sqftVal").textContent = state.sqft.toLocaleString();
+
+    var q = clearspaceQuote(state);
+    var es = Lang.get() === "es";
+    document.getElementById("priceNum").textContent = q.total;
+    document.getElementById("priceFreq").textContent = q.discountPct
+      ? (es ? "por visita, " : "per visit, ") + t(q.frequency).toLowerCase()
+      : (es ? "visita única" : "one-time visit");
+
+    var rows = [];
+    rows.push(["<span>" + t(q.service) + (es ? " base" : " base") + "</span>", "$" + q.base]);
+    if (q.sqftAdd) rows.push(["<span>" + state.sqft.toLocaleString() + " ft²</span>", "+$" + q.sqftAdd]);
+    if (q.bedAdd) rows.push(["<span>" + (es ? "Recámaras extra" : "Extra bedrooms") + "</span>", "+$" + q.bedAdd]);
+    if (q.bathAdd) rows.push(["<span>" + (es ? "Baños extra" : "Extra bathrooms") + "</span>", "+$" + q.bathAdd]);
+    q.addons.forEach(function (a) { rows.push(["<span>" + t(a) + "</span>", "+$" + a.price]); });
+    var html = rows.map(function (r) { return "<div class='br'>" + r[0] + "<span>" + r[1] + "</span></div>"; }).join("");
+    if (q.discount) html += "<div class='br disc'><span>" + (es ? "Descuento " : "") + t(q.frequency).toLowerCase() + (es ? "" : " discount") + " −" + Math.round(q.discountPct * 100) + "%</span><span>−$" + q.discount + "</span></div>";
+    html += "<div class='br tot'><span>" + (es ? "Total por visita" : "Total per visit") + "</span><span>$" + q.total + "</span></div>";
+    document.getElementById("priceBreak").innerHTML = html;
+  }
+
+  function step(key, dir) {
+    state[key] = Math.min(9, Math.max(1, state[key] + dir));
+    render();
+  }
+
+  document.getElementById("sqftRange").addEventListener("input", function () {
+    state.sqft = parseInt(this.value, 10);
+    render();
+  });
+  document.addEventListener("langchange", render);
+  render();
+
+  return { step: step };
+})();
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+</script>
+</body>
+</html>
