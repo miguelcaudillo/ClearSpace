@@ -429,9 +429,58 @@ table.data tr:hover td{background:rgba(236,253,245,.55)}
 .slot-row.hour-row{min-height:0;height:64px}
 .slot-row.hour-row .slot-jobs{min-height:0}
 .dur-hint{font-size:.72rem;color:var(--ink-3);margin-top:8px}
+<style id="pinLockCSS">
+body.locked{overflow:hidden}
+body.locked > *:not(#pinLockOverlay){display:none !important}
+#pinLockOverlay{position:fixed;inset:0;z-index:9999;background:linear-gradient(150deg,#22c55e 0%,#0ea968 50%,#059669 100%);display:flex;align-items:center;justify-content:center;font-family:var(--font-body,-apple-system,Segoe UI,Arial,sans-serif)}
+#pinLockOverlay .box{background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(2,44,34,.3);padding:34px 32px;width:min(360px,90vw);text-align:center}
+#pinLockOverlay .mk{width:52px;height:52px;border-radius:15px;background:linear-gradient(135deg,#22c55e,#065f46);color:#fff;font-size:1.5rem;display:grid;place-items:center;margin:0 auto 16px}
+#pinLockOverlay h2{font-family:var(--font-head,inherit);color:#065f46;font-size:1.25rem;margin-bottom:4px}
+#pinLockOverlay p{color:#5c6f67;font-size:.9rem;margin-bottom:20px}
+#pinLockOverlay input{width:100%;text-align:center;font-size:1.6rem;letter-spacing:.5em;padding:12px;border:1.5px solid #dcebe3;border-radius:12px;margin-bottom:14px}
+#pinLockOverlay input:focus{outline:none;border-color:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2)}
+#pinLockOverlay button{width:100%;background:linear-gradient(135deg,#22c55e,#047857);color:#fff;border:none;border-radius:999px;padding:13px;font-weight:700;font-size:1rem;cursor:pointer}
+#pinLockOverlay .err{color:#dc2626;font-size:.85rem;font-weight:600;min-height:18px;margin-top:10px}
 </style>
 </head>
-<body>
+<body class="locked">
+
+<!-- ============ OWNER PIN LOCK ============
+     Change the code on the OWNER_PIN line below to whatever you want.
+     Note: this is a light deterrent for a public URL, not bank-grade security. -->
+<div id="pinLockOverlay">
+  <div class="box">
+    <div class="mk">&#10022;</div>
+    <h2>ClearSpace Office</h2>
+    <p>Enter your owner PIN to continue.</p>
+    <input id="pinInput" type="password" inputmode="numeric" maxlength="8" autocomplete="off" aria-label="Owner PIN" placeholder="••••">
+    <button onclick="ClearSpaceUnlock.try()">Unlock</button>
+    <div class="err" id="pinErr"></div>
+  </div>
+</div>
+<script>
+var ClearSpaceUnlock = (function () {
+  var OWNER_PIN = "7342";            // <-- change this to your own code
+  var KEY = "clearspace_owner_ok";
+  function unlock() { try { localStorage.setItem(KEY, "1"); } catch (e) {} document.body.classList.remove("locked"); }
+  // already unlocked on this device? skip the screen.
+  try { if (localStorage.getItem(KEY) === "1") unlock(); } catch (e) {}
+  function attempt() {
+    var v = document.getElementById("pinInput").value.trim();
+    if (v === OWNER_PIN) { unlock(); }
+    else {
+      document.getElementById("pinErr").textContent = "Incorrect PIN — try again.";
+      document.getElementById("pinInput").value = "";
+      document.getElementById("pinInput").focus();
+    }
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var i = document.getElementById("pinInput");
+    if (i) { i.focus(); i.addEventListener("keydown", function (e) { if (e.key === "Enter") attempt(); }); }
+  });
+  return { try: attempt };
+})();
+</script>
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
