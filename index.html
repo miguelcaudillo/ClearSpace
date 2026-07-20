@@ -32,7 +32,14 @@
 .lede{color:var(--ink-2);font-size:1.12rem;max-width:54ch;margin-bottom:26px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
 .hero-card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-2);padding:26px}
+.hero-photo{width:100%;height:190px;object-fit:cover;border-radius:14px;margin-bottom:18px}
 .hero-card h3{font-size:1.02rem;margin-bottom:14px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:760px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.gal{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-1);aspect-ratio:4/3}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gal:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 12px;color:#fff;font-family:var(--font-head);font-weight:700;font-size:.92rem;background:linear-gradient(to top,rgba(2,44,34,.72),transparent)}
 .hc-line{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink-2)}
 .hc-line:first-of-type{border-top:none}
 .hc-line .ico{font-size:1.2rem}
@@ -86,6 +93,8 @@
       </div>
     </div>
     <div class="hero-card">
+      <!-- Placeholder stock image — replace with a real photo of your work (see marketing/photo-shot-list.md) -->
+      <img class="hero-photo" src="assets/img/hero-living.jpg" alt="A bright, freshly cleaned living room" loading="eager" width="1400" height="1000">
       <h3 data-es="Cada limpieza incluye">Every clean includes</h3>
       <div class="hc-line"><span class="ico">🍳</span><span data-es="Cocina: superficies, electrodomésticos por fuera, fregadero y pisos">Kitchen: counters, appliance exteriors, sink &amp; floors</span></div>
       <div class="hc-line"><span class="ico">🛁</span><span data-es="Baños: ducha, sanitario, espejos y azulejos">Bathrooms: shower, toilet, mirrors &amp; tile</span></div>
@@ -125,6 +134,21 @@
       <div class="step"><span class="step-num">1</span><h3 data-es="Obtén tu precio">Get your price</h3><p data-es="Cuéntanos de tu hogar — tamaño, cuartos, extras. Ve tu tarifa fija al instante, desglosada línea por línea.">Tell us about your home — size, rooms, extras. See your exact flat rate instantly, itemized line by line.</p></div>
       <div class="step"><span class="step-num">2</span><h3 data-es="Elige día y horario">Pick a day &amp; window</h3><p data-es="Escoge la fecha y ventana de llegada que te convenga. Confirmamos y asignamos tu equipo.">Choose a date and arrival window that fits your life. We confirm and assign your crew.</p></div>
       <div class="step"><span class="step-num">3</span><h3 data-es="Llega a un hogar feliz">Come home happy</h3><p data-es="Tu equipo trabaja con una lista cuarto por cuarto. ¿No quedaste encantado? Regresamos a re-limpiar sin costo.">Your crew works a room-by-room checklist. Not thrilled? We come back and re-clean free.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY (illustrative — swap for real job photos when available) -->
+<section id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow" data-es="La diferencia">The standard</span>
+    <h2 class="section-title" data-es="Así se ve un hogar terminado.">This is what "finished" looks like.</h2>
+    <p class="section-sub" data-es="El nivel que dejamos en cada visita — cocinas, salas y recámaras listas para vivirse. (Pronto: fotos reales de nuestros trabajos.)">The level we leave behind on every visit — kitchens, living spaces, and bedrooms ready to be lived in. (Real photos from our own jobs coming soon.)</p>
+    <div class="gallery-grid">
+      <figure class="gal"><img src="assets/img/kitchen.jpg" alt="Clean, bright kitchen" loading="lazy" width="1400" height="1000"><figcaption data-es="Cocinas">Kitchens</figcaption></figure>
+      <figure class="gal"><img src="assets/img/living.jpg" alt="Tidy, bright living room" loading="lazy" width="1400" height="1000"><figcaption data-es="Salas">Living spaces</figcaption></figure>
+      <figure class="gal"><img src="assets/img/bedroom.jpg" alt="Neatly cleaned bedroom" loading="lazy" width="1400" height="1000"><figcaption data-es="Recámaras">Bedrooms</figcaption></figure>
+      <figure class="gal"><img src="assets/img/supplies.jpg" alt="Professional cleaning supplies" loading="lazy" width="1400" height="1000"><figcaption data-es="Nuestros insumos">Our supplies</figcaption></figure>
     </div>
   </div>
 </section>
