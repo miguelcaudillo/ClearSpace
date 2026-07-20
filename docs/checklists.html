@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClearSpace — Cleaning Checklists / Listas de Limpieza</title>
+<style>
+body{font-family:"Segoe UI",Arial,sans-serif;color:#111;max-width:840px;margin:0 auto;padding:36px 26px;line-height:1.45;font-size:13.5px}
+h1{font-size:1.45rem;margin-bottom:2px}
+.brand{font-weight:700;color:#047857;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.sub{color:#555;font-size:.9rem;margin-bottom:16px}
+.svc{page-break-before:always;padding-top:10px}
+.svc:first-of-type{page-break-before:avoid}
+.svc>h2{font-size:1.25rem;background:#047857;color:#fff;padding:8px 14px;border-radius:8px}
+.svc>h2 small{font-weight:400;opacity:.85}
+.room{margin:14px 0 4px}
+.room h3{font-size:.98rem;color:#065f46;border-bottom:2px solid #a7f3d0;padding-bottom:3px;margin-bottom:6px}
+ul{list-style:none;margin:0;padding:0;columns:2;column-gap:30px}
+@media(max-width:640px){ul{columns:1}}
+li{margin-bottom:5px;break-inside:avoid}
+li::before{content:"☐ ";color:#047857;font-size:1rem}
+li i{font-style:normal;color:#666;display:block;margin-left:20px;font-size:.86rem}
+.meta{display:flex;gap:24px;margin:10px 0 4px;font-size:.9rem;flex-wrap:wrap}
+.meta span{border-bottom:1px solid #111;min-width:170px;display:inline-block}
+.toolbar{position:fixed;top:12px;right:12px}
+.toolbar button{background:#047857;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer}
+@media print{.toolbar{display:none}body{padding:0}}
+</style>
+</head>
+<body>
+<div class="toolbar"><button onclick="window.print()">🖨 Print</button></div>
+
+<p class="brand">✦ ClearSpace Home Cleaning</p>
+<h1>Room-by-Room Checklists <span style="color:#777;font-weight:400">/ Listas Cuarto por Cuarto</span></h1>
+<p class="sub">Print one per job. Check every box; the crew lead signs at the end. / Imprimir una por trabajo. Marcar cada casilla; el líder del equipo firma al final.</p>
+
+<!-- ============ STANDARD ============ -->
+<div class="svc">
+  <h2>STANDARD CLEAN <small>/ Limpieza Estándar</small></h2>
+  <div class="meta"><b>Client / Cliente:</b><span></span><b>Date / Fecha:</b><span></span><b>Crew / Equipo:</b><span></span></div>
+
+  <div class="room"><h3>Kitchen / Cocina</h3>
+    <ul>
+      <li>Counters &amp; backsplash wiped<i>Superficies y salpicadero limpios</i></li>
+      <li>Sink scrubbed &amp; shined<i>Fregadero tallado y brillante</i></li>
+      <li>Stovetop cleaned<i>Estufa limpia por encima</i></li>
+      <li>Appliance exteriors wiped<i>Exterior de electrodomésticos limpio</i></li>
+      <li>Microwave inside &amp; out<i>Microondas por dentro y por fuera</i></li>
+      <li>Cabinet fronts spot-cleaned<i>Frentes de gabinetes sin manchas</i></li>
+      <li>Table &amp; chairs wiped<i>Mesa y sillas limpias</i></li>
+      <li>Floor vacuumed &amp; mopped<i>Piso aspirado y trapeado</i></li>
+      <li>Trash emptied, new liner<i>Basura fuera, bolsa nueva</i></li>
+    </ul>
+  </div>
+
+  <div class="room"><h3>Bathrooms / Baños</h3>
+    <ul>
+      <li>Toilet cleaned &amp; disinfected (incl. base)<i>Sanitario limpio y desinfectado (incl. base)</i></li>
+      <li>Shower/tub scrubbed<i>Ducha/tina tallada</i></li>
+      <li>Sink &amp; counter cleaned<i>Lavabo y cubierta limpios</i></li>
+      <li>Mirror polished<i>Espejo pulido</i></li>
+      <li>Fixtures shined<i>Grifería brillante</i></li>
+      <li>Towels neatly hung/folded<i>Toallas acomodadas</i></li>
+      <li>Floor vacuumed &amp; mopped<i>Piso aspirado y trapeado</i></li>
+      <li>Trash emptied<i>Basura fuera</i></li>
+    </ul>
+  </div>
+
+  <div class="room"><h3>Bedrooms / Recámaras</h3>
+    <ul>
+      <li>Beds made (linens changed if left out)<i>Camas tendidas (sábanas cambiadas si las dejan listas)</i></li>
+      <li>Surfaces &amp; furniture dusted<i>Superficies y muebles sin polvo</i></li>
+      <li>Mirrors cleaned<i>Espejos limpios</i></li>
+      <li>Visible clutter neatened<i>Objetos a la vista ordenados</i></li>
+      <li>Floor vacuumed (mopped if hard)<i>Piso aspirado (trapeado si es duro)</i></li>
+      <li>Trash emptied<i>Basura fuera</i></li>
+    </ul>
+  </div>
+
+  <div class="room"><h3>Living Areas &amp; Whole Home / Áreas Comunes y Toda la Casa</h3>
+    <ul>
+      <li>All surfaces dusted (shelves, TV stand, décor)<i>Todas las superficies sin polvo (repisas, mueble de TV, decoración)</i></li>
+      <li>Couch cushions straightened, under-cushion crumbs<i>Cojines acomodados, migas debajo</i></li>
+      <li>Light switches &amp; door handles wiped<i>Apagadores y manijas desinfectados</i></li>
+      <li>Baseboards spot-dusted<i>Zoclos repasados</i></li>
+      <li>Stairs vacuumed<i>Escaleras aspiradas</i></li>
+      <li>All floors vacuumed &amp; mopped<i>Todos los pisos aspirados y trapeados</i></li>
+      <li>All trash out, liners replaced<i>Toda la basura fuera, bolsas nuevas</i></li>
+      <li>Final walkthrough — lights off, doors locked as instructed<i>Recorrido final — luces apagadas, puertas según instrucciones</i></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ DEEP ============ -->
+<div class="svc">
+  <h2>DEEP CLEAN <small>/ Limpieza Profunda — everything in Standard PLUS: / todo lo de Estándar MÁS:</small></h2>
+  <div class="meta"><b>Client / Cliente:</b><span></span><b>Date / Fecha:</b><span></span><b>Crew / Equipo:</b><span></span></div>
+
+  <div class="room"><h3>Kitchen / Cocina</h3>
+    <ul>
+      <li>Degrease range hood &amp; filter<i>Desengrasar campana y filtro</i></li>
+      <li>Behind/under movable appliances<i>Detrás/debajo de electrodomésticos movibles</i></li>
+      <li>Backsplash grout scrubbed<i>Boquilla del salpicadero tallada</i></li>
+      <li>Cabinet fronts full wipe-down<i>Frentes de gabinetes completos</i></li>
+      <li>Descale faucet &amp; sink drain area<i>Quitar sarro de llave y drenaje</i></li>
+    </ul>
+  </div>
+
+  <div class="room"><h3>Bathrooms / Baños</h3>
+    <ul>
+      <li>Grout &amp; tile scrubbed<i>Boquillas y azulejo tallados</i></li>
+      <li>Shower glass descaled<i>Vidrio de ducha sin sarro</i></li>
+      <li>Exhaust fan cover dusted<i>Rejilla del extractor sin polvo</i></li>
+      <li>Vanity organized &amp; wiped inside top drawer<i>Tocador ordenado, primer cajón limpio por dentro</i></li>
+    </ul>
+  </div>
+
+  <div class="room"><h3>Whole Home / Toda la Casa</h3>
+    <ul>
+      <li>Baseboards washed end-to-end<i>Zoclos lavados de punta a punta</i></li>
+      <li>Door frames &amp; doors wiped<i>Marcos y puertas limpios</i></li>
+      <li>Vents &amp; returns dusted<i>Rejillas de ventilación sin polvo</i></li>
+      <li>Ceiling fans dusted<i>Ventiladores de techo sin polvo</i></li>
+      <li>Window sills &amp; tracks<i>Repisas y rieles de ventanas</i></li>
+      <li>Blinds dusted<i>Persianas sin polvo</i></li>
+      <li>Under/behind furniture (movable)<i>Debajo/detrás de muebles (movibles)</i></li>
+      <li>Wall spot-cleaning (marks &amp; scuffs)<i>Manchas en paredes repasadas</i></li>
+      <li>Light fixtures dusted<i>Lámparas sin polvo</i></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ MOVE-OUT ============ -->
+<div class="svc">
+  <h2>MOVE-IN / MOVE-OUT CLEAN <small>/ Limpieza de Mudanza — empty-home spec / especificación de casa vacía</small></h2>
+  <div class="meta"><b>Client / Cliente:</b><span></span><b>Date / Fecha:</b><span></span><b>Crew / Equipo:</b><span></span></div>
+
+  <div class="room"><h3>Kitchen / Cocina</h3>
+    <ul>
+      <li>Inside ALL cabinets &amp; drawers<i>TODOS los gabinetes y cajones por dentro</i></li>
+      <li>Inside fridge &amp; freezer<i>Refrigerador y congelador por dentro</i></li>
+      <li>Inside oven (incl. racks)<i>Horno por dentro (incl. rejillas)</i></li>
+      <li>Dishwasher edges &amp; filter<i>Bordes y filtro del lavavajillas</i></li>
+      <li>Under sink cleaned<i>Bajo el fregadero limpio</i></li>
+      <li>Pantry shelves wiped<i>Repisas de despensa limpias</i></li>
+    </ul>
+  </div>
+
+  <div class="room"><h3>Bathrooms / Baños</h3>
+    <ul>
+      <li>Inside vanity cabinets &amp; drawers<i>Gabinetes y cajones del tocador por dentro</i></li>
+      <li>Full descale: shower, tub, toilets<i>Sarro completo: ducha, tina, sanitarios</i></li>
+      <li>Medicine cabinet inside<i>Botiquín por dentro</i></li>
+    </ul>
+  </div>
+
+  <div class="room"><h3>Whole Home / Toda la Casa</h3>
+    <ul>
+      <li>Inside ALL closets — shelves &amp; rods<i>TODOS los clósets por dentro — repisas y tubos</i></li>
+      <li>All baseboards, doors &amp; frames washed<i>Todos los zoclos, puertas y marcos lavados</i></li>
+      <li>All switch plates &amp; outlets wiped<i>Placas de apagadores y contactos limpios</i></li>
+      <li>Interior windows, sills &amp; tracks<i>Ventanas interiores, repisas y rieles</i></li>
+      <li>Blinds cleaned<i>Persianas limpias</i></li>
+      <li>Vents, fans &amp; fixtures dusted<i>Rejillas, ventiladores y lámparas sin polvo</i></li>
+      <li>Wall marks removed where possible<i>Marcas de pared removidas donde sea posible</i></li>
+      <li>Garage swept (if included)<i>Cochera barrida (si se incluye)</i></li>
+      <li>All floors: vacuum, mop, corners detailed<i>Todos los pisos: aspirar, trapear, esquinas a detalle</i></li>
+      <li>Photo walkthrough for the client<i>Recorrido con fotos para el cliente</i></li>
+    </ul>
+  </div>
+
+  <div class="meta" style="margin-top:20px"><b>Crew lead signature / Firma del líder:</b><span style="min-width:260px"></span><b>Time in/out / Hora entrada/salida:</b><span></span></div>
+</div>
+
+</body>
+</html>
