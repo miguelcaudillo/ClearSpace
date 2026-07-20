@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClearSpace — Business Card Preview</title>
+<style>
+body{font-family:"Segoe UI",Arial,sans-serif;background:#e7ece9;margin:0;padding:30px 20px;color:#0b1f18}
+h1{text-align:center;color:#065f46;font-size:1.4rem;margin-bottom:6px}
+p.note{text-align:center;color:#5c6f67;font-size:.9rem;margin-bottom:30px}
+.row{display:flex;flex-wrap:wrap;gap:40px;justify-content:center;align-items:flex-start}
+.card-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+.label{font-weight:700;color:#047857;font-size:.95rem}
+/* frame shows the 3.75x2.25in card scaled up ~2.1x with a subtle trim guide */
+.frame{width:7.875in;height:4.725in;box-shadow:0 10px 30px rgba(0,0,0,.18);border-radius:6px;overflow:hidden;position:relative;background:#fff}
+.frame iframe{width:3.75in;height:2.25in;border:none;transform:scale(2.1);transform-origin:top left}
+/* dashed trim line at 0.125in inset (scaled: 0.125*2.1=0.2625in) */
+.trim{position:absolute;inset:.2625in;border:1px dashed rgba(220,60,60,.55);pointer-events:none;border-radius:2px}
+.legend{text-align:center;color:#94a3a0;font-size:.8rem;margin-top:22px}
+.legend b{color:#dc3c3c}
+@media(max-width:900px){.frame{width:auto;height:auto;aspect-ratio:auto}.frame iframe{transform:scale(1.4)}.frame{width:5.25in;height:3.15in}}
+</style>
+</head>
+<body>
+<h1>ClearSpace — Business Card Preview</h1>
+<p class="note">Shown enlarged for on-screen viewing. Actual printed size is 3.5″ × 2″.</p>
+<div class="row">
+  <div class="card-wrap">
+    <span class="label">FRONT</span>
+    <div class="frame"><iframe src="card-front.html" title="Card front"></iframe><div class="trim"></div></div>
+  </div>
+  <div class="card-wrap">
+    <span class="label">BACK</span>
+    <div class="frame"><iframe src="card-back.html" title="Card back"></iframe><div class="trim"></div></div>
+  </div>
+</div>
+<p class="legend">The <b>red dashed line</b> marks where the card gets trimmed — anything outside it is bleed and gets cut off. Nothing important crosses it. ✓</p>
+</body>
+</html>
