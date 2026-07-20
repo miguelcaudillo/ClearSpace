@@ -77,8 +77,9 @@ function quoteMessages(lead) {
       " bath home in " + lead.city + " (" + lead.sqft + " sq ft), a " + freqEn + " " + q.service.en.toLowerCase() +
       " comes to " + usd(q.total) + " per visit" + (recurring ? " (that includes your " + Math.round(q.discountPct * 100) + "% " + freqEn + " discount)" : "") +
       ". Want to grab a day this week? Reply YES and we'll get you scheduled. – " + BIZ.name + " " + BIZ.phone,
-    sms_es: "Hola " + fn + ", ¡somos " + BIZ.name + "! Para su hogar de " + lead.bedrooms + " recámaras / " + lead.bathrooms +
-      " baños en " + lead.city + " (" + lead.sqft + " pies²), una " + q.service.es.toLowerCase() + " " + freqEs +
+    sms_es: "Hola " + fn + ", ¡somos " + BIZ.name + "! Para su hogar de " + lead.bedrooms +
+      (lead.bedrooms === 1 ? " recámara" : " recámaras") + " / " + lead.bathrooms +
+      (lead.bathrooms === 1 ? " baño" : " baños") + " en " + lead.city + " (" + lead.sqft + " pies²), una " + q.service.es.toLowerCase() + " " + freqEs +
       " le queda en " + usd(q.total) + " por visita" + (recurring ? " (ya incluye su descuento " + freqEs + " del " + Math.round(q.discountPct * 100) + "%)" : "") +
       ". ¿Le gustaría agendar esta semana? Responda SÍ y le apartamos su día. – " + BIZ.name + " " + BIZ.phone,
     email_subject_en: "Your ClearSpace quote: " + usd(q.total) + " per visit",
