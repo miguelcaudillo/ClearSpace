@@ -432,6 +432,7 @@ table.data tr:hover td{background:rgba(236,253,245,.55)}
 <style id="pinLockCSS">
 body.locked{overflow:hidden}
 body.locked > *:not(#pinLockOverlay){display:none !important}
+body:not(.locked) #pinLockOverlay{display:none !important}
 #pinLockOverlay{position:fixed;inset:0;z-index:9999;background:linear-gradient(150deg,#22c55e 0%,#0ea968 50%,#059669 100%);display:flex;align-items:center;justify-content:center;font-family:var(--font-body,-apple-system,Segoe UI,Arial,sans-serif)}
 #pinLockOverlay .box{background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(2,44,34,.3);padding:34px 32px;width:min(360px,90vw);text-align:center}
 #pinLockOverlay .mk{width:52px;height:52px;border-radius:15px;background:linear-gradient(135deg,#22c55e,#065f46);color:#fff;font-size:1.5rem;display:grid;place-items:center;margin:0 auto 16px}
