@@ -8,14 +8,17 @@ appears in your GBP dashboard under "Ask for reviews").
 
 ## 1. Business description (750-char limit — this fits)
 
+**Hours:** Monday–Saturday 8:00 AM – 6:00 PM · Sunday closed
+
 **EN:**
-ClearSpace Home Cleaning is a locally owned residential cleaning and home-organizing company based in West Jordan, serving the entire Salt Lake valley — including Salt Lake City, South Jordan, Sandy, Riverton, Herriman, Taylorsville, and Murray. Every visit follows a written room-by-room checklist, every price is a flat rate you see before you book, and every clean is backed by our 48-hour re-clean guarantee. We offer standard, deep, and move-in/move-out cleaning, recurring service with the same trusted crew each visit, and professional home organizing. Service available in English and Spanish. Get your instant price online or text us for a free quote today.
+ClearSpace Home Cleaning is a locally owned house cleaning company based in West Jordan, serving the entire Salt Lake valley — including Salt Lake City, South Jordan, Sandy, Riverton, Herriman, Taylorsville, and Murray. Every visit follows a written room-by-room checklist, every price is a flat rate you see before you book, and every clean is backed by our 48-hour re-clean guarantee. We offer standard, deep, and move-in/move-out cleaning, plus recurring service with the same trusted crew each visit. Service available in English and Spanish. Get your instant price online or text us for a free quote today.
 
 **ES (for the Spanish description field / posts):**
-ClearSpace Home Cleaning es una empresa local de limpieza residencial y organización del hogar con base en West Jordan, sirviendo todo el valle de Salt Lake — incluyendo Salt Lake City, South Jordan, Sandy, Riverton, Herriman, Taylorsville y Murray. Cada visita sigue una lista cuarto por cuarto, cada precio es fijo y lo ve antes de reservar, y cada limpieza está respaldada por nuestra garantía de re-limpieza de 48 horas. Ofrecemos limpieza estándar, profunda y de mudanza, servicio recurrente con el mismo equipo de confianza, y organización profesional del hogar. Servicio en inglés y español. Obtenga su precio al instante en línea o mándenos un mensaje para su cotización gratis.
+ClearSpace Home Cleaning es una empresa local de limpieza de casas con base en West Jordan, sirviendo todo el valle de Salt Lake — incluyendo Salt Lake City, South Jordan, Sandy, Riverton, Herriman, Taylorsville y Murray. Cada visita sigue una lista cuarto por cuarto, cada precio es fijo y lo ve antes de reservar, y cada limpieza está respaldada por nuestra garantía de re-limpieza de 48 horas. Ofrecemos limpieza estándar, profunda y de mudanza, más servicio recurrente con el mismo equipo de confianza. Servicio en inglés y español. Obtenga su precio al instante en línea o mándenos un mensaje para su cotización gratis.
 
 **Category (primary):** House cleaning service
-**Categories (additional):** Cleaning service · Home organizer (if available)
+**Categories (additional):** Cleaning service · Commercial cleaning service (only if you take those jobs)
+*(Home organizing is intentionally left off the profile for now — add the "Home organizer" category later once you have reviews and want to promote it.)*
 
 ---
 
@@ -27,7 +30,6 @@ ClearSpace Home Cleaning es una empresa local de limpieza residencial y organiza
 | Deep cleaning | Everything in standard plus baseboards, vents, ceiling fans, blinds, tile & grout, behind furniture, and door/frame wipe-downs. |
 | Move-in / move-out cleaning | Empty-home detail spec: inside all cabinets, closets, fridge, and oven — built to pass landlord walkthroughs. |
 | Recurring cleaning (weekly / bi-weekly / monthly) | Same crew every visit, discounted flat rate, schedule that flexes with you. |
-| Home organizing | Closets, pantries, garages, and playrooms turned into systems that stay tidy. Quoted per project. |
 | Inside fridge cleaning | Add-on: shelves, drawers, and seals cleaned and deodorized. |
 | Inside oven cleaning | Add-on: oven interior and racks degreased. |
 | Interior window cleaning | Add-on: interior glass, sills, and tracks. |
