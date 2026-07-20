@@ -59,8 +59,11 @@ function renderConfigPrices() {
   document.querySelectorAll("[data-max-discount]").forEach(function (el) {
     el.textContent = Math.round(maxDisc * 100) + "%";
   });
+  var phone = CLEARSPACE_CONFIG.business.phone;
+  var telHref = "tel:" + phone.replace(/[^0-9+]/g, "");
   document.querySelectorAll("[data-biz-phone]").forEach(function (el) {
-    el.textContent = CLEARSPACE_CONFIG.business.phone;
+    el.textContent = phone;
+    if (el.tagName === "A") el.setAttribute("href", telHref);
   });
   document.querySelectorAll("[data-biz-email]").forEach(function (el) {
     el.textContent = CLEARSPACE_CONFIG.business.email;

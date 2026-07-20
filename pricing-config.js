@@ -19,8 +19,8 @@ var CLEARSPACE_CONFIG = {
   /* ---------- BUSINESS INFO (shown on every page & message) ---------- */
   business: {
     name: "ClearSpace Home Cleaning",
-    phone: "[YOUR PHONE NUMBER]",        // e.g. "(801) 555-0100"
-    email: "[YOUR EMAIL]",               // e.g. "hello@clearspace.com"
+    phone: "(801) 433-7342",
+    email: "ClearSpaceCleaning113@gmaill.com",  // ⚠️ CONFIRM: is this "gmaill" (double L) correct, or should it be gmail.com?
     bookingUrl: "https://miguelcaudillo.github.io/ClearSpace/pricing.html",
     reviewUrl: "[YOUR GOOGLE REVIEW LINK]", // from Google Business Profile → "Ask for reviews"
     serviceCities: [
