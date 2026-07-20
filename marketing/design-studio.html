@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClearSpace — Logo & 20 Card Designs</title>
+<style>
+:root{
+  --e950:#022c22;--e900:#064e3b;--e800:#065f46;--e700:#047857;--e600:#059669;
+  --e500:#10b981;--e400:#34d399;--e300:#6ee7b7;--e200:#a7f3d0;--e100:#d1fae5;--e50:#ecfdf5;
+  --ink:#0b1f18;--ink3:#5c6f67;
+  --f:"Segoe UI",Arial,sans-serif;
+  --fh:"Avenir Next","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--f);background:#eef2f0;color:var(--ink);padding:32px 20px 60px}
+.head{max-width:1200px;margin:0 auto 30px;text-align:center}
+.head h1{font-family:var(--fh);font-size:1.8rem;color:var(--e800);letter-spacing:-.02em}
+.head p{color:var(--ink3);margin-top:8px}
+.sec-title{max-width:1200px;margin:40px auto 18px;font-family:var(--fh);font-size:1.25rem;color:var(--e800);border-bottom:2px solid var(--e200);padding-bottom:8px}
+.tip{max-width:1200px;margin:0 auto 18px;background:#fff;border-left:4px solid var(--e500);border-radius:8px;padding:12px 16px;color:var(--ink3);font-size:.9rem}
+
+/* ---------- LOGO SHOWCASE ---------- */
+.logos{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.logobox{background:#fff;border-radius:14px;padding:26px;box-shadow:0 2px 10px rgba(0,0,0,.06);display:flex;flex-direction:column;align-items:center;gap:14px;min-height:170px;justify-content:center}
+.logobox.dark{background:linear-gradient(150deg,var(--e800),var(--e950))}
+.logobox .cap{font-size:.78rem;color:var(--ink3);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.logobox.dark .cap{color:var(--e300)}
+.lockup{display:flex;align-items:center;gap:12px}
+.wm{font-family:var(--fh);font-weight:800;font-size:1.5rem;letter-spacing:-.02em;color:var(--ink)}
+.wm b{font-weight:900}
+.wm .sub{display:block;font-size:.52rem;letter-spacing:.22em;color:var(--ink3);font-weight:700;margin-top:2px}
+.dark .wm{color:#fff}.dark .wm .sub{color:var(--e300)}
+.wm.mono{color:var(--e700)}
+
+/* ---------- CARD GRID ---------- */
+.grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:26px}
+.slot{display:flex;flex-direction:column;gap:8px}
+.slot .meta{display:flex;justify-content:space-between;align-items:baseline;padding:0 2px}
+.slot .num{font-family:var(--fh);font-weight:800;color:var(--e700)}
+.slot .sty{font-size:.8rem;color:var(--ink3)}
+
+/* base card = 3.5x2 ratio */
+.card{aspect-ratio:3.5/2;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 6px 20px rgba(2,44,34,.14);font-family:var(--f);color:#fff;padding:20px 22px;display:flex;flex-direction:column;justify-content:space-between}
+.card .brand{display:flex;align-items:center;gap:9px;font-family:var(--fh);font-weight:800;font-size:1.05rem;letter-spacing:-.01em}
+.card .brand b{font-weight:900}
+.card .mk{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:.95rem;flex:none}
+.card .ph{font-family:var(--fh);font-weight:800;font-size:1.15rem;letter-spacing:.01em}
+.card .sm{font-size:.62rem;letter-spacing:.04em}
+.card .web{font-size:.66rem;opacity:.9}
+.card .tag{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.spk{position:absolute;pointer-events:none}
+
+/* ===== individual designs ===== */
+/* 1 Signature gradient */
+.d1{background:linear-gradient(150deg,var(--e600),var(--e900))}
+.d1::after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.35),transparent 70%);top:-90px;right:-60px}
+.d1 .mk{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4)}
+
+/* 2 Minimal white + accent */
+.d2{background:#fff;color:var(--ink)}
+.d2 .brand{color:var(--e800)}
+.d2 .mk{background:linear-gradient(135deg,var(--e500),var(--e800));color:#fff}
+.d2 .ph{color:var(--e700)}.d2 .web{color:var(--ink3)}.d2 .tag{color:var(--e600)}
+.d2::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(var(--e500),var(--e800))}
+
+/* 3 Luxe dark */
+.d3{background:radial-gradient(120% 120% at 0% 0%,var(--e800),var(--e950))}
+.d3 .mk{background:var(--e500)}
+.d3 .tag{color:var(--e300)}.d3 .web{color:var(--e200)}
+
+/* 4 Diagonal split */
+.d4{background:#fff;color:var(--ink)}
+.d4::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,var(--e700) 42%,#fff 42.2%)}
+.d4>*{position:relative;z-index:1}
+.d4 .brand{color:#fff}.d4 .mk{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4)}
+.d4 .ph{color:var(--e800);text-align:right}.d4 .web{color:var(--ink3);text-align:right}.d4 .btm{text-align:right}
+
+/* 5 Sparkle watermark */
+.d5{background:linear-gradient(160deg,var(--e700),var(--e900))}
+.d5 .big-spk{position:absolute;right:-10px;bottom:-30px;font-size:150px;color:rgba(255,255,255,.08);line-height:1}
+.d5 .mk{background:rgba(255,255,255,.15)}
+
+/* 6 Outlined minimal */
+.d6{background:var(--e50);color:var(--e900)}
+.d6::before{content:"";position:absolute;inset:9px;border:1.5px solid var(--e400);border-radius:9px}
+.d6>*{position:relative;z-index:1}
+.d6 .mk{background:var(--e700);color:#fff}.d6 .ph{color:var(--e800)}.d6 .web{color:var(--e700)}.d6 .tag{color:var(--e600)}
+
+/* 7 Centered emblem */
+.d7{background:linear-gradient(150deg,var(--e600),var(--e900));align-items:center;text-align:center;justify-content:center;gap:8px}
+.d7 .ring{width:44px;height:44px;border-radius:50%;border:2px solid var(--e300);display:grid;place-items:center;font-size:1.2rem}
+.d7 .brand{justify-content:center}.d7 .tag{color:var(--e300)}
+
+/* 8 Emerald sidebar */
+.d8{background:#fff;color:var(--ink);padding:0;flex-direction:row}
+.d8 .side{width:38%;background:linear-gradient(160deg,var(--e600),var(--e900));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#fff}
+.d8 .side .mk{background:rgba(255,255,255,.16);width:34px;height:34px}
+.d8 .side small{font-size:.55rem;letter-spacing:.12em}
+.d8 .body{flex:1;padding:20px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+.d8 .body .nm{font-family:var(--fh);font-weight:900;color:var(--e800);font-size:1.05rem}
+.d8 .body .ph{color:var(--e700)}.d8 .body .web{color:var(--ink3)}
+
+/* 9 Dot pattern */
+.d9{background:var(--e800);background-image:radial-gradient(rgba(255,255,255,.14) 1.4px,transparent 1.4px);background-size:14px 14px}
+.d9 .mk{background:var(--e500)}.d9 .tag{color:var(--e300)}
+
+/* 10 Wave divider */
+.d10{background:#fff;color:var(--ink)}
+.d10 .wave{position:absolute;top:0;left:0;width:100%;height:56%}
+.d10 .wave svg{width:100%;height:100%}
+.d10 .brand{position:relative;color:#fff;z-index:2}
+.d10 .mk{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4)}
+.d10 .btm{position:relative;z-index:2}.d10 .ph{color:var(--e800)}.d10 .web{color:var(--ink3)}
+
+/* 11 Big monogram */
+.d11{background:linear-gradient(150deg,var(--e700),var(--e950))}
+.d11 .cs{position:absolute;right:6px;bottom:-34px;font-family:var(--fh);font-weight:900;font-size:130px;color:rgba(255,255,255,.09);line-height:1}
+.d11 .mk{background:rgba(255,255,255,.15)}.d11 .tag{color:var(--e300)}
+
+/* 12 Typographic hero */
+.d12{background:var(--e900);justify-content:center;gap:10px}
+.d12 .huge{font-family:var(--fh);font-weight:900;font-size:2rem;letter-spacing:-.03em;line-height:.95}
+.d12 .huge b{color:var(--e300)}
+.d12 .row{display:flex;justify-content:space-between;align-items:flex-end}
+.d12 .tag{color:var(--e300)}.d12 .web{color:var(--e200)}
+
+/* 13 Vertical accent */
+.d13{background:#fff;color:var(--ink);padding-left:34px}
+.d13 .vert{position:absolute;left:0;top:0;bottom:0;width:26px;background:linear-gradient(var(--e600),var(--e900));display:grid;place-items:center}
+.d13 .vert span{writing-mode:vertical-rl;transform:rotate(180deg);color:#fff;font-size:.56rem;letter-spacing:.2em;font-weight:700}
+.d13 .brand{color:var(--e800)}.d13 .mk{background:linear-gradient(135deg,var(--e500),var(--e800));color:#fff}
+.d13 .ph{color:var(--e700)}.d13 .web{color:var(--ink3)}
+
+/* 14 Bottom band */
+.d14{background:var(--e50);color:var(--e900);padding-bottom:0}
+.d14 .band{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(120deg,var(--e700),var(--e900));display:flex;align-items:center;justify-content:space-between;padding:0 22px;color:#fff}
+.d14 .mk{background:var(--e700);color:#fff}.d14 .brand{color:var(--e800)}
+.d14 .band .ph{font-size:1rem}.d14 .band .web{font-size:.6rem}
+
+/* 15 Scattered sparkles mesh */
+.d15{background:radial-gradient(100% 100% at 100% 0,var(--e500),var(--e900))}
+.d15 .mk{background:rgba(255,255,255,.16)}.d15 .tag{color:var(--e100)}
+.d15 s1,.d15 s2,.d15 s3,.d15 s4{position:absolute;color:rgba(255,255,255,.5)}
+
+/* 16 Light mint */
+.d16{background:linear-gradient(150deg,var(--e100),var(--e200));color:var(--e900)}
+.d16 .mk{background:linear-gradient(135deg,var(--e600),var(--e900));color:#fff}
+.d16 .ph{color:var(--e800)}.d16 .web{color:var(--e700)}.d16 .tag{color:var(--e700)}
+
+/* 17 Corner ribbon */
+.d17{background:#fff;color:var(--ink)}
+.d17 .rib{position:absolute;top:14px;right:-34px;transform:rotate(45deg);background:var(--e600);color:#fff;font-size:.54rem;font-weight:800;letter-spacing:.1em;padding:4px 40px}
+.d17 .brand{color:var(--e800)}.d17 .mk{background:linear-gradient(135deg,var(--e500),var(--e800));color:#fff}
+.d17 .ph{color:var(--e700)}.d17 .web{color:var(--ink3)}
+.d17::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:4px;background:linear-gradient(90deg,var(--e400),var(--e800))}
+
+/* 18 Framed luxe */
+.d18{background:linear-gradient(150deg,var(--e800),var(--e950))}
+.d18::before{content:"";position:absolute;inset:8px;border:1px solid rgba(110,231,183,.4);border-radius:8px}
+.d18>*{position:relative;z-index:1}
+.d18 .mk{background:var(--e500)}.d18 .tag{color:var(--e300)}.d18 .web{color:var(--e200)}
+
+/* 19 Soft duotone panels */
+.d19{background:#fff;color:var(--ink);padding:0;flex-direction:row;align-items:stretch}
+.d19 .l{flex:1;background:var(--e50);padding:20px;display:flex;flex-direction:column;justify-content:space-between}
+.d19 .r{width:34%;background:linear-gradient(160deg,var(--e600),var(--e900));display:grid;place-items:center;color:#fff;font-size:1.6rem}
+.d19 .brand{color:var(--e800)}.d19 .mk{background:var(--e700);color:#fff}
+.d19 .ph{color:var(--e700)}.d19 .web{color:var(--ink3)}
+
+/* 20 Ticket / perforation */
+.d20{background:linear-gradient(150deg,var(--e600),var(--e900))}
+.d20 .perf{position:absolute;left:64%;top:0;bottom:0;border-left:2px dashed rgba(255,255,255,.4)}
+.d20 .stub{position:absolute;right:0;top:0;bottom:0;width:36%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center}
+.d20 .stub .ph{font-size:.82rem}.d20 .stub small{font-size:.5rem;letter-spacing:.1em;opacity:.85}
+.d20 .mk{background:rgba(255,255,255,.15)}
+.d20 .main{width:60%}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>ClearSpace — Logo &amp; 20 Business Card Designs</h1>
+  <p>All emerald green. Pick your favorite logo lockup and card number(s) — tell me the numbers and I'll build them into print-ready front/back PDFs.</p>
+</div>
+
+<!-- ============ LOGO ============ -->
+<h2 class="sec-title">The logo</h2>
+<div class="tip">A refined mark: a rounded emerald "squircle" holding a clean four-point shine (the sparkle of a just-cleaned home), paired with a two-weight wordmark. Works on light, dark, and in a single ink. Scalable SVG — crisp on a card or a truck wrap.</div>
+<div class="logos">
+  <!-- Primary on light -->
+  <div class="logobox">
+    <div class="lockup">
+      <svg width="58" height="58" viewBox="0 0 64 64" aria-label="ClearSpace mark">
+        <defs><linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#065f46"/></linearGradient></defs>
+        <rect x="3" y="3" width="58" height="58" rx="18" fill="url(#lg1)"/>
+        <path d="M32 14 L35.5 27 L49 32 L35.5 37 L32 50 L28.5 37 L15 32 L28.5 27 Z" fill="#fff"/>
+        <path d="M46 16 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4 -3.8 l-3.8 -1.4 l3.8 -1.4 Z" fill="#a7f3d0"/>
+      </svg>
+      <span class="wm">Clear<b>Space</b><span class="sub">HOME&nbsp;&nbsp;CLEANING</span></span>
+    </div>
+    <span class="cap">Primary · on light</span>
+  </div>
+  <!-- Primary on dark -->
+  <div class="logobox dark">
+    <div class="lockup">
+      <svg width="58" height="58" viewBox="0 0 64 64">
+        <rect x="3" y="3" width="58" height="58" rx="18" fill="#ffffff" opacity="0.12"/>
+        <rect x="3" y="3" width="58" height="58" rx="18" fill="none" stroke="#6ee7b7" stroke-width="1.5"/>
+        <path d="M32 14 L35.5 27 L49 32 L35.5 37 L32 50 L28.5 37 L15 32 L28.5 27 Z" fill="#fff"/>
+        <path d="M46 16 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4 -3.8 l-3.8 -1.4 l3.8 -1.4 Z" fill="#6ee7b7"/>
+      </svg>
+      <span class="wm">Clear<b>Space</b><span class="sub">HOME&nbsp;&nbsp;CLEANING</span></span>
+    </div>
+    <span class="cap">Reversed · on dark</span>
+  </div>
+  <!-- Mark only -->
+  <div class="logobox">
+    <svg width="70" height="70" viewBox="0 0 64 64">
+      <defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#065f46"/></linearGradient></defs>
+      <rect x="3" y="3" width="58" height="58" rx="18" fill="url(#lg2)"/>
+      <path d="M32 14 L35.5 27 L49 32 L35.5 37 L32 50 L28.5 37 L15 32 L28.5 27 Z" fill="#fff"/>
+      <path d="M46 16 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4 -3.8 l-3.8 -1.4 l3.8 -1.4 Z" fill="#a7f3d0"/>
+    </svg>
+    <span class="cap">App icon / avatar</span>
+  </div>
+  <!-- Single ink -->
+  <div class="logobox">
+    <div class="lockup">
+      <svg width="50" height="50" viewBox="0 0 64 64">
+        <rect x="3" y="3" width="58" height="58" rx="18" fill="none" stroke="#047857" stroke-width="3"/>
+        <path d="M32 15 L35 27 L47 32 L35 37 L32 49 L29 37 L17 32 L29 27 Z" fill="#047857"/>
+      </svg>
+      <span class="wm mono">Clear<b>Space</b><span class="sub" style="color:var(--e600)">HOME&nbsp;&nbsp;CLEANING</span></span>
+    </div>
+    <span class="cap">One-color (stamps / invoices)</span>
+  </div>
+</div>
+
+<!-- ============ CARDS ============ -->
+<h2 class="sec-title">20 card fronts</h2>
+<div class="tip">Every design is print-safe (nothing important near the edges). Numbers are just labels — mix and match, or ask for tweaks (swap a tagline, add "Se habla Español", change which is boldest).</div>
+<div class="grid">
+
+  <div class="slot"><div class="card d1"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace · English &amp; Español</div></div></div><div class="meta"><span class="num">01</span><span class="sty">Signature gradient</span></div></div>
+
+  <div class="slot"><div class="card d2"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div><span class="tag">Home Cleaning · West Jordan</span></div><div class="meta"><span class="num">02</span><span class="sty">Minimal white + accent bar</span></div></div>
+
+  <div class="slot"><div class="card d3"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><span class="tag">Home Cleaning</span><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">03</span><span class="sty">Luxe dark emerald</span></div></div>
+
+  <div class="slot"><div class="card d4"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">04</span><span class="sty">Diagonal split</span></div></div>
+
+  <div class="slot"><div class="card d5"><span class="big-spk">✦</span><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">Home Cleaning · English &amp; Español</div></div></div><div class="meta"><span class="num">05</span><span class="sty">Sparkle watermark</span></div></div>
+
+  <div class="slot"><div class="card d6"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div><span class="tag">Licensed &amp; insured</span></div><div class="meta"><span class="num">06</span><span class="sty">Outlined minimal</span></div></div>
+
+  <div class="slot"><div class="card d7"><div class="ring">✦</div><div class="brand">Clear<b>Space</b></div><span class="tag">Home Cleaning</span><div class="ph">(801) 433-7342</div></div><div class="meta"><span class="num">07</span><span class="sty">Centered emblem</span></div></div>
+
+  <div class="slot"><div class="card d8"><div class="side"><span class="mk">✦</span><small>CLEAN</small></div><div class="body"><div class="nm">ClearSpace</div><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">08</span><span class="sty">Emerald sidebar</span></div></div>
+
+  <div class="slot"><div class="card d9"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><span class="tag">Home Cleaning</span><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">09</span><span class="sty">Dot pattern</span></div></div>
+
+  <div class="slot"><div class="card d10"><div class="wave"><svg viewBox="0 0 350 120" preserveAspectRatio="none"><path d="M0 0 H350 V78 Q262 118 175 82 Q88 46 0 88 Z" fill="url(#wv)"/><defs><linearGradient id="wv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#059669"/><stop offset="1" stop-color="#064e3b"/></linearGradient></defs></svg></div><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">10</span><span class="sty">Wave divider</span></div></div>
+
+  <div class="slot"><div class="card d11"><span class="cs">CS</span><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><span class="tag">Home Cleaning</span><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">11</span><span class="sty">Big monogram</span></div></div>
+
+  <div class="slot"><div class="card d12"><div class="huge">Clear<b>Space</b></div><div class="row"><span class="tag">Home Cleaning</span><div style="text-align:right"><div class="ph">(801) 433-7342</div><div class="web">English &amp; Español</div></div></div></div><div class="meta"><span class="num">12</span><span class="sty">Typographic hero</span></div></div>
+
+  <div class="slot"><div class="card d13"><div class="vert"><span>CLEARSPACE · CLEAN</span></div><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">13</span><span class="sty">Vertical accent</span></div></div>
+
+  <div class="slot"><div class="card d14"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><span class="tag">Home Cleaning · West Jordan, UT</span><div class="band"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">14</span><span class="sty">Bottom band</span></div></div>
+
+  <div class="slot"><div class="card d15"><s1 style="top:20px;left:30px;font-size:14px">✦</s1><s2 style="top:60px;left:120px;font-size:9px">✦</s2><s3 style="bottom:30px;left:60px;font-size:11px">✦</s3><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">Home Cleaning · English &amp; Español</div></div></div><div class="meta"><span class="num">15</span><span class="sty">Scattered sparkles</span></div></div>
+
+  <div class="slot"><div class="card d16"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><span class="tag">Home Cleaning</span><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">16</span><span class="sty">Light mint</span></div></div>
+
+  <div class="slot"><div class="card d17"><span class="rib">CLEAN</span><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">17</span><span class="sty">Corner ribbon</span></div></div>
+
+  <div class="slot"><div class="card d18"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><span class="tag">Home Cleaning</span><div class="btm"><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="meta"><span class="num">18</span><span class="sty">Framed luxe</span></div></div>
+
+  <div class="slot"><div class="card d19"><div class="l"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div><div class="ph">(801) 433-7342</div><div class="web">miguelcaudillo.github.io/ClearSpace</div></div></div><div class="r">✦</div></div><div class="meta"><span class="num">19</span><span class="sty">Duotone panels</span></div></div>
+
+  <div class="slot"><div class="card d20"><div class="main"><div class="brand"><span class="mk">✦</span>Clear<b>Space</b></div><div class="btm" style="margin-top:14px"><div class="web">Home Cleaning<br>English &amp; Español</div></div></div><div class="perf"></div><div class="stub"><span style="font-size:1.1rem">✦</span><div class="ph">(801)<br>433-7342</div><small>CALL / TEXT</small></div></div><div class="meta"><span class="num">20</span><span class="sty">Ticket / perforation</span></div></div>
+
+</div>
+
+<p style="text-align:center;color:var(--ink3);margin-top:40px;font-size:.9rem">Tell me the number(s) you like — I'll produce them as print-ready front/back PDFs (3.5×2 + bleed) and set the winner as the site logo.</p>
+
+</body>
+</html>
