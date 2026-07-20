@@ -1,5 +1,5 @@
 /* ClearSpace service worker — cache-first so the app works offline once visited. */
-var CACHE = "clearspace-v4";
+var CACHE = "clearspace-v5";
 var ASSETS = ["./", "./index.html"];
 
 self.addEventListener("install", function (e) {
