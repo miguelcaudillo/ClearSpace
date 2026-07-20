@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ClearSpace — Print Materials (Flyer · Door Hanger · Business Card)</title>
 <style>
-:root{--em-800:#065f46;--em-700:#047857;--em-600:#059669;--em-500:#10b981;--em-50:#ecfdf5;--ink:#0b1f18;--ink-3:#5c6f67;--amber:#f59e0b}
+:root{--em-800:#065f46;--em-700:#047857;--em-600:#059669;--em-500:#10b981;--spring:#22c55e;--em-50:#ecfdf5;--ink:#0b1f18;--ink-3:#5c6f67;--amber:#f59e0b}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:#e7ece9;padding:24px}
 .bar{max-width:900px;margin:0 auto 18px;background:#fff;border-radius:10px;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;box-shadow:0 2px 8px rgba(0,0,0,.08)}
@@ -14,12 +14,12 @@ body{font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:#e7ece9
 .bar span{color:var(--ink-3);font-size:.85rem}
 .sheet{background:#fff;margin:0 auto 26px;box-shadow:0 4px 16px rgba(0,0,0,.12);position:relative;overflow:hidden}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
-.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--em-500),var(--em-800));display:grid;place-items:center;color:#fff;font-size:1.1rem;flex:none}
+.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--spring),var(--em-800));display:grid;place-items:center;color:#fff;font-size:1.1rem;flex:none}
 .mark.lg{width:54px;height:54px;font-size:1.5rem;border-radius:15px}
 
 /* ---- FLYER: 8.5x11 ---- */
 .flyer{width:8.5in;min-height:11in;padding:.7in .7in .5in}
-.flyer .hero{background:linear-gradient(150deg,var(--em-700),#022c22);color:#fff;border-radius:20px;padding:40px 38px;position:relative;overflow:hidden}
+.flyer .hero{background:linear-gradient(150deg,var(--spring),#065f46 70%,#043a2c);color:#fff;border-radius:20px;padding:40px 38px;position:relative;overflow:hidden}
 .flyer .hero::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.28),transparent 70%);top:-150px;right:-120px}
 .flyer h1{font-size:2.5rem;line-height:1.08;margin:22px 0 12px;letter-spacing:-.02em}
 .flyer .hl{color:#6ee7b7}
@@ -49,7 +49,7 @@ body{font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:#e7ece9
 .hanger ul{list-style:none;margin:14px 0}
 .hanger li{padding:5px 0 5px 22px;position:relative;font-size:.92rem}
 .hanger li::before{content:"✓";position:absolute;left:0;color:var(--em-600);font-weight:800}
-.hanger .cta{background:var(--em-700);color:#fff;border-radius:12px;padding:16px;text-align:center;margin:14px 0}
+.hanger .cta{background:linear-gradient(135deg,var(--spring),var(--em-700));color:#fff;border-radius:12px;padding:16px;text-align:center;margin:14px 0}
 .hanger .cta .ph{font-size:1.5rem;font-weight:800}
 .tabs{display:flex;border-top:1.5px dashed #999;margin-top:16px}
 .tab{flex:1;border-right:1px dashed #ccc;text-align:center;padding:10px 2px;font-size:.62rem;font-weight:700;color:var(--em-800);writing-mode:vertical-rl;transform:rotate(180deg);height:1.5in}
@@ -58,7 +58,7 @@ body{font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:#e7ece9
 /* ---- BUSINESS CARDS: 3.5x2, 10-up ---- */
 .cards{display:flex;flex-wrap:wrap;gap:.15in;width:8in;padding:.25in}
 .card{width:3.5in;height:2in;border:1px solid #ddd;border-radius:10px;padding:.2in .22in;display:flex;flex-direction:column;justify-content:space-between}
-.card.front{background:linear-gradient(150deg,var(--em-700),#022c22);color:#fff}
+.card.front{background:linear-gradient(150deg,var(--spring),#065f46 70%,#043a2c);color:#fff}
 .card.back{background:#fff}
 .card .ph{font-size:1.15rem;font-weight:800}
 .card .tag{font-size:.72rem;color:#cdeee1}
