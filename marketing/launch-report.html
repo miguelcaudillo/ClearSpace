@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+:root{--g:#22c55e;--g6:#059669;--g7:#047857;--g8:#065f46;--g9:#064e3b;--g950:#022c22;
+  --ink:#0b1f18;--ink2:#33473f;--ink3:#5c6f67;--line:#e3ede8;--mint:#ecfdf5;--mint2:#d1fae5;--amber:#f59e0b;}
+body{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);font-size:10.5pt;line-height:1.5}
+.page{width:8.5in;min-height:11in;padding:0.7in 0.75in;position:relative;page-break-after:always}
+.page:last-child{page-break-after:auto}
+
+/* Cover */
+.cover{background:linear-gradient(150deg,var(--g) 0%,var(--g6) 45%,var(--g9) 100%);color:#fff;min-height:11in;padding:0.9in 0.8in;overflow:hidden}
+.cover::after{content:"";position:absolute;width:6in;height:6in;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%);top:-2.5in;right:-2in}
+.cover .brand{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+.cover .mk{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.cover .bn{font-size:1.5rem;font-weight:800;letter-spacing:-.01em}
+.cover .bn b{font-weight:900;color:var(--g9)}
+.cover .bn small{display:block;font-size:.62rem;letter-spacing:.24em;font-weight:600;color:var(--mint2);margin-top:2px}
+.cover h1{font-size:3.1rem;font-weight:900;letter-spacing:-.03em;line-height:1.02;margin-top:2.6in;position:relative;z-index:1}
+.cover h1 span{color:var(--g9)}
+.cover .lede{font-size:1.05rem;color:var(--mint2);margin-top:14px;max-width:5in;position:relative;z-index:1}
+.cover .meta{position:absolute;bottom:1in;left:.8in;right:.8in;display:flex;justify-content:space-between;align-items:flex-end;font-size:.85rem;color:var(--mint2);z-index:1;border-top:1px solid rgba(255,255,255,.25);padding-top:14px}
+.cover .status{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:7px 16px;font-weight:700;color:#fff;font-size:.9rem;margin-top:20px;position:relative;z-index:1}
+.dot{width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 3px rgba(74,222,128,.35)}
+
+/* Section headers */
+.sec{display:flex;align-items:center;gap:12px;margin:0 0 6px}
+.sec .n{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--g),var(--g8));color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex:none}
+.sec h2{font-size:1.35rem;font-weight:900;letter-spacing:-.02em;color:var(--g8)}
+.sec-sub{color:var(--ink3);font-size:.92rem;margin:0 0 16px 42px}
+.pill{font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-left:8px}
+.pill.done{background:var(--mint);color:var(--g7);border:1px solid var(--mint2)}
+.pill.todo{background:#fff7ed;color:#b45309;border:1px solid #fed7aa}
+
+/* Groups & checklist */
+.grp{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;break-inside:avoid}
+.grp h3{font-size:.82rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--g7);margin-bottom:9px}
+.ck{display:flex;gap:10px;padding:4px 0;font-size:9.8pt;line-height:1.45;align-items:flex-start}
+.ck .bx{width:16px;height:16px;border-radius:5px;flex:none;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900}
+.ck .bx.on{background:var(--g6);color:#fff}
+.ck .bx.off{background:#fff;border:1.6px solid #fbbf24;color:#fff}
+.ck b{color:var(--ink)}
+.ck .d{color:var(--ink3)}
+
+/* Priority items */
+.prio{display:flex;gap:12px;border:1px solid var(--line);border-left:4px solid var(--g);border-radius:10px;padding:12px 14px;margin-bottom:10px;break-inside:avoid}
+.prio.p1{border-left-color:#ef4444}
+.prio.p2{border-left-color:var(--amber)}
+.prio.p3{border-left-color:var(--g6)}
+.prio .rank{font-weight:900;color:var(--ink3);font-size:1.1rem;flex:none;width:26px}
+.prio h4{font-size:1rem;font-weight:800;margin-bottom:3px}
+.prio p{font-size:9.3pt;color:var(--ink2);line-height:1.45}
+.prio .why{color:var(--ink3);font-style:italic;font-size:8.8pt;margin-top:3px}
+
+.callout{background:var(--mint);border:1px solid var(--mint2);border-radius:12px;padding:14px 16px;margin-top:14px}
+.callout b{color:var(--g8)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ref{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.ref h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--g7);margin-bottom:7px}
+.ref .row{display:flex;justify-content:space-between;font-size:9.3pt;padding:3px 0;border-bottom:1px dashed var(--line)}
+.ref .row:last-child{border-bottom:none}
+.ref .row span:first-child{color:var(--ink3)}
+.ref .row span:last-child{font-weight:700;color:var(--ink)}
+.foot{position:absolute;bottom:.5in;left:.75in;right:.75in;display:flex;justify-content:space-between;font-size:8pt;color:var(--ink3);border-top:1px solid var(--line);padding-top:8px}
+.hl{color:var(--g7);font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="page cover">
+  <div class="brand">
+    <div class="mk">&#10022;</div>
+    <div class="bn">Clear<b>Space</b><small>HOME&nbsp;&nbsp;CLEANING</small></div>
+  </div>
+  <h1>Launch Status<br><span>Report</span></h1>
+  <p class="lede">Your complete business launch package &mdash; what's built, what's left, and where to go next.</p>
+  <div class="status"><span class="dot"></span> LIVE &amp; ACCEPTING LEADS</div>
+  <div class="meta">
+    <div>Prepared for <b style="color:#fff">Miguel Caudillo</b><br>West Jordan, UT &middot; Salt Lake valley</div>
+    <div style="text-align:right">miguelcaudillo.github.io/ClearSpace<br>(801) 433-7342</div>
+  </div>
+</div>
+
+<!-- ===== PAGE 2: WHAT'S DONE ===== -->
+<div class="page">
+  <div class="sec"><div class="n">1</div><h2>What's Been Built <span class="pill done">Complete</span></h2></div>
+  <p class="sec-sub">Your full digital storefront and business toolkit &mdash; live and verified.</p>
+
+  <div class="grp">
+    <h3>&#127760; Website (live &amp; bilingual EN/ES)</h3>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Landing page</b> <span class="d">&mdash; hero, services, how-it-works, gallery, service areas, quote form</span></span></div>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Instant price calculator</b> <span class="d">&mdash; live estimates from one shared pricing file</span></span></div>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>16 local SEO pages</b> <span class="d">&mdash; house &amp; move-out cleaning for all 8 valley cities</span></span></div>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Sitemap, robots.txt, structured data, social-share previews</b></span></div>
+  </div>
+
+  <div class="grp">
+    <h3>&#128176; Pricing &amp; Customer Comms</h3>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>One pricing config</b> <span class="d">&mdash; Standard $120 / Deep $220 / Move-out $280; your wife can edit rates in one place</span></span></div>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Quote engine</b> <span class="d">&mdash; quote, confirmation, reminder &amp; review messages in SMS + email, EN + ES</span></span></div>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Quote form &rarr; your Gmail</b> <span class="d">&mdash; live via Formspree, tested &amp; confirmed</span></span></div>
+  </div>
+
+  <div class="grp">
+    <h3>&#128196; Client Documents (printable)</h3>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Service agreement</b> (EN + ES), <b>new-client intake form</b>, <b>room-by-room checklists</b> (standard/deep/move-out)</span></div>
+  </div>
+
+  <div class="grp">
+    <h3>&#128226; Marketing Kit</h3>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Google Business Profile kit</b> <span class="d">&mdash; description, services, 5 posts, 10 review requests</span></span></div>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>30-day GoHighLevel follow-up sequence</b> <span class="d">&mdash; 5 workflows, bilingual, paste-ready</span></span></div>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Social media starter kit, verification video script, photo shot-list, first-week ops checklist</b></span></div>
+  </div>
+
+  <div class="grp">
+    <h3>&#127912; Brand &amp; Print</h3>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Logo system</b> (4 lockups) + <b>brand green</b> unified across site &amp; print</span></div>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Business card</b> (print-ready front/back PDFs) + <b>flyer</b> &amp; <b>door hanger</b> with tear-off tabs</span></div>
+  </div>
+
+  <div class="grp">
+    <h3>&#128272; Owner Dashboard</h3>
+    <div class="ck"><span class="bx on">&#10003;</span><span><b>Office dashboard</b> <span class="d">&mdash; jobs, clients, calendar, invoices; PIN-protected, reached via footer "Owner login"</span></span></div>
+  </div>
+
+  <div class="foot"><span>ClearSpace Home Cleaning &mdash; Launch Status Report</span><span>Page 2</span></div>
+</div>
+
+<!-- ===== PAGE 3: WHAT'S LEFT ===== -->
+<div class="page">
+  <div class="sec"><div class="n">2</div><h2>What Still Needs You <span class="pill todo">Your action</span></h2></div>
+  <p class="sec-sub">These require your accounts, decisions, or real-world credentials &mdash; I can't do them for you, but everything's prepped so each is quick.</p>
+
+  <div class="grp">
+    <h3>Launch-critical</h3>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Verify your Google Business Profile</b> <span class="d">&mdash; started; ~5-day video verification. Everything to paste is in your GBP kit.</span></span></div>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Send me your Google review link</b> <span class="d">&mdash; once verified, so I can wire it into your review texts/emails (the one open config item)</span></span></div>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Get licensed &amp; insured</b> <span class="d">&mdash; then I'll drop the "*placeholder" badge and fill the insurance blank in your agreement</span></span></div>
+  </div>
+
+  <div class="grp">
+    <h3>Before serious volume</h3>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Have a lawyer review the service agreement</b> <span class="d">&mdash; it's a solid draft, flagged for review before use</span></span></div>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Replace placeholder photos</b> <span class="d">&mdash; swap in real before/afters from your first jobs (shot-list ready)</span></span></div>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Add real Google reviews</b> <span class="d">&mdash; ask every early customer; aim for 5+ to start pulling in strangers</span></span></div>
+  </div>
+
+  <div class="grp">
+    <h3>Growth (when ready)</h3>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Buy a domain</b> <span class="d">&mdash; e.g. clearspaceutah.com, nicer than the github.io URL</span></span></div>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Set up GoHighLevel</b> <span class="d">&mdash; build the 5 workflows from your sequence file; automates follow-up</span></span></div>
+    <div class="ck"><span class="bx off">&#9633;</span><span><b>Synced backend</b> <span class="d">&mdash; so your phone &amp; desktop share dashboard data (also enables the phone-app version)</span></span></div>
+  </div>
+
+  <div class="callout"><b>Bottom line:</b> your site, pricing, lead pipeline, branding, and print assets are 100% done and live. The only thing gating a "fully finished" setup is your <b>Google review link</b>, which depends on GBP verification. Everything else above is growth, not blockers.</div>
+
+  <div class="foot"><span>ClearSpace Home Cleaning &mdash; Launch Status Report</span><span>Page 3</span></div>
+</div>
+
+<!-- ===== PAGE 4: ROADMAP ===== -->
+<div class="page">
+  <div class="sec"><div class="n">3</div><h2>What to Work On Next</h2></div>
+  <p class="sec-sub">A prioritized roadmap &mdash; do these roughly in order for the fastest path to steady bookings.</p>
+
+  <div class="prio p1"><div class="rank">1</div><div>
+    <h4>Land your first 3&ndash;5 jobs &mdash; even at a discount</h4>
+    <p>Print the flyer &amp; door hangers and canvass your own West Jordan neighborhood. Offer a small "grand opening" rate in exchange for a Google review and permission to photograph.</p>
+    <p class="why">Why first: reviews + real photos are the fuel everything else needs. Nothing converts strangers like proof.</p>
+  </div></div>
+
+  <div class="prio p1"><div class="rank">2</div><div>
+    <h4>Finish Google Business Profile &amp; get to 5 reviews</h4>
+    <p>Complete verification, upload 10+ real photos, publish your first post, and ask every early customer for a review. Send me the review link so one-tap review requests go live.</p>
+    <p class="why">Why: GBP is how people searching "house cleaning near me" in the valley actually find you.</p>
+  </div></div>
+
+  <div class="prio p2"><div class="rank">3</div><div>
+    <h4>Replace placeholder photos with your real work</h4>
+    <p>Shoot before/afters on every job (shot-list is ready). Swap them onto the site &mdash; send them to me and I'll drop them in.</p>
+    <p class="why">Why: authentic photos of your results out-convert stock every time.</p>
+  </div></div>
+
+  <div class="prio p2"><div class="rank">4</div><div>
+    <h4>Get consistent on social &amp; Nextdoor</h4>
+    <p>Post 1&ndash;2&times;/week using your social kit &mdash; mostly before/afters. Claim a Nextdoor business page; it's gold for suburban cleaning referrals.</p>
+    <p class="why">Why: free, local, and compounds. Consistency beats perfection.</p>
+  </div></div>
+
+  <div class="prio p3"><div class="rank">5</div><div>
+    <h4>Automate follow-up with GoHighLevel</h4>
+    <p>Once lead volume grows past what you can text by hand, build the 5 workflows from your 30-day sequence so no lead goes cold.</p>
+    <p class="why">Why: most jobs are won on the 2nd&ndash;5th touch, not the first.</p>
+  </div></div>
+
+  <div class="prio p3"><div class="rank">6</div><div>
+    <h4>Buy a domain &amp; consider a synced backend</h4>
+    <p>A real domain lifts trust on cards and ads. Later, a shared database lets your phone &amp; desktop see the same dashboard and powers a true phone app.</p>
+    <p class="why">Why: polish and scale &mdash; valuable, but only once jobs are flowing.</p>
+  </div></div>
+
+  <div class="foot"><span>ClearSpace Home Cleaning &mdash; Launch Status Report</span><span>Page 4</span></div>
+</div>
+
+<!-- ===== PAGE 5: REFERENCE ===== -->
+<div class="page">
+  <div class="sec"><div class="n">4</div><h2>Quick Reference</h2></div>
+  <p class="sec-sub">Everything you need at a glance.</p>
+
+  <div class="grid2">
+    <div class="ref">
+      <h4>Your links</h4>
+      <div class="row"><span>Public site</span><span>.../ClearSpace/</span></div>
+      <div class="row"><span>Price calculator</span><span>/pricing.html</span></div>
+      <div class="row"><span>Owner dashboard</span><span>/app.html</span></div>
+      <div class="row"><span>Get to dashboard</span><span>Footer "Owner login"</span></div>
+      <div class="row"><span>Dashboard PIN</span><span>7342 (every visit)</span></div>
+    </div>
+    <div class="ref">
+      <h4>Your business</h4>
+      <div class="row"><span>Phone</span><span>(801) 433-7342</span></div>
+      <div class="row"><span>Email</span><span>ClearSpaceCleaning113@gmail.com</span></div>
+      <div class="row"><span>Service area</span><span>Salt Lake valley (8 cities)</span></div>
+      <div class="row"><span>Languages</span><span>English &amp; Espa&ntilde;ol</span></div>
+      <div class="row"><span>Brand green</span><span>#22c55e</span></div>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:12px">
+    <div class="ref">
+      <h4>Pricing (edit in pricing-config.js)</h4>
+      <div class="row"><span>Standard clean</span><span>from $120</span></div>
+      <div class="row"><span>Deep clean</span><span>from $220</span></div>
+      <div class="row"><span>Move-in / out</span><span>from $280</span></div>
+      <div class="row"><span>Recurring discount</span><span>up to 20%</span></div>
+    </div>
+    <div class="ref">
+      <h4>Print files (marketing/print/)</h4>
+      <div class="row"><span>Card front</span><span>card12-front.pdf</span></div>
+      <div class="row"><span>Card back</span><span>card12-back.pdf</span></div>
+      <div class="row"><span>Flyer + door hanger</span><span>print-materials.html</span></div>
+      <div class="row"><span>Card size</span><span>3.5&times;2 + bleed</span></div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:16px">
+    <b>Verified 100% on the live server:</b> 32 / 32 pages return healthy, all code valid, pricing consistent, lead form delivering to your inbox, dashboard PIN working, branding unified. The one open item &mdash; your Google review link &mdash; is waiting on GBP verification, then it's fully complete.
+  </div>
+
+  <div style="text-align:center;margin-top:40px;color:var(--ink3);font-size:9pt">
+    <div style="font-size:1.4rem">&#10022;</div>
+    <b style="color:var(--g8)">You built a real business today, Miguel.</b><br>
+    Now go get those first jobs.
+  </div>
+
+  <div class="foot"><span>ClearSpace Home Cleaning &mdash; Launch Status Report</span><span>Page 5</span></div>
+</div>
+
+</body>
+</html>
