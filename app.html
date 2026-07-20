@@ -462,10 +462,8 @@ body:not(.locked) #pinLockOverlay{display:none !important}
 <script>
 var ClearSpaceUnlock = (function () {
   var OWNER_PIN = "7342";            // <-- change this to your own code
-  var KEY = "clearspace_owner_ok";
-  function unlock() { try { localStorage.setItem(KEY, "1"); } catch (e) {} document.body.classList.remove("locked"); }
-  // already unlocked on this device? skip the screen.
-  try { if (localStorage.getItem(KEY) === "1") unlock(); } catch (e) {}
+  // PIN is required on every visit (nothing is remembered between page loads).
+  function unlock() { document.body.classList.remove("locked"); }
   function attempt() {
     var v = document.getElementById("pinInput").value.trim();
     if (v === OWNER_PIN) { unlock(); }
@@ -479,7 +477,7 @@ var ClearSpaceUnlock = (function () {
     var i = document.getElementById("pinInput");
     if (i) { i.focus(); i.addEventListener("keydown", function (e) { if (e.key === "Enter") attempt(); }); }
   });
-  function lock() { try { localStorage.removeItem(KEY); } catch (e) {} document.body.classList.add("locked"); var i = document.getElementById("pinInput"); if (i) { i.value = ""; i.focus(); } }
+  function lock() { document.body.classList.add("locked"); var i = document.getElementById("pinInput"); if (i) { i.value = ""; i.focus(); } }
   return { try: attempt, lock: lock };
 })();
 </script>
@@ -1963,10 +1961,10 @@ var Office = {
   } catch (e) { /* non-fatal */ }
 })();
 
-/* ---------- SERVICE WORKER (offline support when hosted over http/https) ---------- */
+/* ---------- SERVICE WORKER retired (offline cache caused stale pages) ---------- */
 (function () {
-  if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
-    navigator.serviceWorker.register("./sw.js").catch(function () { /* not hosted with sw.js — fine */ });
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); });
   }
 })();
 

@@ -186,7 +186,7 @@ var Calc = (function () {
 
   return { step: step };
 })();
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+if ("serviceWorker" in navigator) navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); });
 </script>
 </body>
 </html>

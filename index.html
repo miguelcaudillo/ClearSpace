@@ -293,7 +293,8 @@ function handleQuote(e) {
   );
   return false;
 }
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+/* Offline service worker removed (it caused stale pages). Retire any old one. */
+if ("serviceWorker" in navigator) navigator.serviceWorker.getRegistrations().then(function (rs) { rs.forEach(function (r) { r.unregister(); }); });
 </script>
 </body>
 </html>

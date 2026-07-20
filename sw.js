@@ -1,32 +1,16 @@
-/* ClearSpace service worker — cache-first so the app works offline once visited. */
-var CACHE = "clearspace-v10";
-var ASSETS = ["./", "./index.html"];
-
-self.addEventListener("install", function (e) {
-  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }));
-  self.skipWaiting();
-});
+/* ClearSpace — self-retiring service worker.
+   The offline cache caused stale pages after every update, so it's been removed.
+   This version clears all old caches and unregisters itself, then reloads open
+   tabs with fresh content. Safe to delete this file once every device has loaded
+   the site at least once after this change. */
+self.addEventListener("install", function () { self.skipWaiting(); });
 
 self.addEventListener("activate", function (e) {
-  e.waitUntil(
-    caches.keys().then(function (keys) {
-      return Promise.all(keys.filter(function (k) { return k !== CACHE; }).map(function (k) { return caches.delete(k); }));
-    })
-  );
-  self.clients.claim();
-});
-
-self.addEventListener("fetch", function (e) {
-  if (e.request.method !== "GET") return;
-  e.respondWith(
-    fetch(e.request)
-      .then(function (res) {
-        var clone = res.clone();
-        caches.open(CACHE).then(function (c) { c.put(e.request, clone); });
-        return res;
-      })
-      .catch(function () {
-        return caches.match(e.request).then(function (r) { return r || caches.match("./index.html"); });
-      })
-  );
+  e.waitUntil((async function () {
+    var keys = await caches.keys();
+    await Promise.all(keys.map(function (k) { return caches.delete(k); }));
+    await self.registration.unregister();
+    var clients = await self.clients.matchAll({ type: "window" });
+    clients.forEach(function (c) { c.navigate(c.url); });
+  })());
 });
