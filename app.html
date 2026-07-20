@@ -479,7 +479,8 @@ var ClearSpaceUnlock = (function () {
     var i = document.getElementById("pinInput");
     if (i) { i.focus(); i.addEventListener("keydown", function (e) { if (e.key === "Enter") attempt(); }); }
   });
-  return { try: attempt };
+  function lock() { try { localStorage.removeItem(KEY); } catch (e) {} document.body.classList.add("locked"); var i = document.getElementById("pinInput"); if (i) { i.value = ""; i.focus(); } }
+  return { try: attempt, lock: lock };
 })();
 </script>
 
@@ -677,6 +678,7 @@ var ClearSpaceUnlock = (function () {
         </nav>
         <button class="btn btn-ghost btn-sm" onclick="App.exportBackup()">⬇ Backup</button>
         <button class="btn btn-ghost btn-sm" onclick="App.resetDemo()">↺ Reset demo data</button>
+        <button class="btn btn-ghost btn-sm" onclick="ClearSpaceUnlock.lock()">🔒 Lock</button>
       </div>
     </div>
 
