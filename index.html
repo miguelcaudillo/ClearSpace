@@ -3,1933 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ClearSpace — Home Cleaning, Perfected</title>
-<meta name="description" content="ClearSpace — premium home cleaning. Instant estimates, easy booking.">
+<title>ClearSpace Home Cleaning — House Cleaning & Organizing in West Jordan & Salt Lake City, UT</title>
+<meta name="description" content="Professional house cleaning and home organizing in West Jordan, Salt Lake City, and the Salt Lake valley. Instant estimates, flat-rate pricing, bilingual service. Request your free quote today.">
 <meta name="theme-color" content="#059669">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="ClearSpace">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23059669'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23059669'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-/* ============ TOKENS & RESET ============ */
-:root{
-  --em-950:#022c22; --em-900:#064e3b; --em-800:#065f46; --em-700:#047857;
-  --em-600:#059669; --em-500:#10b981; --em-400:#34d399; --em-300:#6ee7b7;
-  --em-200:#a7f3d0; --em-100:#d1fae5; --em-50:#ecfdf5;
-  --amber-600:#d97706; --amber-500:#f59e0b; --amber-400:#fbbf24; --amber-50:#fffbeb;
-  --ink:#0b1f18; --ink-2:#33473f; --ink-3:#5c6f67; --line:#dcebe3;
-  --bg:#eef8f2; --card:#ffffff;
-  --red:#dc2626; --red-bg:#fef2f2; --blue:#2563eb; --blue-bg:#eff6ff;
-  --radius:18px; --radius-sm:12px;
-  --shadow-1:0 1px 2px rgba(2,44,34,.05),0 4px 14px rgba(2,44,34,.06);
-  --shadow-2:0 2px 6px rgba(2,44,34,.07),0 14px 38px rgba(2,44,34,.10);
-  --shadow-3:0 8px 20px rgba(2,44,34,.10),0 28px 70px rgba(2,44,34,.16);
-  --font-head:"Avenir Next","Segoe UI Variable Display","Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
-  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--font-body);color:var(--ink);background:linear-gradient(180deg,#f1faf5 0%,var(--bg) 40%,#e7f4ec 100%);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;position:relative}
-/* Aurora wash — fixed, slow-drifting emerald light behind everything */
-body::before{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;
-  background:
-    radial-gradient(42% 38% at 18% 22%,rgba(16,185,129,.16),transparent 70%),
-    radial-gradient(46% 42% at 85% 12%,rgba(52,211,153,.18),transparent 70%),
-    radial-gradient(38% 40% at 72% 78%,rgba(6,95,70,.10),transparent 70%),
-    radial-gradient(30% 30% at 8% 85%,rgba(251,191,36,.08),transparent 70%),
-    radial-gradient(34% 32% at 50% 45%,rgba(110,231,183,.10),transparent 70%);
-  background-size:160% 160%;
-  animation:aurora 36s ease-in-out infinite alternate}
-@keyframes aurora{
-  0%{background-position:0% 0%;transform:rotate(0deg) scale(1)}
-  50%{background-position:60% 40%}
-  100%{background-position:100% 100%;transform:rotate(2deg) scale(1.06)}
-}
-/* Film-grain texture — organic, print-like finish over the gradients */
-body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
-img,svg{display:block;max-width:100%}
-button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
-input,select,textarea{font:inherit;color:inherit}
-a{color:var(--em-700);text-decoration:none}
-a:hover{text-decoration:underline}
-:focus-visible{outline:3px solid var(--em-500);outline-offset:2px;border-radius:4px}
-h1,h2,h3,h4{font-family:var(--font-head);font-weight:800;letter-spacing:-.02em;line-height:1.12;color:var(--ink)}
-.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--em-700);background:var(--em-50);border:1px solid var(--em-100);padding:6px 14px;border-radius:999px;margin-bottom:18px}
-.section-title{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:12px}
-.section-sub{color:var(--ink-3);max-width:56ch;font-size:1.05rem;margin-bottom:40px}
-section{padding:84px 0}
-@media(max-width:640px){section{padding:56px 0}}
-
-/* ============ HEADER ============ */
-.site-header{position:sticky;top:0;z-index:60;background:rgba(238,248,242,.72);backdrop-filter:blur(14px) saturate(1.5);-webkit-backdrop-filter:blur(14px) saturate(1.5);border-bottom:1px solid rgba(190,224,206,.55)}
-.header-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:66px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:800;font-size:1.22rem;letter-spacing:-.02em;color:var(--ink)}
-.brand-mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--em-500),var(--em-800));display:grid;place-items:center;color:#fff;font-size:1rem;box-shadow:var(--shadow-1);flex:none}
-.brand span b{color:var(--em-700)}
-.mode-switch{display:flex;background:var(--em-50);border:1px solid var(--em-100);border-radius:999px;padding:4px;gap:2px}
-.mode-switch button{padding:7px 18px;border-radius:999px;font-weight:600;font-size:.88rem;color:var(--em-800);transition:all .18s ease;white-space:nowrap}
-.mode-switch button.active{background:var(--em-700);color:#fff;box-shadow:var(--shadow-1)}
-.header-cta{white-space:nowrap}
-@media(max-width:680px){.header-cta{display:none}.brand span i{display:none}}
-
-/* ============ BUTTONS ============ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:999px;padding:13px 26px;font-size:.95rem;letter-spacing:.01em;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;text-decoration:none !important}
-.btn:hover{transform:translateY(-2px)}
-.btn:active{transform:translateY(0)}
-.btn-primary{background:linear-gradient(135deg,var(--amber-500),var(--amber-600));color:#fff;box-shadow:0 4px 14px rgba(217,119,6,.35)}
-.btn-primary:hover{box-shadow:0 8px 24px rgba(217,119,6,.4)}
-.btn-em{background:var(--em-700);color:#fff;box-shadow:0 4px 14px rgba(4,120,87,.3)}
-.btn-em:hover{background:var(--em-800)}
-.btn-ghost{background:#fff;color:var(--em-800);border:1.5px solid var(--line);box-shadow:var(--shadow-1)}
-.btn-ghost:hover{border-color:var(--em-300);background:var(--em-50)}
-.btn-sm{padding:8px 16px;font-size:.84rem}
-.btn[disabled]{opacity:.5;cursor:not-allowed;transform:none !important}
-
-/* ============ HERO ============ */
-.hero{position:relative;overflow:hidden;padding:96px 0 110px;background:
-  radial-gradient(1100px 520px at 82% -10%,rgba(52,211,153,.22),transparent 62%),
-  radial-gradient(800px 460px at -8% 22%,rgba(16,185,129,.14),transparent 60%),
-  radial-gradient(600px 380px at 55% 108%,rgba(251,191,36,.10),transparent 62%),
-  linear-gradient(180deg,rgba(233,248,240,.85) 0%,rgba(238,248,242,0) 90%)}
-.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(6,95,70,.07) 1px,transparent 1px);background-size:26px 26px;mask-image:linear-gradient(180deg,transparent,black 30%,transparent 90%);-webkit-mask-image:linear-gradient(180deg,transparent,black 30%,transparent 90%);pointer-events:none}
-.hero-blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none}
-.hero-blob.b1{width:420px;height:420px;background:var(--em-200);top:-140px;right:-80px}
-.hero-blob.b2{width:340px;height:340px;background:#fde9c8;bottom:-160px;left:-100px;opacity:.65}
-.hero-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-@media(max-width:880px){.hero-in{grid-template-columns:1fr;gap:44px}.hero{padding:64px 0 72px}}
-.hero h1{font-size:clamp(2.4rem,5.6vw,4rem);letter-spacing:-.035em;margin:0 0 20px}
-.hero h1 .hl{background:linear-gradient(120deg,var(--em-600),var(--em-400));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lede{font-size:1.14rem;color:var(--ink-2);max-width:48ch;margin-bottom:30px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
-.hero-trust{display:flex;gap:26px;flex-wrap:wrap}
-.trust-item b{display:block;font-family:var(--font-head);font-size:1.35rem;letter-spacing:-.02em;color:var(--em-800)}
-.trust-item span{font-size:.82rem;color:var(--ink-3)}
-.hero-card{background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border:1px solid #dcefe6;border-radius:24px;box-shadow:var(--shadow-3);padding:26px;position:relative}
-.hero-card .hc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.hero-card .hc-head h3{font-size:1.02rem}
-.hc-badge{font-size:.72rem;font-weight:700;color:var(--em-700);background:var(--em-50);border:1px solid var(--em-100);padding:4px 10px;border-radius:999px}
-.hc-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
-.hc-row:last-of-type{border-bottom:0}
-.hc-ico{width:36px;height:36px;border-radius:10px;background:var(--em-50);display:grid;place-items:center;font-size:1rem;flex:none}
-.hc-row b{font-size:.9rem}
-.hc-row span{font-size:.78rem;color:var(--ink-3);display:block}
-.hc-price{margin-left:auto;font-family:var(--font-head);font-weight:800;color:var(--em-700)}
-.hero-float{position:absolute;top:-18px;right:-14px;background:#fff;border:1px solid var(--em-100);border-radius:14px;box-shadow:var(--shadow-2);padding:10px 16px;font-size:.82rem;font-weight:700;color:var(--em-800);display:flex;gap:8px;align-items:center;animation:floaty 5s ease-in-out infinite}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-
-/* ============ REVEAL ============ */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){
-  *{animation-duration:.001s !important;animation-iteration-count:1 !important;transition-duration:.001s !important;scroll-behavior:auto !important}
-  .reveal{opacity:1;transform:none}
-}
-
-/* ============ SERVICES BENTO ============ */
-.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-@media(max-width:920px){.bento{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.bento{grid-template-columns:1fr}}
-.svc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow-1);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;position:relative;overflow:hidden}
-.svc-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-2);border-color:var(--em-200)}
-.svc-card.feat{background:linear-gradient(150deg,var(--em-800),var(--em-950));color:#e7f7f0;border-color:var(--em-800)}
-.svc-card.feat h3{color:#fff}
-.svc-card.feat p{color:#b8dfd0}
-.svc-card.feat .svc-price{color:var(--em-300)}
-.svc-ico{width:46px;height:46px;border-radius:13px;background:var(--em-50);border:1px solid var(--em-100);display:grid;place-items:center;font-size:1.3rem;margin-bottom:16px}
-.svc-card.feat .svc-ico{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18)}
-.svc-card h3{font-size:1.12rem;margin-bottom:8px}
-.svc-card p{font-size:.9rem;color:var(--ink-3);margin-bottom:14px}
-.svc-price{font-family:var(--font-head);font-weight:800;color:var(--em-700);font-size:.95rem}
-.svc-tag{position:absolute;top:16px;right:16px;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--amber-400);color:#7c4a03;padding:4px 10px;border-radius:999px}
-
-/* ============ HOW IT WORKS ============ */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:step}
-@media(max-width:760px){.steps{grid-template-columns:1fr}}
-.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow-1);position:relative}
-.step-num{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--em-500),var(--em-700));color:#fff;display:grid;place-items:center;font-family:var(--font-head);font-weight:800;font-size:1.05rem;margin-bottom:18px;box-shadow:0 4px 12px rgba(5,150,105,.3)}
-.step h3{font-size:1.08rem;margin-bottom:8px}
-.step p{font-size:.92rem;color:var(--ink-3)}
-
-/* ============ GALLERY ============ */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-@media(max-width:860px){.gallery{grid-template-columns:1fr}}
-.ba-tile{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-1);background:#fff;transition:transform .22s ease,box-shadow .22s ease}
-.ba-tile:hover{transform:translateY(-4px);box-shadow:var(--shadow-2)}
-.ba-split{display:grid;grid-template-columns:1fr 1fr;height:190px}
-.ba-half{display:grid;place-items:center;position:relative;font-family:var(--font-head);font-weight:800;letter-spacing:.02em}
-.ba-half.before{background:repeating-linear-gradient(135deg,#e8e3da 0 14px,#ded7cb 14px 28px);color:#8a7f6d}
-.ba-half.after{background:linear-gradient(150deg,var(--em-100),var(--em-300));color:var(--em-900)}
-.ba-half .lbl{position:absolute;top:10px;left:10px;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.85);padding:3px 9px;border-radius:999px;color:var(--ink-2)}
-.ba-half .big{font-size:1.6rem;opacity:.75}
-.ba-cap{padding:14px 18px;font-size:.88rem;font-weight:600}
-.ba-cap span{display:block;font-weight:400;font-size:.78rem;color:var(--ink-3)}
-
-/* ============ REVIEWS ============ */
-.reviews-band{background:linear-gradient(160deg,var(--em-950),var(--em-900) 55%,var(--em-800));color:#dff5ec;border-radius:28px;padding:64px 40px;position:relative;overflow:hidden}
-.reviews-band::after{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.25),transparent 70%);top:-200px;right:-140px;pointer-events:none}
-@media(max-width:640px){.reviews-band{padding:44px 22px;border-radius:20px}}
-.reviews-band .section-title{color:#fff}
-.reviews-band .section-sub{color:#a9d6c6}
-.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;position:relative;z-index:1}
-@media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
-.rev-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:24px;backdrop-filter:blur(6px)}
-.rev-stars{color:var(--amber-400);letter-spacing:3px;margin-bottom:12px;font-size:.9rem}
-.rev-card p{font-size:.93rem;color:#d4ece2;margin-bottom:16px}
-.rev-who{display:flex;align-items:center;gap:11px}
-.rev-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--em-400),var(--em-600));display:grid;place-items:center;font-weight:800;font-size:.85rem;color:#fff;flex:none}
-.rev-who b{font-size:.88rem;color:#fff}
-.rev-who span{display:block;font-size:.75rem;color:#8fc4b2}
-
-/* ============ ESTIMATOR ============ */
-.est-shell{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:start}
-@media(max-width:880px){.est-shell{grid-template-columns:1fr}}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-1);padding:28px}
-@media(max-width:560px){.panel{padding:20px 16px}}
-.field-label{display:block;font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);margin:22px 0 10px}
-.field-label:first-child{margin-top:0}
-.seg{display:flex;gap:8px;flex-wrap:wrap}
-.seg button{flex:1;min-width:100px;padding:12px 10px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:.88rem;color:var(--ink-2);transition:all .16s ease;text-align:center}
-.seg button small{display:block;font-size:.7rem;font-weight:600;color:var(--em-600);margin-top:2px}
-.seg button:hover{border-color:var(--em-300)}
-.seg button.active{border-color:var(--em-600);background:var(--em-50);color:var(--em-900);box-shadow:0 0 0 1px var(--em-600) inset}
-.stepper-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:480px){.stepper-row{grid-template-columns:1fr}}
-.stepper{display:flex;align-items:center;justify-content:space-between;border:1.5px solid var(--line);border-radius:14px;padding:8px 10px;background:#fff}
-.stepper .st-lab{font-size:.88rem;font-weight:600;color:var(--ink-2)}
-.stepper .st-ctl{display:flex;align-items:center;gap:12px}
-.stepper button{width:32px;height:32px;border-radius:50%;background:var(--em-50);border:1px solid var(--em-100);color:var(--em-800);font-weight:800;font-size:1.05rem;display:grid;place-items:center;transition:background .15s}
-.stepper button:hover{background:var(--em-100)}
-.stepper b{min-width:20px;text-align:center;font-family:var(--font-head)}
-.addons{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-@media(max-width:640px){.addons{grid-template-columns:repeat(2,1fr)}}
-.addon{border:1.5px solid var(--line);border-radius:13px;padding:11px 12px;background:#fff;text-align:left;font-size:.83rem;font-weight:600;color:var(--ink-2);transition:all .16s ease;display:flex;flex-direction:column;gap:2px}
-.addon small{font-weight:700;color:var(--em-600);font-size:.76rem}
-.addon:hover{border-color:var(--em-300)}
-.addon.active{border-color:var(--em-600);background:var(--em-50);color:var(--em-900);box-shadow:0 0 0 1px var(--em-600) inset}
-.price-panel{position:sticky;top:86px}
-.price-hero{background:linear-gradient(150deg,var(--em-800),var(--em-950));border-radius:22px;color:#fff;padding:30px 28px;box-shadow:var(--shadow-2);position:relative;overflow:hidden}
-.price-hero::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.3),transparent 70%);top:-130px;right:-100px}
-.price-hero .ph-lab{font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--em-300)}
-.price-big{font-family:var(--font-head);font-size:3.3rem;font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:6px 0 2px}
-.price-big sup{font-size:1.4rem;top:-.9em}
-.price-freq{font-size:.85rem;color:#a9d6c6;margin-bottom:18px}
-.price-break{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.15);padding-top:14px;margin-top:6px;font-size:.86rem}
-.price-break .br{display:flex;justify-content:space-between;padding:4px 0;color:#cdeee1}
-.price-break .br.disc{color:var(--amber-400);font-weight:700}
-.price-break .br.tot{border-top:1px dashed rgba(255,255,255,.25);margin-top:8px;padding-top:10px;font-weight:800;color:#fff;font-size:.95rem}
-.price-hero .btn{width:100%;margin-top:20px;position:relative;z-index:1}
-.zip-box{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow-1)}
-.zip-box h4{font-size:.95rem;margin-bottom:10px}
-.zip-row{display:flex;gap:8px}
-.zip-row input{flex:1;border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;font-size:.95rem;min-width:0}
-.zip-row input:focus{border-color:var(--em-500);outline:none;box-shadow:0 0 0 3px var(--em-100)}
-.zip-msg{margin-top:10px;font-size:.85rem;font-weight:600;display:none;padding:9px 13px;border-radius:10px}
-.zip-msg.ok{display:block;background:var(--em-50);color:var(--em-800);border:1px solid var(--em-100)}
-.zip-msg.no{display:block;background:var(--red-bg);color:var(--red);border:1px solid #fecaca}
-
-/* ============ CTA BAND & FOOTER ============ */
-.cta-band{background:linear-gradient(135deg,var(--em-600),var(--em-800));border-radius:28px;padding:58px 44px;text-align:center;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-2)}
-.cta-band::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.13) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
-.cta-band h2{color:#fff;font-size:clamp(1.6rem,3.6vw,2.3rem);margin-bottom:12px;position:relative}
-.cta-band p{color:#c8ecdd;margin-bottom:26px;position:relative}
-@media(max-width:600px){.cta-band{padding:40px 22px;border-radius:20px}}
-.site-footer{padding:44px 0 60px;border-top:1px solid var(--line);margin-top:40px}
-.foot-in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
-.foot-in p{font-size:.85rem;color:var(--ink-3)}
-
-/* ============ MODAL ============ */
-.modal-back{position:fixed;inset:0;background:rgba(2,44,34,.45);backdrop-filter:blur(4px);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:24px;overflow-y:auto}
-.modal-back.open{display:flex}
-.modal{background:#fff;border-radius:24px;box-shadow:var(--shadow-3);width:100%;max-width:560px;padding:32px;margin:auto 0;animation:modalin .28s ease}
-@keyframes modalin{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:none}}
-@media(max-width:560px){.modal{padding:24px 18px;border-radius:20px}}
-.modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
-.modal-head h3{font-size:1.4rem}
-.modal-x{width:36px;height:36px;border-radius:50%;background:var(--em-50);color:var(--em-800);font-size:1.05rem;display:grid;place-items:center;flex:none}
-.modal-x:hover{background:var(--em-100)}
-.modal .sub{color:var(--ink-3);font-size:.9rem;margin-bottom:20px}
-.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.f-grid .full{grid-column:1/-1}
-@media(max-width:480px){.f-grid{grid-template-columns:1fr}}
-.f-field label{display:block;font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);margin-bottom:5px}
-.f-field input,.f-field select,.f-field textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;font-size:.94rem;background:#fff}
-.f-field textarea{resize:vertical;min-height:74px}
-.f-field input:focus,.f-field select:focus,.f-field textarea:focus{border-color:var(--em-500);outline:none;box-shadow:0 0 0 3px var(--em-100)}
-.form-err{display:none;background:var(--red-bg);color:var(--red);border:1px solid #fecaca;border-radius:12px;padding:10px 14px;font-size:.86rem;font-weight:600;margin-top:14px}
-.form-err.show{display:block}
-.modal-actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
-.modal-actions .btn{flex:1}
-.success-view{text-align:center;padding:14px 0}
-.success-ico{width:74px;height:74px;border-radius:50%;background:var(--em-50);border:2px solid var(--em-200);display:grid;place-items:center;font-size:2rem;margin:0 auto 18px;color:var(--em-600)}
-.success-view h3{font-size:1.5rem;margin-bottom:8px}
-.success-view p{color:var(--ink-3);font-size:.94rem;margin-bottom:6px}
-.ref-chip{display:inline-block;font-family:var(--font-head);font-weight:800;letter-spacing:.06em;background:var(--em-50);border:1.5px dashed var(--em-300);color:var(--em-800);border-radius:12px;padding:10px 22px;margin:14px 0 20px;font-size:1.05rem}
-.stub-note{margin-top:18px;background:var(--amber-50);border:1px dashed var(--amber-400);border-radius:12px;padding:12px 14px;font-size:.8rem;color:#92610a;text-align:left}
-
-/* ============ OFFICE ============ */
-#officeView{display:none;background:transparent;min-height:100vh}
-.office-shell{max-width:1180px;margin:0 auto;padding:26px 22px 90px}
-.office-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px}
-.office-top h1{font-size:clamp(1.5rem,3vw,2rem);background:linear-gradient(120deg,var(--em-950),var(--em-600));-webkit-background-clip:text;background-clip:text;color:transparent}
-.office-top .sub{color:var(--ink-3);font-size:.9rem}
-.office-tabs{display:flex;gap:6px;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(190,224,206,.6);border-radius:999px;padding:5px;box-shadow:var(--shadow-1);overflow-x:auto;max-width:100%}
-.office-tabs button{padding:9px 20px;border-radius:999px;font-weight:600;font-size:.88rem;color:var(--ink-2);white-space:nowrap;transition:all .16s}
-.office-tabs button.active{background:var(--em-700);color:#fff}
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
-@media(max-width:900px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.stat-grid{grid-template-columns:1fr}}
-.stat-card{background:linear-gradient(160deg,rgba(255,255,255,.92),rgba(236,253,245,.55));backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(190,224,206,.65);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-1);position:relative;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
-.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
-.stat-card::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--em-500),var(--em-300))}
-.stat-card.warn::after{background:linear-gradient(90deg,var(--amber-500),var(--amber-400))}
-.stat-card .sc-lab{font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
-.stat-card .sc-val{font-family:var(--font-head);font-size:2.1rem;font-weight:800;letter-spacing:-.02em;margin:4px 0 2px;background:linear-gradient(120deg,var(--em-950),var(--em-700));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat-card.warn .sc-val{background:linear-gradient(120deg,#78350f,var(--amber-600));-webkit-background-clip:text;background-clip:text}
-.stat-card .sc-sub{font-size:.8rem;color:var(--ink-3)}
-.office-panel{background:rgba(255,255,255,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(190,224,206,.6);border-radius:20px;box-shadow:var(--shadow-1);padding:24px;margin-bottom:22px}
-.office-panel h2{position:relative;padding-left:14px}
-.office-panel h2::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:4px;border-radius:99px;background:linear-gradient(180deg,var(--em-500),var(--em-700))}
-.office-panel h2{font-size:1.2rem;margin-bottom:4px}
-.office-panel .p-sub{font-size:.86rem;color:var(--ink-3);margin-bottom:18px}
-.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-table.data{width:100%;border-collapse:collapse;font-size:.88rem;min-width:640px}
-table.data th{text-align:left;font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--em-800);padding:10px 12px;border-bottom:2px solid var(--em-200);background:rgba(236,253,245,.5)}
-table.data td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
-table.data tr:last-child td{border-bottom:0}
-table.data tr:hover td{background:rgba(236,253,245,.55)}
-.status-pill{display:inline-block;font-size:.74rem;font-weight:700;padding:4px 12px;border-radius:999px;white-space:nowrap}
-.st-scheduled{background:var(--blue-bg);color:var(--blue)}
-.st-inprogress{background:var(--amber-50);color:var(--amber-600)}
-.st-done{background:var(--em-50);color:var(--em-700)}
-.pill-paid{background:var(--em-50);color:var(--em-700)}
-.pill-unpaid{background:var(--red-bg);color:var(--red)}
-.pill-quote{background:#f3e8ff;color:#7c3aed}
-.mini-sel{border:1.5px solid var(--line);border-radius:10px;padding:6px 9px;font-size:.82rem;background:#fff;max-width:150px}
-.mini-sel:focus{border-color:var(--em-500);outline:none}
-.client-card{border:1px solid rgba(190,224,206,.6);border-left:4px solid var(--em-400);border-radius:16px;padding:18px 20px;margin-bottom:12px;background:linear-gradient(160deg,rgba(255,255,255,.95),rgba(236,253,245,.4));transition:box-shadow .18s,transform .18s}
-.client-card:hover{box-shadow:var(--shadow-2);transform:translateY(-2px)}
-.cc-head{display:flex;align-items:center;gap:14px;cursor:pointer}
-.cc-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--em-500),var(--em-700));color:#fff;font-weight:800;display:grid;place-items:center;font-size:.95rem;flex:none}
-.cc-head .cc-name{font-weight:700;font-size:.98rem}
-.cc-head .cc-meta{font-size:.8rem;color:var(--ink-3)}
-.cc-ltv{margin-left:auto;text-align:right;flex:none}
-.cc-ltv b{font-family:var(--font-head);color:var(--em-700);font-size:1.05rem}
-.cc-ltv span{display:block;font-size:.7rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
-.cc-body{display:none;margin-top:16px;padding-top:16px;border-top:1px dashed var(--line)}
-.client-card.open .cc-body{display:block}
-.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
-@media(max-width:560px){.cc-grid{grid-template-columns:1fr}}
-.cc-field label{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin-bottom:4px}
-.cc-field input,.cc-field textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:8px 11px;font-size:.87rem}
-.cc-field input:focus,.cc-field textarea:focus{border-color:var(--em-500);outline:none}
-.cc-hist{font-size:.83rem;color:var(--ink-2)}
-.cc-hist li{margin-left:18px;padding:3px 0}
-.empty-note{padding:30px;text-align:center;color:var(--ink-3);font-size:.9rem}
-.stub-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-@media(max-width:880px){.stub-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.stub-grid{grid-template-columns:1fr}}
-.stub-card{border:1.5px dashed #d8c79a;background:var(--amber-50);border-radius:16px;padding:20px;position:relative}
-.stub-card .soon{position:absolute;top:12px;right:12px;font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--amber-400);color:#7c4a03;padding:3px 9px;border-radius:999px}
-.stub-card h3{font-size:.98rem;margin:8px 0 6px}
-.stub-card p{font-size:.8rem;color:#92610a;margin-bottom:14px}
-.stub-card .s-ico{font-size:1.5rem}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--em-900);color:#fff;padding:13px 26px;border-radius:999px;font-size:.9rem;font-weight:600;box-shadow:var(--shadow-3);z-index:200;opacity:0;transition:all .3s ease;pointer-events:none;max-width:90vw;text-align:center}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.office-view-pane{display:none}
-.office-view-pane.active{display:block}
-.tbl-actions{display:flex;gap:6px;flex-wrap:wrap}
-.recur-badge{font-size:.72rem;cursor:help}
-.del-btn{width:30px;height:30px;border-radius:50%;background:var(--red-bg);color:var(--red);font-size:.85rem;display:grid;place-items:center;flex:none}
-.del-btn:hover{background:#fee2e2}
-
-/* ============ CALENDAR ============ */
-.cal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:16px}
-.cal-title{font-family:var(--font-head);font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
-.cal-nav{display:flex;gap:8px;align-items:center}
-.cal-nav button{width:38px;height:38px;border-radius:50%;background:var(--em-50);border:1px solid var(--em-100);color:var(--em-800);font-weight:800;display:grid;place-items:center;transition:background .15s}
-.cal-nav button:hover{background:var(--em-100)}
-.cal-nav .cal-today-btn{width:auto;border-radius:999px;padding:0 16px;font-size:.84rem;font-weight:700;height:38px}
-.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
-.cal-dow{font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);text-align:center;padding:4px 0}
-.cal-cell{min-height:98px;border:1px solid rgba(190,224,206,.55);border-radius:12px;padding:6px;background:rgba(255,255,255,.88);cursor:pointer;text-align:left;transition:border-color .15s,box-shadow .15s;overflow:hidden;display:block;width:100%}
-.cal-cell:hover{border-color:var(--em-300);box-shadow:var(--shadow-1)}
-.cal-cell.other{opacity:.42;background:rgba(236,253,245,.45)}
-.cal-cell.today{border-color:var(--em-500);box-shadow:0 0 0 2px var(--em-100)}
-.cal-cell.sel{border-color:var(--em-600);background:var(--em-50);box-shadow:0 0 0 1px var(--em-600) inset}
-.cal-date{font-size:.76rem;font-weight:700;color:var(--ink-2)}
-.cal-cell.today .cal-date{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--em-600);color:#fff}
-.cal-chip{display:block;font-size:.64rem;font-weight:700;padding:2px 7px;border-radius:6px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
-.cal-more{display:block;font-size:.62rem;color:var(--ink-3);margin-top:3px;font-weight:700}
-.cal-dots{display:none;gap:3px;flex-wrap:wrap;margin-top:4px}
-.cal-dot{width:7px;height:7px;border-radius:50%}
-.cal-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:.76rem;color:var(--ink-3);font-weight:600}
-.cal-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;font-style:normal}
-@media(max-width:720px){
-  .cal-cell{min-height:52px;padding:4px;border-radius:9px}
-  .cal-chip,.cal-more{display:none}
-  .cal-dots{display:flex}
-}
-#calDayDetail{margin-top:20px}
-#calDayDetail h3{font-size:1rem;margin-bottom:10px}
-
-/* ============ JOB QUEUE + DAY SCHEDULER ============ */
-.cal-layout{display:grid;grid-template-columns:268px 1fr;gap:20px;align-items:start}
-@media(max-width:880px){.cal-layout{grid-template-columns:1fr}}
-.queue-side{background:linear-gradient(170deg,rgba(236,253,245,.75),rgba(209,250,229,.35));border:1.5px dashed var(--em-300);border-radius:16px;padding:16px;min-height:220px;transition:background .15s,border-color .15s}
-.queue-side.dragover{border-color:var(--em-600);background:var(--em-50)}
-.queue-side h3{font-size:.95rem;display:flex;align-items:center;gap:8px;margin-bottom:4px}
-.q-count{font-size:.68rem;background:var(--em-600);color:#fff;border-radius:999px;padding:2px 9px;font-weight:800}
-.q-hint{font-size:.74rem;color:var(--ink-3);margin-bottom:12px}
-.q-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--em-500);border-radius:12px;padding:10px 12px;margin-bottom:8px;cursor:grab;box-shadow:var(--shadow-1);transition:transform .15s,box-shadow .15s,border-color .15s;-webkit-user-select:none;user-select:none}
-.q-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-2)}
-.q-card:active{cursor:grabbing}
-.q-card.placing{border-color:var(--amber-500);border-left-color:var(--amber-500);background:var(--amber-50)}
-.q-card b{font-size:.86rem;display:block}
-.q-card .q-sub{font-size:.73rem;color:var(--ink-3);display:block}
-.q-card .q-price{float:right;font-family:var(--font-head);font-weight:800;color:var(--em-700);font-size:.86rem}
-.q-empty{font-size:.8rem;color:var(--ink-3);text-align:center;padding:20px 6px}
-.cal-cell.dragover{border-color:var(--amber-500);background:var(--amber-50);box-shadow:0 0 0 2px var(--amber-400)}
-.place-banner{display:none;background:var(--amber-50);border:1.5px dashed var(--amber-400);color:#92610a;border-radius:12px;padding:9px 14px;font-size:.8rem;font-weight:600;margin-bottom:14px}
-.place-banner.show{display:block}
-.day-sched{margin-top:10px;border:1px solid rgba(190,224,206,.6);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.9)}
-.slot-row{display:grid;grid-template-columns:88px 1fr;border-bottom:1px solid var(--line);min-height:46px;cursor:default}
-.slot-row:last-child{border-bottom:0}
-.slot-time{font-size:.7rem;font-weight:800;letter-spacing:.04em;color:var(--em-800);padding:8px 10px;background:rgba(236,253,245,.6);border-right:1px solid var(--em-100);display:flex;align-items:center}
-.slot-jobs{padding:6px 8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;min-height:46px;transition:background .15s}
-.slot-row.dragover .slot-jobs{background:var(--amber-50)}
-.slot-row.anytime .slot-time{color:var(--em-700)}
-.day-chip{display:inline-flex;align-items:center;gap:7px;font-size:.76rem;font-weight:700;border-radius:999px;padding:5px 12px;cursor:grab;box-shadow:var(--shadow-1)}
-.day-chip:active{cursor:grabbing}
-.day-chip .dc-x{font-size:.72rem;opacity:.6;padding:0 1px}
-.day-chip .dc-x:hover{opacity:1}
-
-/* ============ TIMELINE (day view with durations) ============ */
-.tl-body{position:relative}
-.tl-canvas{position:absolute;top:0;bottom:0;left:96px;right:10px;pointer-events:none}
-.tl-block{position:absolute;pointer-events:auto;border-radius:12px;padding:8px 12px 16px;font-size:.76rem;overflow:hidden;box-shadow:var(--shadow-1);cursor:grab;border:1px solid transparent;display:flex;flex-direction:column;gap:2px;min-height:34px}
-.tl-block:active{cursor:grabbing}
-.tl-block:hover{box-shadow:var(--shadow-2);z-index:5}
-.blk-scheduled{background:var(--blue-bg);border-color:#bfdbfe;border-left:4px solid var(--blue);color:#1e3a8a}
-.blk-inprogress{background:var(--amber-50);border-color:#fde68a;border-left:4px solid var(--amber-500);color:#78350f}
-.blk-done{background:var(--em-50);border-color:var(--em-200);border-left:4px solid var(--em-500);color:var(--em-900)}
-.tlb-head{display:flex;justify-content:space-between;gap:8px;font-weight:800;white-space:nowrap}
-.tlb-dur{font-weight:800;opacity:.75}
-.tlb-name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.tlb-ctl{display:flex;gap:5px;margin-top:auto;flex-wrap:wrap}
-.tlb-ctl button{font-size:.66rem;font-weight:800;background:rgba(255,255,255,.75);border:1px solid rgba(0,0,0,.08);border-radius:999px;padding:2px 9px;line-height:1.4}
-.tlb-ctl button:hover{background:#fff}
-.tlb-resize{position:absolute;left:0;right:0;bottom:0;height:12px;cursor:ns-resize;display:grid;place-items:center;touch-action:none;color:inherit;opacity:.45}
-.tlb-resize:hover{opacity:1;background:rgba(0,0,0,.05)}
-.tlb-resize::after{content:"";width:34px;height:3px;border-radius:99px;background:currentColor}
-.tl-block.resizing{box-shadow:var(--shadow-3);z-index:9;opacity:.95}
-.slot-row.hour-row{min-height:0;height:64px}
-.slot-row.hour-row .slot-jobs{min-height:0}
-.dur-hint{font-size:.72rem;color:var(--ink-3);margin-top:8px}
+/* Landing-only styles */
+.hero{padding:70px 0 60px;position:relative;overflow:hidden}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+@media(max-width:880px){.hero-in{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.4rem);margin:14px 0 18px}
+.hero h1 .hl{color:var(--em-700)}
+.lede{color:var(--ink-2);font-size:1.12rem;max-width:54ch;margin-bottom:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-2);padding:26px}
+.hero-card h3{font-size:1.02rem;margin-bottom:14px}
+.hc-line{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink-2)}
+.hc-line:first-of-type{border-top:none}
+.hc-line .ico{font-size:1.2rem}
+.svc-org{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:18px;background:linear-gradient(140deg,#fffbeb,#fff);border:1px solid #fde68a}
+.svc-org .svc-ico{font-size:2rem}
+.svc-org > div{flex:1;min-width:220px}
+.quote-shell{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+@media(max-width:880px){.quote-shell{grid-template-columns:1fr}}
+.quote-side h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:12px}
+.quote-side p{color:var(--ink-3);margin-bottom:22px}
+.quote-side .hc-line{border-top:none;padding:7px 0}
 </style>
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="wrap header-in">
-    <a href="#" class="brand" onclick="App.go('customer');return false;">
+    <a href="index.html" class="brand">
       <span class="brand-mark">✦</span>
-      <span>Clear<b>Space</b><i style="font-style:normal;font-weight:500;font-size:.72rem;color:var(--ink-3);display:block;line-height:1;letter-spacing:.06em">HOME CLEANING</i></span>
+      <span>Clear<b>Space</b><i class="brand-sub" data-es="LIMPIEZA DEL HOGAR">HOME CLEANING</i></span>
     </a>
-    <nav class="mode-switch" aria-label="Site mode">
-      <button id="navCustomer" class="active" onclick="App.go('customer')">Customer</button>
-      <button id="navOffice" onclick="App.go('office')">Office</button>
+    <nav class="header-nav">
+      <a href="#services" class="hide-m" data-es="Servicios">Services</a>
+      <a href="#areas" class="hide-m" data-es="Zonas">Areas</a>
+      <a href="pricing.html" class="hide-m" data-es="Precios">Pricing</a>
+      <span class="lang-toggle" role="group" aria-label="Language">
+        <button data-lang="en" onclick="Lang.set('en')">EN</button>
+        <button data-lang="es" onclick="Lang.set('es')">ES</button>
+      </span>
+      <a class="btn btn-primary btn-sm" href="#quote" data-es="Cotización gratis">Free quote</a>
     </nav>
-    <button class="btn btn-primary btn-sm header-cta" onclick="App.openBooking('booking')">Book a clean</button>
   </div>
 </header>
 
-<!-- ================= CUSTOMER ================= -->
-<main id="customerView">
-
-  <!-- HERO -->
-  <div class="hero">
-    <span class="hero-blob b1"></span><span class="hero-blob b2"></span>
-    <div class="wrap hero-in">
-      <div>
-        <span class="eyebrow">✦ &nbsp;Trusted local cleaning crews</span>
-        <h1>A spotless home,<br><span class="hl">without lifting a finger.</span></h1>
-        <p class="lede">Vetted, insured cleaning pros. Instant flat-rate pricing. Book in under two minutes and come home to a space that finally breathes.</p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" onclick="document.getElementById('estimate').scrollIntoView({behavior:'smooth'})">Get my instant price</button>
-          <button class="btn btn-ghost" onclick="App.openBooking('quote')">Request custom quote</button>
-        </div>
-        <div class="hero-trust">
-          <div class="trust-item"><b>4.9★</b><span>620+ reviews</span></div>
-          <div class="trust-item"><b>12,400+</b><span>homes cleaned</span></div>
-          <div class="trust-item"><b>100%</b><span>happiness guarantee</span></div>
-        </div>
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow" data-es="✦ Limpieza local · West Jordan y Salt Lake City">✦ Locally owned · West Jordan &amp; Salt Lake City</span>
+      <h1 data-es-html="Un hogar impecable,<br><span class='hl'>sin mover un dedo.</span>">A spotless home,<br><span class="hl">without lifting a finger.</span></h1>
+      <p class="lede" data-es="Limpieza residencial y organización profesional en todo el valle de Salt Lake. Precios claros por adelantado, servicio en inglés y español, y un hogar que por fin respira.">Residential cleaning and professional organizing across the Salt Lake valley. Clear upfront pricing, service in English and Spanish, and a home that finally breathes.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="pricing.html" data-es="Ver mi precio al instante">Get my instant price</a>
+        <a class="btn btn-ghost" href="#quote" data-es="Pedir cotización gratis">Request a free quote</a>
       </div>
-      <div class="hero-card reveal">
-        <div class="hero-float">🧽 Crew on the way — 9:00 AM</div>
-        <div class="hc-head"><h3>This week at ClearSpace</h3><span class="hc-badge">LIVE</span></div>
-        <div class="hc-row"><span class="hc-ico">🏡</span><div><b>Deep Clean · 3 bed / 2 bath</b><span>Maple Grove · Crew A</span></div><span class="hc-price">$286</span></div>
-        <div class="hc-row"><span class="hc-ico">🔁</span><div><b>Bi-weekly Standard</b><span>Riverside · Crew B</span></div><span class="hc-price">$129</span></div>
-        <div class="hc-row"><span class="hc-ico">📦</span><div><b>Move-Out · 2 bed / 1 bath</b><span>Downtown loft · Crew C</span></div><span class="hc-price">$342</span></div>
-        <div class="hc-row"><span class="hc-ico">✨</span><div><b>First-time Deep + Oven</b><span>Oak Park · Crew A</span></div><span class="hc-price">$255</span></div>
+      <div class="badge-row">
+        <span class="trust-badge"><span class="tb-ico">🛡️</span><span data-es="Con licencia y seguro*">Licensed &amp; insured*</span></span>
+        <span class="trust-badge"><span class="tb-ico">🗣️</span><span data-es="Inglés y Español">English &amp; Español</span></span>
+        <span class="trust-badge"><span class="tb-ico">💯</span><span data-es="Garantía de satisfacción">Satisfaction guarantee</span></span>
       </div>
     </div>
-  </div>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">Services</span>
-        <h2 class="section-title">Cleaning for every kind of mess.</h2>
-        <p class="section-sub">Flat-rate, no surprises. Every clean includes kitchens, bathrooms, dusting, floors, and a final walkthrough checklist.</p>
-      </div>
-      <div class="bento">
-        <div class="svc-card reveal"><span class="svc-ico">🧹</span><h3>Standard Clean</h3><p>The essentials, done beautifully. Perfect upkeep for a home that's already in decent shape.</p><span class="svc-price">from $120</span></div>
-        <div class="svc-card feat reveal"><span class="svc-tag">Most booked</span><span class="svc-ico">✨</span><h3>Deep Clean</h3><p>Baseboards, vents, grout, behind furniture — the full reset your home has been waiting for.</p><span class="svc-price">from $220</span></div>
-        <div class="svc-card reveal"><span class="svc-ico">📦</span><h3>Move In / Out</h3><p>Empty-home detail clean, inside cabinets and appliances. Get the deposit back, or start fresh.</p><span class="svc-price">from $280</span></div>
-        <div class="svc-card reveal"><span class="svc-ico">🔁</span><h3>Recurring</h3><p>Weekly, bi-weekly, or monthly visits from the same trusted crew — at up to 20% off.</p><span class="svc-price">save up to 20%</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section style="background:linear-gradient(180deg,var(--em-50) 0,var(--bg) 100%);border-top:1px solid var(--em-100);border-bottom:1px solid var(--line)">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">How it works</span>
-        <h2 class="section-title">Booked in minutes. Clean by dinner.</h2>
-        <p class="section-sub">No phone tag, no vague hourly quotes. Just a price, a time, and a crew that shows up.</p>
-      </div>
-      <div class="steps">
-        <div class="step reveal"><span class="step-num">1</span><h3>Get your instant price</h3><p>Tell us about your home — size, rooms, extras. See your exact flat rate immediately, itemized line by line.</p></div>
-        <div class="step reveal"><span class="step-num">2</span><h3>Pick a day &amp; window</h3><p>Choose a date and arrival window that fits your life. We confirm and assign your dedicated crew.</p></div>
-        <div class="step reveal"><span class="step-num">3</span><h3>Come home happy</h3><p>Your crew works a room-by-room checklist. Not thrilled? We re-clean free within 48 hours.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section>
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">Before &amp; after</span>
-        <h2 class="section-title">The glow-up speaks for itself.</h2>
-        <p class="section-sub">Real transformations from recent ClearSpace visits.</p>
-      </div>
-      <div class="gallery">
-        <div class="ba-tile reveal"><div class="ba-split"><div class="ba-half before"><span class="lbl">Before</span><span class="big">🍳</span></div><div class="ba-half after"><span class="lbl">After</span><span class="big">✨</span></div></div><div class="ba-cap">Kitchen deep clean<span>Grease-cut stovetop, degreased hood, polished counters</span></div></div>
-        <div class="ba-tile reveal"><div class="ba-split"><div class="ba-half before"><span class="lbl">Before</span><span class="big">🛁</span></div><div class="ba-half after"><span class="lbl">After</span><span class="big">✨</span></div></div><div class="ba-cap">Bathroom reset<span>Descaled glass, scrubbed grout, gleaming fixtures</span></div></div>
-        <div class="ba-tile reveal"><div class="ba-split"><div class="ba-half before"><span class="lbl">Before</span><span class="big">🛋️</span></div><div class="ba-half after"><span class="lbl">After</span><span class="big">✨</span></div></div><div class="ba-cap">Living room refresh<span>Pet-hair detail, dusted shelves, vacuum-lined carpet</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ESTIMATOR -->
-  <section id="estimate" style="padding-top:40px">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">Instant estimate</span>
-        <h2 class="section-title">Your price, before you commit.</h2>
-        <p class="section-sub">Adjust anything — the price updates live. What you see is what you pay.</p>
-      </div>
-      <div class="est-shell">
-        <div class="panel reveal">
-          <span class="field-label">Service type</span>
-          <div class="seg" id="segService"></div>
-          <span class="field-label">Home size</span>
-          <div class="seg" id="segSize"></div>
-          <span class="field-label">Rooms</span>
-          <div class="stepper-row">
-            <div class="stepper"><span class="st-lab">Bedrooms</span><span class="st-ctl"><button aria-label="Fewer bedrooms" onclick="Est.step('bedrooms',-1)">−</button><b id="stBed">2</b><button aria-label="More bedrooms" onclick="Est.step('bedrooms',1)">+</button></span></div>
-            <div class="stepper"><span class="st-lab">Bathrooms</span><span class="st-ctl"><button aria-label="Fewer bathrooms" onclick="Est.step('bathrooms',-1)">−</button><b id="stBath">1</b><button aria-label="More bathrooms" onclick="Est.step('bathrooms',1)">+</button></span></div>
-          </div>
-          <span class="field-label">Add-ons</span>
-          <div class="addons" id="addonGrid"></div>
-          <span class="field-label">Frequency</span>
-          <div class="seg" id="segFreq"></div>
-        </div>
-        <div class="price-panel reveal">
-          <div class="price-hero">
-            <span class="ph-lab">Your estimate</span>
-            <div class="price-big"><sup>$</sup><span id="priceNum">0</span></div>
-            <div class="price-freq" id="priceFreq">one-time visit</div>
-            <div class="price-break" id="priceBreak"></div>
-            <button class="btn btn-primary" onclick="App.openBooking('booking')">Book this clean →</button>
-          </div>
-          <div class="zip-box">
-            <h4>📍 Are we in your area?</h4>
-            <div class="zip-row">
-              <input id="zipInput" inputmode="numeric" maxlength="5" placeholder="Enter your ZIP code" aria-label="ZIP code">
-              <button class="btn btn-em btn-sm" onclick="App.checkZip()">Check</button>
-            </div>
-            <div class="zip-msg" id="zipMsg" role="status"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section>
-    <div class="wrap">
-      <div class="reviews-band reveal">
-        <span class="eyebrow" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18);color:var(--em-300)">Reviews</span>
-        <h2 class="section-title">Neighbors who never went back to scrubbing.</h2>
-        <p class="section-sub">4.9 average across 620+ verified reviews.</p>
-        <div class="rev-grid">
-          <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"They found dust I didn't know existed. My oven looks factory-new and the crew was in and out in three hours. Booking took two minutes."</p><div class="rev-who"><span class="rev-av">JT</span><div><b>Jasmine T.</b><span>Deep Clean · Maple Grove</span></div></div></div>
-          <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"Bi-weekly service for eight months now. Same crew every time, they know exactly how we like the kitchen. Worth every penny."</p><div class="rev-who"><span class="rev-av">DR</span><div><b>Devon R.</b><span>Recurring · Riverside</span></div></div></div>
-          <div class="rev-card"><div class="rev-stars">★★★★★</div><p>"Move-out clean saved my entire deposit. Landlord literally asked who did it. Inside the cabinets, inside the fridge — everything."</p><div class="rev-who"><span class="rev-av">MK</span><div><b>Mara K.</b><span>Move-Out · Downtown</span></div></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="cta-band reveal">
-        <h2>Ready to come home to clean?</h2>
-        <p>Instant pricing · vetted crews · 100% happiness guarantee</p>
-        <button class="btn btn-primary" onclick="App.openBooking('booking')">Book my clean →</button>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="wrap foot-in">
-      <a href="#" class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><span class="brand-mark">✦</span><span>Clear<b>Space</b></span></a>
-      <p>© 2026 ClearSpace Home Cleaning · Licensed &amp; insured · <a href="#estimate">Get an estimate</a></p>
-    </div>
-  </footer>
-</main>
-
-<!-- ================= OFFICE ================= -->
-<div id="officeView">
-  <div class="office-shell">
-    <div class="office-top">
-      <div>
-        <h1>Office Dashboard</h1>
-        <div class="sub" id="officeDate"></div>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-        <nav class="office-tabs" aria-label="Office sections">
-          <button class="active" data-pane="dash" onclick="Office.tab('dash')">Dashboard</button>
-          <button data-pane="jobs" onclick="Office.tab('jobs')">Jobs</button>
-          <button data-pane="cal" onclick="Office.tab('cal')">Calendar</button>
-          <button data-pane="clients" onclick="Office.tab('clients')">Clients</button>
-          <button data-pane="invoices" onclick="Office.tab('invoices')">Invoices</button>
-        </nav>
-        <button class="btn btn-ghost btn-sm" onclick="App.exportBackup()">⬇ Backup</button>
-        <button class="btn btn-ghost btn-sm" onclick="App.resetDemo()">↺ Reset demo data</button>
-      </div>
-    </div>
-
-    <!-- DASHBOARD PANE -->
-    <div class="office-view-pane active" id="pane-dash">
-      <div class="stat-grid" id="statGrid"></div>
-      <div class="office-panel">
-        <h2>Today &amp; upcoming</h2>
-        <p class="p-sub">Next jobs on the schedule, soonest first.</p>
-        <div class="tbl-wrap" id="dashJobs"></div>
-      </div>
-      <div class="office-panel">
-        <h2>Open quote requests</h2>
-        <p class="p-sub">Customers waiting on a custom quote.</p>
-        <div id="dashQuotes"></div>
-      </div>
-      <div class="office-panel">
-        <h2>Integrations</h2>
-        <p class="p-sub">These hooks are wired but not live yet — clearly-labeled placeholders, not simulations.</p>
-        <div class="stub-grid">
-          <div class="stub-card"><span class="soon">Coming soon</span><span class="s-ico">💳</span><h3>Card payments</h3><p>Stripe, Apple Pay &amp; Google Pay checkout for invoices.</p><button class="btn btn-ghost btn-sm" onclick="Stubs.payments()">Connect Stripe</button></div>
-          <div class="stub-card"><span class="soon">Coming soon</span><span class="s-ico">💬</span><h3>SMS &amp; email</h3><p>Booking confirmations, on-my-way texts, receipts.</p><button class="btn btn-ghost btn-sm" onclick="Stubs.messaging()">Set up messaging</button></div>
-          <div class="stub-card"><span class="soon">Coming soon</span><span class="s-ico">📍</span><h3>GPS crew tracking</h3><p>Live crew locations and automatic arrival alerts.</p><button class="btn btn-ghost btn-sm" onclick="Stubs.gps()">Enable tracking</button></div>
-          <div class="stub-card"><span class="soon">Coming soon</span><span class="s-ico">🤖</span><h3>AI assistant</h3><p>Smart scheduling, quote drafting, review replies.</p><button class="btn btn-ghost btn-sm" onclick="Stubs.ai()">Preview AI tools</button></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- JOBS PANE -->
-    <div class="office-view-pane" id="pane-jobs">
-      <div class="office-panel">
-        <h2>All jobs</h2>
-        <p class="p-sub">Every customer booking lands here automatically. Assign crews, update status, or invoice.</p>
-        <div class="tbl-wrap" id="jobsTable"></div>
-      </div>
-    </div>
-
-    <!-- CALENDAR PANE -->
-    <div class="office-view-pane" id="pane-cal">
-      <div class="office-panel">
-        <div class="place-banner" id="placeBanner"></div>
-        <div class="cal-layout">
-          <aside class="queue-side" id="queueSide"
-                 ondragover="Office.dragOverEl(event)" ondragleave="Office.dragLeaveEl(event)" ondrop="Office.dropOnQueue(event)">
-            <h3>📋 Job queue <span class="q-count" id="qCount">0</span></h3>
-            <p class="q-hint">Unscheduled jobs. Drag one onto a day — or onto a time slot in the day view. On mobile, tap a card, then tap a day. Drag a job back here to unschedule it.</p>
-            <div id="queueList"></div>
-          </aside>
-          <div>
-            <div class="cal-head">
-              <div class="cal-title" id="calTitle"></div>
-              <div class="cal-nav">
-                <button aria-label="Previous month" onclick="Office.calMove(-1)">‹</button>
-                <button class="cal-today-btn" onclick="Office.calGoToday()">Today</button>
-                <button aria-label="Next month" onclick="Office.calMove(1)">›</button>
-              </div>
-            </div>
-            <div class="cal-grid" id="calGrid"></div>
-            <div class="cal-legend">
-              <span><i style="background:var(--blue)"></i>Scheduled</span>
-              <span><i style="background:var(--amber-500)"></i>In Progress</span>
-              <span><i style="background:var(--em-500)"></i>Done</span>
-              <span>🔁 recurring series continue automatically</span>
-            </div>
-            <div id="calDayDetail"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CLIENTS PANE -->
-    <div class="office-view-pane" id="pane-clients">
-      <div class="office-panel">
-        <h2>Client CRM</h2>
-        <p class="p-sub">Auto-created from bookings. Click a client to edit notes, gate codes, pets, and preferences.</p>
-        <div id="clientList"></div>
-      </div>
-    </div>
-
-    <!-- INVOICES PANE -->
-    <div class="office-view-pane" id="pane-invoices">
-      <div class="office-panel">
-        <h2>Invoices</h2>
-        <p class="p-sub">Generated from jobs. Toggle paid status here.</p>
-        <div class="tbl-wrap" id="invTable"></div>
-      </div>
+    <div class="hero-card">
+      <h3 data-es="Cada limpieza incluye">Every clean includes</h3>
+      <div class="hc-line"><span class="ico">🍳</span><span data-es="Cocina: superficies, electrodomésticos por fuera, fregadero y pisos">Kitchen: counters, appliance exteriors, sink &amp; floors</span></div>
+      <div class="hc-line"><span class="ico">🛁</span><span data-es="Baños: ducha, sanitario, espejos y azulejos">Bathrooms: shower, toilet, mirrors &amp; tile</span></div>
+      <div class="hc-line"><span class="ico">🛏️</span><span data-es="Recámaras: polvo, superficies y camas tendidas">Bedrooms: dusting, surfaces &amp; beds made</span></div>
+      <div class="hc-line"><span class="ico">🧹</span><span data-es="Toda la casa: aspirado, trapeado y basura fuera">Whole home: vacuum, mop &amp; trash out</span></div>
+      <div class="hc-line"><span class="ico">✅</span><span data-es="Recorrido final con lista de verificación cuarto por cuarto">Final walkthrough with a room-by-room checklist</span></div>
     </div>
   </div>
 </div>
 
-<!-- ================= BOOKING MODAL ================= -->
-<div class="modal-back" id="modalBack" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal">
-    <div id="modalFormView">
-      <div class="modal-head">
-        <h3 id="modalTitle">Book your clean</h3>
-        <button class="modal-x" aria-label="Close" onclick="App.closeModal()">✕</button>
-      </div>
-      <p class="sub" id="modalSub">Two minutes, and you're on the schedule.</p>
-      <div class="f-grid">
-        <div class="f-field"><label for="bkFirst">First name</label><input id="bkFirst" autocomplete="given-name"></div>
-        <div class="f-field"><label for="bkLast">Last name</label><input id="bkLast" autocomplete="family-name"></div>
-        <div class="f-field"><label for="bkEmail">Email</label><input id="bkEmail" type="email" autocomplete="email"></div>
-        <div class="f-field"><label for="bkPhone">Phone</label><input id="bkPhone" type="tel" autocomplete="tel"></div>
-        <div class="f-field full"><label for="bkAddr">Street address</label><input id="bkAddr" autocomplete="street-address"></div>
-        <div class="f-field"><label for="bkCity">City</label><input id="bkCity" autocomplete="address-level2"></div>
-        <div class="f-field"><label for="bkZip">ZIP</label><input id="bkZip" inputmode="numeric" maxlength="5" autocomplete="postal-code"></div>
-        <div class="f-field" id="dateField"><label for="bkDate">Preferred date</label><input id="bkDate" type="date"></div>
-        <div class="f-field" id="windowField"><label for="bkWindow">Time window</label>
-          <select id="bkWindow"><option>Morning (8–11 AM)</option><option>Midday (11 AM–2 PM)</option><option>Afternoon (2–5 PM)</option></select>
-        </div>
-        <div class="f-field full"><label for="bkNotes">Notes (pets, parking, priorities…)</label><textarea id="bkNotes"></textarea></div>
-      </div>
-      <div class="form-err" id="formErr"></div>
-      <div class="modal-actions">
-        <button class="btn btn-ghost" onclick="App.closeModal()">Cancel</button>
-        <button class="btn btn-primary" id="modalSubmit" onclick="App.submitBooking()">Confirm booking</button>
-      </div>
-    </div>
-    <div id="modalSuccessView" style="display:none">
-      <div class="success-view">
-        <div class="success-ico">✓</div>
-        <h3 id="successTitle">You're booked!</h3>
-        <p id="successBody">We'll email your confirmation shortly.</p>
-        <div class="ref-chip" id="successRef"></div>
-        <p style="font-size:.85rem">Your reference number — save it for any changes.</p>
-        <div class="stub-note">💳 <b>Card payments coming soon</b> — Stripe / Apple Pay / Google Pay checkout is on the roadmap. For now, pay your crew on the day. 💬 SMS confirmations are also coming soon.</div>
-        <div class="modal-actions">
-          <button class="btn btn-em" onclick="App.closeModal()">Done</button>
-        </div>
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow" data-es="Servicios">Services</span>
+    <h2 class="section-title" data-es="Limpieza para cada tipo de hogar.">Cleaning for every kind of home.</h2>
+    <p class="section-sub" data-es="Precios fijos, sin sorpresas. Elige el servicio y ve tu precio antes de reservar.">Flat-rate, no surprises. Pick your service and see your price before you book.</p>
+    <div class="bento">
+      <div class="svc-card"><span class="svc-ico">🧹</span><h3 data-es="Limpieza Estándar">Standard Clean</h3><p data-es="Lo esencial, muy bien hecho. Mantenimiento perfecto para un hogar que ya está en buen estado.">The essentials, done beautifully. Perfect upkeep for a home that's already in decent shape.</p><span class="svc-price"><span data-es="desde ">from </span><span data-price-from="standard">$—</span></span></div>
+      <div class="svc-card feat"><span class="svc-tag" data-es="Más pedido">Most booked</span><span class="svc-ico">✨</span><h3 data-es="Limpieza Profunda">Deep Clean</h3><p data-es="Zoclos, rejillas, azulejo, detrás de los muebles — el reinicio completo que tu hogar esperaba.">Baseboards, vents, grout, behind furniture — the full reset your home has been waiting for.</p><span class="svc-price"><span data-es="desde ">from </span><span data-price-from="deep">$—</span></span></div>
+      <div class="svc-card"><span class="svc-ico">📦</span><h3 data-es="Limpieza de Mudanza">Move In / Out</h3><p data-es="Limpieza a detalle de casa vacía, incluyendo gabinetes y electrodomésticos por dentro. Recupera tu depósito o empieza de cero.">Empty-home detail clean, inside cabinets and appliances. Get the deposit back, or start fresh.</p><span class="svc-price"><span data-es="desde ">from </span><span data-price-from="moveout">$—</span></span></div>
+      <div class="svc-card"><span class="svc-ico">🔁</span><h3 data-es="Servicio Recurrente">Recurring</h3><p data-es="Visitas semanales, quincenales o mensuales del mismo equipo de confianza.">Weekly, bi-weekly, or monthly visits from the same trusted crew.</p><span class="svc-price"><span data-es="ahorra hasta ">save up to </span><span data-max-discount>—</span></span></div>
+      <div class="svc-card svc-org"><span class="svc-ico">🗂️</span>
+        <div><h3 data-es="Organización del Hogar">Home Organizing</h3><p data-es="Clósets, despensas, cocheras, cuartos de juegos — creamos sistemas que se mantienen ordenados solos. Cada proyecto es diferente, así que lo cotizamos en persona.">Closets, pantries, garages, playrooms — we build systems that keep themselves tidy. Every project is different, so we quote it in person.</p></div>
+        <a class="btn btn-ghost btn-sm" href="#quote" data-es="Pedir cotización">Request a quote</a>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="toast" id="toast" role="status"></div>
+<!-- HOW IT WORKS -->
+<section style="background:linear-gradient(180deg,var(--em-50) 0,var(--bg) 100%);border-top:1px solid var(--em-100);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow" data-es="Cómo funciona">How it works</span>
+    <h2 class="section-title" data-es="Reservado en minutos. Limpio para la cena.">Booked in minutes. Clean by dinner.</h2>
+    <p class="section-sub" data-es="Sin llamadas interminables ni cotizaciones vagas por hora. Solo un precio, una fecha y un equipo que llega puntual.">No phone tag, no vague hourly quotes. Just a price, a time, and a crew that shows up.</p>
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span><h3 data-es="Obtén tu precio">Get your price</h3><p data-es="Cuéntanos de tu hogar — tamaño, cuartos, extras. Ve tu tarifa fija al instante, desglosada línea por línea.">Tell us about your home — size, rooms, extras. See your exact flat rate instantly, itemized line by line.</p></div>
+      <div class="step"><span class="step-num">2</span><h3 data-es="Elige día y horario">Pick a day &amp; window</h3><p data-es="Escoge la fecha y ventana de llegada que te convenga. Confirmamos y asignamos tu equipo.">Choose a date and arrival window that fits your life. We confirm and assign your crew.</p></div>
+      <div class="step"><span class="step-num">3</span><h3 data-es="Llega a un hogar feliz">Come home happy</h3><p data-es="Tu equipo trabaja con una lista cuarto por cuarto. ¿No quedaste encantado? Regresamos a re-limpiar sin costo.">Your crew works a room-by-room checklist. Not thrilled? We come back and re-clean free.</p></div>
+    </div>
+  </div>
+</section>
 
+<!-- SERVICE AREA -->
+<section id="areas">
+  <div class="wrap">
+    <span class="eyebrow" data-es="Zona de servicio">Service area</span>
+    <h2 class="section-title" data-es="Con orgullo, servimos el valle de Salt Lake.">Proudly serving the Salt Lake valley.</h2>
+    <p class="section-sub" data-es="Con base en West Jordan, atendemos hogares en todo el condado de Salt Lake. ¿Tu ciudad no aparece? Pregúntanos — probablemente sí llegamos.">Based in West Jordan, we serve homes across Salt Lake County. Don't see your city? Ask — we can probably still make it work.</p>
+    <div class="area-grid">
+      <a class="area-chip" href="areas/house-cleaning-west-jordan.html"><span>📍</span>West Jordan</a>
+      <a class="area-chip" href="areas/house-cleaning-salt-lake-city.html"><span>📍</span>Salt Lake City</a>
+      <a class="area-chip" href="areas/house-cleaning-south-jordan.html"><span>📍</span>South Jordan</a>
+      <a class="area-chip" href="areas/house-cleaning-sandy.html"><span>📍</span>Sandy</a>
+      <a class="area-chip" href="areas/house-cleaning-riverton.html"><span>📍</span>Riverton</a>
+      <a class="area-chip" href="areas/house-cleaning-herriman.html"><span>📍</span>Herriman</a>
+      <a class="area-chip" href="areas/house-cleaning-taylorsville.html"><span>📍</span>Taylorsville</a>
+      <a class="area-chip" href="areas/house-cleaning-murray.html"><span>📍</span>Murray</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS (placeholder until real ones arrive) -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow" data-es="Reseñas">Reviews</span>
+    <h2 class="section-title" data-es="Nuestros primeros vecinos felices — pronto aquí.">Our first happy neighbors — coming soon.</h2>
+    <p class="section-sub" data-es="Somos nuevos y nos lo estamos ganando limpieza por limpieza. Las reseñas reales de Google aparecerán aquí.">We're new, and we're earning it one clean at a time. Real Google reviews will appear here.</p>
+    <div class="rev-grid">
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p data-es="[Marcador — reemplaza con una reseña real de un cliente de limpieza profunda]">[Placeholder — replace with a real review from a deep-clean customer]</p><div class="rev-who" data-es="[Nombre del cliente] · Limpieza Profunda">[Customer name] · Deep Clean</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p data-es="[Marcador — reemplaza con una reseña real de un cliente recurrente]">[Placeholder — replace with a real review from a recurring customer]</p><div class="rev-who" data-es="[Nombre del cliente] · Servicio quincenal">[Customer name] · Bi-weekly service</div></div>
+      <div class="rev-card"><div class="rev-stars">★★★★★</div><p data-es="[Marcador — reemplaza con una reseña real de un cliente de mudanza]">[Placeholder — replace with a real review from a move-out customer]</p><div class="rev-who" data-es="[Nombre del cliente] · Limpieza de Mudanza">[Customer name] · Move-Out Clean</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE FORM -->
+<section id="quote" style="background:linear-gradient(180deg,var(--em-50) 0,var(--bg) 100%);border-top:1px solid var(--em-100)">
+  <div class="wrap quote-shell">
+    <div class="quote-side">
+      <span class="eyebrow" data-es="Cotización gratis">Free quote</span>
+      <h2 data-es="Cuéntanos de tu hogar. Nosotros hacemos el resto.">Tell us about your home. We'll do the rest.</h2>
+      <p data-es="Envía el formulario y te contactamos el mismo día con tu precio personalizado — por mensaje de texto o correo, en inglés o español.">Send the form and we'll get back to you the same day with your personalized price — by text or email, in English or Spanish.</p>
+      <div class="hc-line"><span class="ico">⚡</span><span data-es="¿Prefieres un número al instante? Usa la calculadora de precios.">Want a number right now? Try the instant price calculator.</span></div>
+      <p style="margin-top:8px"><a class="btn btn-ghost btn-sm" href="pricing.html" data-es="Abrir calculadora →">Open the calculator →</a></p>
+    </div>
+    <div class="panel">
+      <form id="quoteForm" onsubmit="return handleQuote(event)" novalidate>
+        <div class="form-err" id="quoteErr" role="alert"></div>
+        <div class="field-grid">
+          <div class="field"><label for="qf-name" data-es="Nombre completo *">Full name *</label><input id="qf-name" name="name" autocomplete="name"></div>
+          <div class="field"><label for="qf-phone" data-es="Teléfono *">Phone *</label><input id="qf-phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="qf-email" data-es="Correo electrónico">Email</label><input id="qf-email" name="email" type="email" autocomplete="email"></div>
+        <div class="field"><label for="qf-address" data-es="Dirección *">Address *</label><input id="qf-address" name="address" autocomplete="street-address" placeholder="Street, city, ZIP" data-es-ph="Calle, ciudad, código postal"></div>
+        <div class="field-grid">
+          <div class="field"><label for="qf-sqft" data-es="Tamaño (pies²)">Home size (sq ft)</label><input id="qf-sqft" name="sqft" inputmode="numeric" placeholder="e.g. 1800" data-es-ph="ej. 1800"></div>
+          <div class="field"><label for="qf-beds" data-es="Recámaras / baños">Beds / baths</label><input id="qf-beds" name="bedsbaths" placeholder="e.g. 3 bed / 2 bath" data-es-ph="ej. 3 rec / 2 baños"></div>
+        </div>
+        <div class="field-grid">
+          <div class="field"><label for="qf-service" data-es="Tipo de servicio *">Service type *</label>
+            <select id="qf-service" name="service">
+              <option value="" data-es="Selecciona…">Select…</option>
+              <option value="standard" data-es="Limpieza Estándar">Standard Clean</option>
+              <option value="deep" data-es="Limpieza Profunda">Deep Clean</option>
+              <option value="moveout" data-es="Limpieza de Mudanza">Move-In/Out Clean</option>
+              <option value="organizing" data-es="Organización del Hogar">Home Organizing</option>
+            </select>
+          </div>
+          <div class="field"><label for="qf-freq" data-es="Frecuencia">Frequency</label>
+            <select id="qf-freq" name="frequency">
+              <option value="onetime" data-es="Una sola vez">One-time</option>
+              <option value="weekly" data-es="Semanal">Weekly</option>
+              <option value="biweekly" data-es="Quincenal">Bi-weekly</option>
+              <option value="monthly" data-es="Mensual">Monthly</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="qf-date" data-es="Fecha preferida">Preferred date</label><input id="qf-date" name="date" type="date"></div>
+        <button class="btn btn-primary" style="width:100%" type="submit" data-es="Enviar mi solicitud">Send my request</button>
+        <p style="font-size:.78rem;color:var(--ink-3);margin-top:10px" data-es="Sin spam, sin compromiso. Solo usamos tus datos para prepararte tu cotización.">No spam, no obligation. We only use your details to prepare your quote.</p>
+      </form>
+      <div class="form-ok" id="quoteOk" style="display:none">
+        <div style="font-size:2rem;margin-bottom:8px">✅</div>
+        <h3 data-es="¡Recibido! Te contactamos hoy mismo.">Got it! We'll reach out today.</h3>
+        <p style="color:var(--ink-3);font-size:.92rem;margin-top:6px" data-es="Revisa tus mensajes de texto — tu cotización personalizada va en camino.">Keep an eye on your texts — your personalized quote is on the way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:40px">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2 data-es="¿Listo para llegar a un hogar limpio?">Ready to come home to clean?</h2>
+      <p data-es="Precios claros · equipo de confianza · garantía de satisfacción">Clear pricing · trusted crew · satisfaction guarantee</p>
+      <a class="btn btn-primary" href="pricing.html" data-es="Ver mi precio →">See my price →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap foot-in">
+    <a href="index.html" class="brand"><span class="brand-mark">✦</span><span>Clear<b>Space</b></span></a>
+    <div class="foot-links">
+      <a href="pricing.html" data-es="Precios">Pricing</a>
+      <a href="#areas" data-es="Zonas de servicio">Service areas</a>
+      <a href="#quote" data-es="Cotización gratis">Free quote</a>
+    </div>
+    <p>© 2026 ClearSpace Home Cleaning · West Jordan, UT<br>
+    <span style="font-size:.78rem" data-es="*Marcadores de licencia y seguro — actualiza cuando tengas la póliza y el registro.">*Licensing &amp; insurance badges are placeholders — update once your policy and registration are active.</span></p>
+  </div>
+</footer>
+
+<script src="pricing-config.js"></script>
+<script src="assets/site.js"></script>
 <script>
-"use strict";
-/* =====================================================================
-   ClearSpace — single-file app. All data lives in localStorage.
-   ===================================================================== */
-
-/* ---------- CONFIG (edit me) ---------- */
-// ZIP prefixes we serve — any ZIP starting with one of these passes the checker.
-var SERVED_ZIP_PREFIXES = ["331", "330", "333", "782", "78701", "902"];
-
-var CREWS = ["Crew A — Ana & Luis", "Crew B — Sam & Rita", "Crew C — Dee & Marco"];
-
-var PRICING = {
-  services: [
-    { id: "standard", label: "Standard", base: 120 },
-    { id: "deep",     label: "Deep",     base: 220 },
-    { id: "move",     label: "Move In/Out", base: 280 }
-  ],
-  sizes: [
-    { id: "s1", label: "< 1,000 ft²",      add: 0   },
-    { id: "s2", label: "1,000–1,500 ft²",  add: 30  },
-    { id: "s3", label: "1,500–2,000 ft²",  add: 60  },
-    { id: "s4", label: "2,000–2,500 ft²",  add: 95  },
-    { id: "s5", label: "2,500–3,500 ft²",  add: 140 },
-    { id: "s6", label: "3,500+ ft²",       add: 200 }
-  ],
-  perBedroom: 25,   // per bedroom beyond the first
-  perBathroom: 30,  // per bathroom beyond the first
-  addons: [
-    { id: "fridge",   label: "Inside fridge",    price: 35 },
-    { id: "oven",     label: "Inside oven",      price: 35 },
-    { id: "windows",  label: "Interior windows", price: 45 },
-    { id: "laundry",  label: "Laundry",          price: 30 },
-    { id: "pet",      label: "Pet-hair detail",  price: 40 },
-    { id: "cabinets", label: "Inside cabinets",  price: 40 }
-  ],
-  freqs: [
-    { id: "once",     label: "One-time",  disc: 0    },
-    { id: "monthly",  label: "Monthly",   disc: 0.10 },
-    { id: "biweekly", label: "Bi-weekly", disc: 0.15 },
-    { id: "weekly",   label: "Weekly",    disc: 0.20 }
-  ]
-};
-
-/* ---------- STORE ---------- */
-var Store = (function () {
-  var KEY = "clearspace_v4";
-  var state = null;
-
-  function todayISO(offsetDays) {
-    var d = new Date();
-    d.setDate(d.getDate() + (offsetDays || 0));
-    var m = String(d.getMonth() + 1).padStart(2, "0");
-    var day = String(d.getDate()).padStart(2, "0");
-    return d.getFullYear() + "-" + m + "-" + day;
-  }
-
-  function seed() {
-    var t = todayISO(0);
-    return {
-      seq: 1010,
-      clients: [
-        { id: "c1", first: "Jasmine", last: "Torres", email: "jasmine.t@example.com", phone: "(305) 555-0114",
-          address: "418 Maple Grove Ln", city: "Maple Grove", zip: "33101",
-          gateCode: "#2244", pets: "1 dog (friendly lab, Biscuit)", prefs: "Unscented products only; focus on kitchen.", notes: "Leaves key under the front mat." },
-        { id: "c2", first: "Devon", last: "Reyes", email: "devon.r@example.com", phone: "(305) 555-0187",
-          address: "77 Riverside Ave, Apt 4B", city: "Riverside", zip: "33012",
-          gateCode: "", pets: "2 cats", prefs: "Bi-weekly regular; don't move desk items.", notes: "Buzz 4B on arrival." },
-        { id: "c3", first: "Mara", last: "Kim", email: "mara.k@example.com", phone: "(786) 555-0142",
-          address: "902 Downtown Pl, Unit 12", city: "Downtown", zip: "33301",
-          gateCode: "Lobby fob at front desk", pets: "None", prefs: "Move-out spec: inside all cabinets + appliances.", notes: "Landlord walkthrough Friday." },
-        { id: "c4", first: "Owen", last: "Blake", email: "owen.b@example.com", phone: "(305) 555-0129",
-          address: "15 Oak Park Ct", city: "Oak Park", zip: "33020",
-          gateCode: "1875", pets: "1 senior dog (gate the kitchen)", prefs: "Extra attention to guest bath before visits.", notes: "" }
-      ],
-      jobs: [
-        { id: "j1", ref: "CS-1001", clientId: "c1", service: "Deep", freq: "One-time", date: t, window: "Morning (8–11 AM)",
-          price: 286, crew: CREWS[0], status: "In Progress", notes: "First deep clean; oven add-on.", created: t, time: 9, dur: 210 },
-        { id: "j2", ref: "CS-1002", clientId: "c2", service: "Standard", freq: "Bi-weekly", date: t, window: "Afternoon (2–5 PM)",
-          price: 129, crew: CREWS[1], status: "Scheduled", notes: "Recurring visit #17.", created: t, seriesId: "ser1", time: 14, dur: 120 },
-        { id: "j3", ref: "CS-1003", clientId: "c3", service: "Move In/Out", freq: "One-time", date: todayISO(2), window: "Morning (8–11 AM)",
-          price: 342, crew: CREWS[2], status: "Scheduled", notes: "Empty unit. Fob at desk.", created: todayISO(-3) },
-        { id: "j4", ref: "CS-1004", clientId: "c4", service: "Deep", freq: "Monthly", date: todayISO(-6), window: "Midday (11 AM–2 PM)",
-          price: 255, crew: CREWS[0], status: "Done", notes: "Included fridge + oven.", created: todayISO(-9), seriesId: "ser2" },
-        { id: "j5", ref: "CS-1005", clientId: "c2", service: "Standard", freq: "Bi-weekly", date: todayISO(-14), window: "Afternoon (2–5 PM)",
-          price: 129, crew: CREWS[1], status: "Done", notes: "Recurring visit #16.", created: todayISO(-16), seriesId: "ser1" },
-        { id: "j6", ref: "CS-1006", clientId: "c2", service: "Standard", freq: "Bi-weekly", date: todayISO(14), window: "Afternoon (2–5 PM)",
-          price: 129, crew: CREWS[1], status: "Scheduled", notes: "Recurring visit #18.", created: t, seriesId: "ser1" },
-        { id: "j7", ref: "CS-1007", clientId: "c4", service: "Deep", freq: "Monthly", date: todayISO(24), window: "Midday (11 AM–2 PM)",
-          price: 255, crew: CREWS[0], status: "Scheduled", notes: "Monthly deep — fridge + oven.", created: t, seriesId: "ser2" },
-        { id: "j8", ref: "CS-1008", clientId: "c1", service: "Deep", freq: "One-time", date: "", window: "Morning (8–11 AM)",
-          price: 286, crew: "", status: "Scheduled", notes: "Waiting on customer to confirm a date — drag onto the calendar.", created: t, dur: 210 },
-        { id: "j9", ref: "CS-1009", clientId: "c3", service: "Standard", freq: "One-time", date: "", window: "Afternoon (2–5 PM)",
-          price: 150, crew: "", status: "Scheduled", notes: "Post-move touch-up, flexible timing.", created: t, dur: 90 }
-      ],
-      invoices: [
-        { id: "i1", jobId: "j4", ref: "INV-1004", clientId: "c4", amount: 255, date: todayISO(-6), paid: true },
-        { id: "i2", jobId: "j5", ref: "INV-1005", clientId: "c2", amount: 129, date: todayISO(-14), paid: false }
-      ],
-      quotes: [
-        { id: "q1", ref: "CS-Q1006", first: "Priya", last: "Nair", email: "priya.n@example.com", phone: "(954) 555-0163",
-          address: "230 Harbor View Dr", city: "Harborside", zip: "33060",
-          notes: "5BR post-renovation — heavy construction dust, need a quote.", created: todayISO(-1), status: "Open" },
-        { id: "q2", ref: "CS-Q1007", first: "Sam", last: "Fielder", email: "sam.f@example.com", phone: "(305) 555-0178",
-          address: "8 Willow Bend", city: "Maple Grove", zip: "33101",
-          notes: "Airbnb turnover cleans, ~6/month. Bulk pricing?", created: t, status: "Open" }
-      ]
-    };
-  }
-
-  function load() {
-    try {
-      var raw = localStorage.getItem(KEY);
-      if (raw) { state = JSON.parse(raw); return; }
-    } catch (e) { /* corrupted or unavailable — reseed */ }
-    state = seed();
-    save();
-  }
-  function save() {
-    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* storage full/blocked */ }
-  }
-  function reset() { state = seed(); save(); }
-  function nextRef(prefix) { state.seq += 1; return (prefix || "CS-") + state.seq; }
-
-  load();
-  return {
-    get: function () { return state; },
-    save: save,
-    reset: reset,
-    nextRef: nextRef,
-    todayISO: todayISO
-  };
-})();
-
-/* ---------- HELPERS ---------- */
-function esc(s) {
-  return String(s == null ? "" : s)
-    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+function handleQuote(e) {
+  e.preventDefault();
+  submitQuoteForm(
+    document.getElementById("quoteForm"),
+    document.getElementById("quoteErr"),
+    document.getElementById("quoteOk")
+  );
+  return false;
 }
-function money(n) { return "$" + Number(n).toLocaleString("en-US", { maximumFractionDigits: 0 }); }
-function fmtDate(iso) {
-  if (!iso) return "—";
-  var p = iso.split("-");
-  var d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
-  return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
-}
-function isoFromDate(d) {
-  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
-}
-function dateFromISO(iso) {
-  var p = iso.split("-");
-  return new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
-}
-function fmtHour(h) {
-  var hr = ((h + 11) % 12) + 1;
-  return hr + (h < 12 ? " AM" : " PM");
-}
-function windowForHour(h) {
-  if (h < 11) return "Morning (8–11 AM)";
-  if (h < 14) return "Midday (11 AM–2 PM)";
-  return "Afternoon (2–5 PM)";
-}
-function fmtDur(min) {
-  min = min || 60;
-  var h = Math.floor(min / 60), m = min % 60;
-  if (!h) return m + " min";
-  return h + " hr" + (m ? " " + m + " min" : "");
-}
-// Minutes-since-midnight → "9:15 AM"
-function minToClock(min) {
-  var h = Math.floor(min / 60), m = min % 60;
-  return (((h + 11) % 12) + 1) + ":" + String(m).padStart(2, "0") + " " + (h < 12 ? "AM" : "PM");
-}
-// Rough duration estimate for a new booking, by service + extras.
-function estimateDur(est) {
-  var base = est.svc.id === "deep" ? 210 : est.svc.id === "move" ? 240 : 120;
-  var addons = 0;
-  est.lines.forEach(function (l) {
-    PRICING.addons.forEach(function (a) { if (a.label === l.label) addons += 1; });
-  });
-  return base + addons * 15;
-}
-// Next visit date for a recurring frequency label ("Weekly" / "Bi-weekly" / "Monthly").
-function nextOccurrenceISO(iso, freqLabel) {
-  var d = dateFromISO(iso);
-  if (freqLabel === "Weekly") d.setDate(d.getDate() + 7);
-  else if (freqLabel === "Bi-weekly") d.setDate(d.getDate() + 14);
-  else if (freqLabel === "Monthly") d.setMonth(d.getMonth() + 1);
-  else return null;
-  return isoFromDate(d);
-}
-function clientName(c) { return c ? (c.first + " " + c.last) : "Unknown"; }
-function findClient(id) {
-  var cs = Store.get().clients;
-  for (var i = 0; i < cs.length; i++) if (cs[i].id === id) return cs[i];
-  return null;
-}
-function toast(msg) {
-  var el = document.getElementById("toast");
-  el.textContent = msg;
-  el.classList.add("show");
-  clearTimeout(toast._t);
-  toast._t = setTimeout(function () { el.classList.remove("show"); }, 2600);
-}
-function statusClass(s) {
-  if (s === "In Progress") return "st-inprogress";
-  if (s === "Done") return "st-done";
-  return "st-scheduled";
-}
-
-/* ---------- ESTIMATOR ---------- */
-var Est = {
-  state: { service: "standard", size: "s2", bedrooms: 2, bathrooms: 1, addons: {}, freq: "once" },
-  displayed: 0,
-
-  init: function () {
-    this.renderSeg("segService", PRICING.services, "service");
-    this.renderSeg("segSize", PRICING.sizes, "size");
-    this.renderSeg("segFreq", PRICING.freqs, "freq");
-    this.renderAddons();
-    this.update(true);
-  },
-
-  renderSeg: function (elId, items, key) {
-    var self = this;
-    var el = document.getElementById(elId);
-    el.innerHTML = "";
-    items.forEach(function (it) {
-      var b = document.createElement("button");
-      b.type = "button";
-      var sub = "";
-      if (key === "freq" && it.disc) sub = "<small>save " + Math.round(it.disc * 100) + "%</small>";
-      if (key === "service") sub = "<small>from " + money(it.base) + "</small>";
-      b.innerHTML = esc(it.label) + sub;
-      b.className = self.state[key] === it.id ? "active" : "";
-      b.setAttribute("aria-pressed", self.state[key] === it.id ? "true" : "false");
-      b.onclick = function () { self.state[key] = it.id; self.renderSeg(elId, items, key); self.update(); };
-      el.appendChild(b);
-    });
-  },
-
-  renderAddons: function () {
-    var self = this;
-    var el = document.getElementById("addonGrid");
-    el.innerHTML = "";
-    PRICING.addons.forEach(function (a) {
-      var b = document.createElement("button");
-      b.type = "button";
-      b.className = "addon" + (self.state.addons[a.id] ? " active" : "");
-      b.setAttribute("aria-pressed", self.state.addons[a.id] ? "true" : "false");
-      b.innerHTML = esc(a.label) + "<small>+" + money(a.price) + "</small>";
-      b.onclick = function () {
-        self.state.addons[a.id] = !self.state.addons[a.id];
-        self.renderAddons(); self.update();
-      };
-      el.appendChild(b);
-    });
-  },
-
-  step: function (key, delta) {
-    var v = this.state[key] + delta;
-    if (v < 1) v = 1;
-    if (v > 8) v = 8;
-    this.state[key] = v;
-    document.getElementById(key === "bedrooms" ? "stBed" : "stBath").textContent = v;
-    this.update();
-  },
-
-  find: function (arr, id) { for (var i = 0; i < arr.length; i++) if (arr[i].id === id) return arr[i]; return arr[0]; },
-
-  compute: function () {
-    var s = this.state;
-    var svc = this.find(PRICING.services, s.service);
-    var size = this.find(PRICING.sizes, s.size);
-    var freq = this.find(PRICING.freqs, s.freq);
-    var lines = [];
-    lines.push({ label: svc.label + " clean", amt: svc.base });
-    if (size.add > 0) lines.push({ label: size.label, amt: size.add });
-    var bedExtra = (s.bedrooms - 1) * PRICING.perBedroom;
-    var bathExtra = (s.bathrooms - 1) * PRICING.perBathroom;
-    if (bedExtra > 0) lines.push({ label: s.bedrooms + " bedrooms", amt: bedExtra });
-    if (bathExtra > 0) lines.push({ label: s.bathrooms + " bathrooms", amt: bathExtra });
-    PRICING.addons.forEach(function (a) {
-      if (s.addons[a.id]) lines.push({ label: a.label, amt: a.price });
-    });
-    var subtotal = 0;
-    lines.forEach(function (l) { subtotal += l.amt; });
-    var discount = Math.round(subtotal * freq.disc);
-    var total = subtotal - discount;
-    return { lines: lines, subtotal: subtotal, discount: discount, total: total, freq: freq, svc: svc };
-  },
-
-  update: function (instant) {
-    var r = this.compute();
-    var brk = document.getElementById("priceBreak");
-    var html = "";
-    r.lines.forEach(function (l) {
-      html += '<div class="br"><span>' + esc(l.label) + "</span><span>" + money(l.amt) + "</span></div>";
-    });
-    if (r.discount > 0) {
-      html += '<div class="br disc"><span>' + esc(r.freq.label) + " discount (−" + Math.round(r.freq.disc * 100) + "%)</span><span>−" + money(r.discount) + "</span></div>";
-    }
-    html += '<div class="br tot"><span>Total per visit</span><span>' + money(r.total) + "</span></div>";
-    brk.innerHTML = html;
-    document.getElementById("priceFreq").textContent =
-      r.freq.id === "once" ? "one-time visit" : r.freq.label.toLowerCase() + " · per visit";
-    this.animateTo(r.total, instant);
-  },
-
-  animateTo: function (target, instant) {
-    var el = document.getElementById("priceNum");
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (instant || reduce) { this.displayed = target; el.textContent = target.toLocaleString("en-US"); return; }
-    var from = this.displayed, self = this;
-    var start = null, dur = 450;
-    cancelAnimationFrame(this._raf);
-    function tick(ts) {
-      if (start === null) start = ts;
-      var p = Math.min(1, (ts - start) / dur);
-      p = 1 - Math.pow(1 - p, 3); // ease-out cubic
-      var val = Math.round(from + (target - from) * p);
-      el.textContent = val.toLocaleString("en-US");
-      if (p < 1) self._raf = requestAnimationFrame(tick);
-      else self.displayed = target;
-    }
-    this._raf = requestAnimationFrame(tick);
-  }
-};
-
-/* ---------- APP (customer side) ---------- */
-var App = {
-  mode: "customer",
-  bookingKind: "booking",
-
-  go: function (mode) {
-    this.mode = mode;
-    document.getElementById("customerView").style.display = mode === "customer" ? "block" : "none";
-    document.getElementById("officeView").style.display = mode === "office" ? "block" : "none";
-    document.getElementById("navCustomer").classList.toggle("active", mode === "customer");
-    document.getElementById("navOffice").classList.toggle("active", mode === "office");
-    window.scrollTo(0, 0);
-    if (mode === "office") Office.renderAll();
-  },
-
-  checkZip: function () {
-    var v = (document.getElementById("zipInput").value || "").trim();
-    var msg = document.getElementById("zipMsg");
-    msg.className = "zip-msg";
-    if (!/^\d{5}$/.test(v)) {
-      msg.classList.add("no");
-      msg.textContent = "Please enter a valid 5-digit ZIP code.";
-      return;
-    }
-    var served = SERVED_ZIP_PREFIXES.some(function (p) { return v.indexOf(p) === 0; });
-    if (served) {
-      msg.classList.add("ok");
-      msg.textContent = "🎉 Great news — we serve " + v + "! Book anytime.";
-    } else {
-      msg.classList.add("no");
-      msg.textContent = "We're not in " + v + " yet — request a custom quote and we'll notify you when we expand.";
-    }
-  },
-
-  openBooking: function (kind) {
-    this.bookingKind = kind || "booking";
-    var isQuote = this.bookingKind === "quote";
-    document.getElementById("modalTitle").textContent = isQuote ? "Request a custom quote" : "Book your clean";
-    document.getElementById("modalSub").textContent = isQuote
-      ? "Tell us about the job — we'll reply with a tailored quote within one business day."
-      : "Two minutes, and you're on the schedule.";
-    document.getElementById("modalSubmit").textContent = isQuote ? "Send quote request" : "Confirm booking";
-    document.getElementById("dateField").style.display = isQuote ? "none" : "block";
-    document.getElementById("windowField").style.display = isQuote ? "none" : "block";
-    document.getElementById("formErr").className = "form-err";
-    document.getElementById("modalFormView").style.display = "block";
-    document.getElementById("modalSuccessView").style.display = "none";
-    if (!isQuote) {
-      var d = document.getElementById("bkDate");
-      if (!d.value) d.value = Store.todayISO(1);
-      d.min = Store.todayISO(0);
-    }
-    document.getElementById("modalBack").classList.add("open");
-    document.body.style.overflow = "hidden";
-    setTimeout(function () { document.getElementById("bkFirst").focus(); }, 60);
-  },
-
-  closeModal: function () {
-    document.getElementById("modalBack").classList.remove("open");
-    document.body.style.overflow = "";
-  },
-
-  submitBooking: function () {
-    var isQuote = this.bookingKind === "quote";
-    var g = function (id) { return (document.getElementById(id).value || "").trim(); };
-    var f = { first: g("bkFirst"), last: g("bkLast"), email: g("bkEmail"), phone: g("bkPhone"),
-              address: g("bkAddr"), city: g("bkCity"), zip: g("bkZip"),
-              date: g("bkDate"), window: document.getElementById("bkWindow").value, notes: g("bkNotes") };
-    var err = document.getElementById("formErr");
-    var problems = [];
-    if (!f.first || !f.last) problems.push("name");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) problems.push("a valid email");
-    if (f.phone.replace(/\D/g, "").length < 7) problems.push("a phone number");
-    if (!f.address || !f.city) problems.push("address & city");
-    if (!/^\d{5}$/.test(f.zip)) problems.push("a 5-digit ZIP");
-    if (!isQuote && !f.date) problems.push("a preferred date");
-    if (problems.length) {
-      err.textContent = "Please add: " + problems.join(", ") + ".";
-      err.className = "form-err show";
-      return;
-    }
-    err.className = "form-err";
-
-    var st = Store.get();
-    var today = Store.todayISO(0);
-
-    if (isQuote) {
-      var qref = Store.nextRef("CS-Q");
-      st.quotes.push({ id: "q" + Date.now(), ref: qref, first: f.first, last: f.last, email: f.email, phone: f.phone,
-        address: f.address, city: f.city, zip: f.zip, notes: f.notes, created: today, status: "Open" });
-      Store.save();
-      this.showSuccess("Quote request sent!", "We'll get back to you within one business day.", qref);
-      return;
-    }
-
-    // Find-or-create the client (matched by email, case-insensitive).
-    var client = null;
-    for (var i = 0; i < st.clients.length; i++) {
-      if (st.clients[i].email.toLowerCase() === f.email.toLowerCase()) { client = st.clients[i]; break; }
-    }
-    if (!client) {
-      client = { id: "c" + Date.now(), first: f.first, last: f.last, email: f.email, phone: f.phone,
-        address: f.address, city: f.city, zip: f.zip, gateCode: "", pets: "", prefs: "", notes: "" };
-      st.clients.push(client);
-    } else {
-      client.phone = f.phone; client.address = f.address; client.city = f.city; client.zip = f.zip;
-    }
-
-    var est = Est.compute();
-    var ref = Store.nextRef("CS-");
-    var isRecurring = est.freq.id !== "once";
-    var seriesId = isRecurring ? "ser" + Date.now() : undefined;
-    var dur = estimateDur(est);
-    st.jobs.push({
-      id: "j" + Date.now(), ref: ref, clientId: client.id,
-      service: est.svc.label, freq: est.freq.label, date: f.date, window: f.window,
-      price: est.total, crew: "", status: "Scheduled", notes: f.notes, created: today, seriesId: seriesId, dur: dur
-    });
-    // Recurring bookings: pre-schedule the next 5 visits in the series.
-    if (isRecurring) {
-      var cursor = f.date;
-      for (var k = 0; k < 5; k++) {
-        cursor = nextOccurrenceISO(cursor, est.freq.label);
-        if (!cursor) break;
-        st.jobs.push({
-          id: "j" + Date.now() + "_" + k, ref: Store.nextRef("CS-"), clientId: client.id,
-          service: est.svc.label, freq: est.freq.label, date: cursor, window: f.window,
-          price: est.total, crew: "", status: "Scheduled", notes: f.notes, created: today, seriesId: seriesId, dur: dur
-        });
-      }
-    }
-    Store.save();
-    var body = "Your " + est.svc.label + " clean is set for " + fmtDate(f.date) + " (" + f.window + ") at " + money(est.total) + ".";
-    if (isRecurring) body += " Your next 5 " + est.freq.label.toLowerCase() + " visits are on the calendar too — the series continues automatically.";
-    this.showSuccess("You're booked!", body, ref);
-  },
-
-  showSuccess: function (title, body, ref) {
-    document.getElementById("modalFormView").style.display = "none";
-    document.getElementById("modalSuccessView").style.display = "block";
-    document.getElementById("successTitle").textContent = title;
-    document.getElementById("successBody").textContent = body;
-    document.getElementById("successRef").textContent = ref;
-    ["bkFirst","bkLast","bkEmail","bkPhone","bkAddr","bkCity","bkZip","bkNotes"].forEach(function (id) {
-      document.getElementById(id).value = "";
-    });
-    if (this.mode === "office") Office.renderAll();
-  },
-
-  resetDemo: function () {
-    if (!window.confirm("Reset all data back to the demo seed? This erases current bookings, clients, and invoices.")) return;
-    Store.reset();
-    Office.renderAll();
-    toast("Demo data restored ✨");
-  },
-
-  exportBackup: function () {
-    var blob = new Blob([JSON.stringify(Store.get(), null, 2)], { type: "application/json" });
-    var a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "clearspace-backup-" + Store.todayISO(0) + ".json";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
-    toast("Backup downloaded 💾");
-  }
-};
-
-/* ---------- STUBS (deliberately non-functional, clearly labeled) ---------- */
-var Stubs = {
-  payments:  function () { toast("💳 Card payments (Stripe / Apple Pay / Google Pay) — coming soon"); },
-  messaging: function () { toast("💬 SMS & email sending — coming soon"); },
-  gps:       function () { toast("📍 GPS crew tracking — coming soon"); },
-  ai:        function () { toast("🤖 AI assistant features — coming soon"); }
-};
-
-/* ---------- OFFICE ---------- */
-var Office = {
-  tab: function (name) {
-    document.querySelectorAll(".office-tabs button").forEach(function (b) {
-      b.classList.toggle("active", b.getAttribute("data-pane") === name);
-    });
-    document.querySelectorAll(".office-view-pane").forEach(function (p) {
-      p.classList.toggle("active", p.id === "pane-" + name);
-    });
-  },
-
-  renderAll: function () {
-    var st = Store.get();
-    var today = Store.todayISO(0);
-    document.getElementById("officeDate").textContent =
-      new Date().toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-
-    // ---- stats ----
-    var todayJobs = st.jobs.filter(function (j) { return j.date === today && j.status !== "Done"; });
-    var revToday = st.jobs.filter(function (j) { return j.date === today; })
-                          .reduce(function (s, j) { return s + j.price; }, 0);
-    var openQuotes = st.quotes.filter(function (q) { return q.status === "Open"; });
-    var unpaid = st.invoices.filter(function (i) { return !i.paid; });
-    var unpaidAmt = unpaid.reduce(function (s, i) { return s + i.amount; }, 0);
-    document.getElementById("statGrid").innerHTML =
-      '<div class="stat-card"><span class="sc-lab">Today\'s jobs</span><div class="sc-val">' + todayJobs.length + '</div><span class="sc-sub">on the schedule</span></div>' +
-      '<div class="stat-card"><span class="sc-lab">Revenue today</span><div class="sc-val">' + money(revToday) + '</div><span class="sc-sub">booked value</span></div>' +
-      '<div class="stat-card warn"><span class="sc-lab">Open quotes</span><div class="sc-val">' + openQuotes.length + '</div><span class="sc-sub">awaiting a reply</span></div>' +
-      '<div class="stat-card warn"><span class="sc-lab">Unpaid invoices</span><div class="sc-val">' + unpaid.length + '</div><span class="sc-sub">' + money(unpaidAmt) + ' outstanding</span></div>';
-
-    // ---- dashboard: upcoming jobs (scheduled, not done), soonest first ----
-    var upcoming = st.jobs.filter(function (j) { return j.status !== "Done" && j.date; })
-      .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
-    document.getElementById("dashJobs").innerHTML = this.jobsTableHTML(upcoming, false);
-
-    // ---- dashboard: open quotes ----
-    var qEl = document.getElementById("dashQuotes");
-    if (!openQuotes.length) {
-      qEl.innerHTML = '<div class="empty-note">No open quote requests — inbox zero 🎉</div>';
-    } else {
-      qEl.innerHTML = openQuotes.map(function (q) {
-        return '<div class="client-card"><div class="cc-head" style="cursor:default">' +
-          '<span class="cc-av">' + esc((q.first[0] || "?") + (q.last[0] || "")) + '</span>' +
-          '<div><div class="cc-name">' + esc(q.first + " " + q.last) + ' <span class="status-pill pill-quote">' + esc(q.ref) + '</span></div>' +
-          '<div class="cc-meta">' + esc(q.address + ", " + q.city + " " + q.zip) + " · " + esc(q.phone) + '</div>' +
-          '<div class="cc-meta" style="margin-top:4px">📝 ' + esc(q.notes || "No notes") + '</div></div>' +
-          '<div class="cc-ltv" style="display:flex;flex-direction:column;gap:6px"><button class="btn btn-em btn-sm" onclick="Office.quoteToJob(\'' + q.id + '\')">→ Job queue</button><button class="btn btn-ghost btn-sm" onclick="Office.closeQuote(\'' + q.id + '\')">Mark handled</button></div>' +
-          '</div></div>';
-      }).join("");
-    }
-
-    // ---- jobs pane ----
-    var allJobs = st.jobs.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
-    document.getElementById("jobsTable").innerHTML = this.jobsTableHTML(allJobs, true);
-
-    // ---- clients pane ----
-    this.renderClients();
-
-    // ---- invoices pane ----
-    this.renderInvoices();
-
-    // ---- calendar pane ----
-    this.renderCalendar();
-  },
-
-  /* ----- CALENDAR ----- */
-  cal: null,   // {y, m} of the displayed month
-  calSel: null, // selected day ISO
-
-  calMove: function (delta) {
-    this.cal.m += delta;
-    if (this.cal.m < 0) { this.cal.m = 11; this.cal.y -= 1; }
-    if (this.cal.m > 11) { this.cal.m = 0; this.cal.y += 1; }
-    this.renderCalendar();
-  },
-
-  calGoToday: function () {
-    var n = new Date();
-    this.cal = { y: n.getFullYear(), m: n.getMonth() };
-    this.calSel = Store.todayISO(0);
-    this.renderCalendar();
-  },
-
-  calSelectDay: function (iso) {
-    // Tap-to-place mode: tapping a day schedules the pending job there.
-    if (this.placeJobId) { this.scheduleJob(this.placeJobId, iso, null); return; }
-    this.calSel = this.calSel === iso ? null : iso;
-    this.renderCalendar();
-  },
-
-  slotClick: function (iso, hour) {
-    if (this.placeJobId) this.scheduleJob(this.placeJobId, iso, hour);
-  },
-
-  renderCalendar: function () {
-    if (!this.cal) {
-      var n = new Date();
-      this.cal = { y: n.getFullYear(), m: n.getMonth() };
-    }
-    var st = Store.get();
-    var today = Store.todayISO(0);
-    var y = this.cal.y, m = this.cal.m;
-
-    document.getElementById("calTitle").textContent =
-      new Date(y, m, 1).toLocaleDateString("en-US", { month: "long", year: "numeric" });
-
-    // Bucket scheduled jobs by date; unscheduled jobs form the queue.
-    var byDate = {};
-    var queued = [];
-    st.jobs.forEach(function (j) {
-      if (!j.date) { queued.push(j); return; }
-      if (!byDate[j.date]) byDate[j.date] = [];
-      byDate[j.date].push(j);
-    });
-    var self = this;
-
-    // ---- queue sidebar ----
-    document.getElementById("qCount").textContent = queued.length;
-    var qEl = document.getElementById("queueList");
-    if (!queued.length) {
-      qEl.innerHTML = '<div class="q-empty">Queue is clear 🎉<br>New bookings without a date, and quotes you convert, land here.</div>';
-    } else {
-      qEl.innerHTML = queued.map(function (j) {
-        var c = findClient(j.clientId);
-        return '<div class="q-card' + (self.placeJobId === j.id ? " placing" : "") + '" draggable="true"' +
-          ' ondragstart="Office.dragStart(event,\'' + j.id + '\')"' +
-          ' onclick="Office.togglePlace(\'' + j.id + '\')" role="button" tabindex="0"' +
-          ' onkeydown="if(event.key===\'Enter\')Office.togglePlace(\'' + j.id + '\')">' +
-          '<span class="q-price">' + money(j.price) + "</span>" +
-          "<b>" + (j.seriesId ? "🔁 " : "") + esc(clientName(c)) + "</b>" +
-          '<span class="q-sub">' + esc(j.service) + " · " + esc(j.ref) + " · ⏱ " + esc(fmtDur(j.dur)) + "</span>" +
-          (j.notes ? '<span class="q-sub">📝 ' + esc(j.notes) + "</span>" : "") +
-          "</div>";
-      }).join("");
-    }
-
-    // ---- placement banner ----
-    var banner = document.getElementById("placeBanner");
-    if (this.placeJobId) {
-      var pj = null;
-      st.jobs.forEach(function (j) { if (j.id === self.placeJobId) pj = j; });
-      banner.textContent = "📌 Placing " + (pj ? pj.ref : "job") + " — tap a day (or a time slot in the day view) to schedule it. Tap the card again to cancel.";
-      banner.classList.add("show");
-    } else {
-      banner.classList.remove("show");
-    }
-
-    var chipStyle = function (status) {
-      if (status === "In Progress") return "background:var(--amber-50);color:var(--amber-600)";
-      if (status === "Done") return "background:var(--em-50);color:var(--em-700)";
-      return "background:var(--blue-bg);color:var(--blue)";
-    };
-    var dotColor = function (status) {
-      if (status === "In Progress") return "var(--amber-500)";
-      if (status === "Done") return "var(--em-500)";
-      return "var(--blue)";
-    };
-
-    var html = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-      .map(function (d) { return '<div class="cal-dow">' + d + "</div>"; }).join("");
-
-    // Grid starts the Sunday on/before the 1st; always draw 6 weeks.
-    var start = new Date(y, m, 1);
-    start.setDate(start.getDate() - start.getDay());
-    for (var i = 0; i < 42; i++) {
-      var d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i);
-      var iso = isoFromDate(d);
-      var jobs = (byDate[iso] || []).slice().sort(function (a, b) {
-        var ta = a.time == null ? 99 : a.time, tb = b.time == null ? 99 : b.time;
-        return ta - tb;
-      });
-      var cls = "cal-cell";
-      if (d.getMonth() !== m) cls += " other";
-      if (iso === today) cls += " today";
-      if (iso === this.calSel) cls += " sel";
-      var inner = '<span class="cal-date">' + d.getDate() + "</span>";
-      var shown = jobs.slice(0, 3);
-      inner += shown.map(function (j) {
-        var c = findClient(j.clientId);
-        return '<span class="cal-chip" style="' + chipStyle(j.status) + '" title="' +
-          esc(j.service + " · " + clientName(c) + " · " + (j.time != null ? fmtHour(j.time) : j.window)) + '">' +
-          (j.seriesId ? "🔁 " : "") + (j.time != null ? fmtHour(j.time).replace(" ", "") + " " : "") + esc(clientName(c)) + "</span>";
-      }).join("");
-      if (jobs.length > 3) inner += '<span class="cal-more">+' + (jobs.length - 3) + " more</span>";
-      if (jobs.length) {
-        inner += '<span class="cal-dots">' + jobs.slice(0, 6).map(function (j) {
-          return '<span class="cal-dot" style="background:' + dotColor(j.status) + '"></span>';
-        }).join("") + "</span>";
-      }
-      html += '<button type="button" class="' + cls + '" aria-label="' + esc(fmtDate(iso)) + ", " + jobs.length + ' jobs"' +
-        ' onclick="Office.calSelectDay(\'' + iso + '\')"' +
-        ' ondragover="Office.dragOverEl(event)" ondragleave="Office.dragLeaveEl(event)"' +
-        ' ondrop="Office.dropOnDay(event,\'' + iso + '\')">' + inner + "</button>";
-    }
-    document.getElementById("calGrid").innerHTML = html;
-
-    // Selected day opens as a full-day, hour-by-hour scheduler (drag jobs into slots).
-    var det = document.getElementById("calDayDetail");
-    if (!this.calSel) {
-      det.innerHTML = '<div class="empty-note">Click a day to open its full schedule — then drag queue jobs into exact time slots.</div>';
-      return;
-    }
-    var sel = this.calSel;
-    var dayJobs = byDate[sel] || [];
-    var dayChip = function (j) {
-      var c = findClient(j.clientId);
-      return '<span class="day-chip" style="' + chipStyle(j.status) + '" draggable="true"' +
-        ' ondragstart="Office.dragStart(event,\'' + j.id + '\')"' +
-        ' title="' + esc(j.service + " · " + j.window + " · " + money(j.price)) + '">' +
-        (j.seriesId ? "🔁 " : "") + esc(clientName(c)) + " · " + esc(j.service) + " · " + money(j.price) +
-        '<button class="dc-x" title="Back to queue" aria-label="Move back to queue" onclick="event.stopPropagation();Office.unscheduleJob(\'' + j.id + '\')">⤺</button></span>';
-    };
-    var anytime = dayJobs.filter(function (j) { return j.time == null; });
-    var dHtml = "<h3>🗓️ " + esc(fmtDate(sel)) + " — full-day schedule (" + dayJobs.length + " job" + (dayJobs.length === 1 ? "" : "s") + ")</h3>";
-    dHtml += '<div class="day-sched">';
-    dHtml += '<div class="slot-row anytime" ondragover="Office.dragOverEl(event)" ondragleave="Office.dragLeaveEl(event)"' +
-      ' ondrop="Office.dropOnDay(event,\'' + sel + '\')" onclick="Office.slotClick(\'' + sel + '\',null)">' +
-      '<div class="slot-time">Any time</div><div class="slot-jobs">' +
-      (anytime.length ? anytime.map(dayChip).join("") : '<span style="font-size:.72rem;color:var(--ink-3)">drop here for no set time</span>') +
-      "</div></div>";
-    // Timeline: hour rows are drop targets; jobs render as duration-sized blocks on top.
-    var PX = 64; // pixels per hour
-    dHtml += '<div class="tl-body">';
-    for (var h = 7; h <= 19; h++) {
-      dHtml += '<div class="slot-row hour-row" ondragover="Office.dragOverEl(event)" ondragleave="Office.dragLeaveEl(event)"' +
-        ' ondrop="Office.dropOnSlot(event,\'' + sel + "'," + h + ')" onclick="Office.slotClick(\'' + sel + "'," + h + ')">' +
-        '<div class="slot-time">' + fmtHour(h) + '</div><div class="slot-jobs"></div></div>';
-    }
-    // Lane layout so overlapping jobs sit side by side.
-    var timed = dayJobs.filter(function (j) { return j.time != null; })
-      .sort(function (a, b) { return (a.time - b.time) || ((b.dur || 60) - (a.dur || 60)); });
-    var laneEnds = [], laneOf = {};
-    timed.forEach(function (j) {
-      var s = j.time * 60, e = s + (j.dur || 60), placed = false;
-      for (var li = 0; li < laneEnds.length; li++) {
-        if (laneEnds[li] <= s) { laneEnds[li] = e; laneOf[j.id] = li; placed = true; break; }
-      }
-      if (!placed) { laneOf[j.id] = laneEnds.length; laneEnds.push(e); }
-    });
-    var N = Math.max(1, laneEnds.length);
-    dHtml += '<div class="tl-canvas">' + timed.map(function (j) {
-      var c = findClient(j.clientId);
-      var dur = j.dur || 60;
-      var top = (j.time - 7) * PX;
-      var height = Math.max(30, (dur / 60) * PX - 6);
-      var lane = laneOf[j.id] || 0;
-      var blkCls = j.status === "In Progress" ? "blk-inprogress" : j.status === "Done" ? "blk-done" : "blk-scheduled";
-      var startMin = j.time * 60, endMin = startMin + dur;
-      return '<div class="tl-block ' + blkCls + '" id="blk-' + j.id + '" draggable="true"' +
-        ' ondragstart="Office.dragStart(event,\'' + j.id + '\')"' +
-        ' style="top:' + top + 'px;height:' + height + 'px;left:calc(' + (lane * 100 / N) + '% + 2px);width:calc(' + (100 / N) + '% - 6px)"' +
-        ' title="' + esc(j.service + " · " + clientName(c) + " · " + money(j.price)) + '">' +
-        '<div class="tlb-head"><b>' + minToClock(startMin) + "–" + minToClock(endMin) + '</b><span class="tlb-dur" id="blkdur-' + j.id + '">' + fmtDur(dur) + "</span></div>" +
-        '<div class="tlb-name">' + (j.seriesId ? "🔁 " : "") + esc(clientName(c)) + " · " + esc(j.service) + " · " + money(j.price) + "</div>" +
-        '<div class="tlb-ctl">' +
-        '<button onclick="event.stopPropagation();Office.bumpDur(\'' + j.id + '\',-15)" aria-label="15 minutes shorter">−15m</button>' +
-        '<button onclick="event.stopPropagation();Office.bumpDur(\'' + j.id + '\',15)" aria-label="15 minutes longer">+15m</button>' +
-        '<button onclick="event.stopPropagation();Office.unscheduleJob(\'' + j.id + '\')" aria-label="Back to queue">⤺ queue</button>' +
-        "</div>" +
-        '<div class="tlb-resize" draggable="false" title="Drag to resize (15-min steps)"' +
-        ' onmousedown="Office.resizeStart(event,\'' + j.id + '\')" ontouchstart="Office.resizeStart(event,\'' + j.id + '\')"></div>' +
-        "</div>";
-    }).join("") + "</div>";
-    dHtml += "</div></div>";
-    dHtml += '<div class="dur-hint">⏱ Drag a block\'s bottom edge (or use −15m / +15m) to set the job length — 1 hr 15 min, 1 hr 30 min, and so on. Drag the block itself to another slot or day.</div>';
-    det.innerHTML = dHtml;
-  },
-
-  /* ----- DURATION (resize + bump) ----- */
-  _rs: null,
-  resizeStart: function (ev, jobId) {
-    ev.preventDefault(); ev.stopPropagation();
-    var st = Store.get(), job = null;
-    st.jobs.forEach(function (j) { if (j.id === jobId) job = j; });
-    if (!job) return;
-    var y = ev.touches ? ev.touches[0].clientY : ev.clientY;
-    var blk = document.getElementById("blk-" + jobId);
-    if (blk) blk.classList.add("resizing");
-    this._rs = { job: job, startY: y, startDur: job.dur || 60, blk: blk, cur: null };
-    var self = this;
-    this._rsMove = function (e) { self.resizeMove(e); };
-    this._rsEnd = function () { self.resizeEnd(); };
-    document.addEventListener("mousemove", this._rsMove);
-    document.addEventListener("mouseup", this._rsEnd);
-    document.addEventListener("touchmove", this._rsMove, { passive: false });
-    document.addEventListener("touchend", this._rsEnd);
-  },
-  resizeMove: function (e) {
-    if (!this._rs) return;
-    if (e.cancelable) e.preventDefault();
-    var y = e.touches ? e.touches[0].clientY : e.clientY;
-    var raw = this._rs.startDur + (y - this._rs.startY) * (60 / 64);
-    var snapped = Math.round(raw / 15) * 15; // 15-minute steps
-    var maxDur = (20 - this._rs.job.time) * 60;
-    if (snapped < 30) snapped = 30;
-    if (snapped > maxDur) snapped = maxDur;
-    this._rs.cur = snapped;
-    if (this._rs.blk) {
-      this._rs.blk.style.height = Math.max(30, (snapped / 60) * 64 - 6) + "px";
-      var lab = document.getElementById("blkdur-" + this._rs.job.id);
-      if (lab) lab.textContent = fmtDur(snapped);
-    }
-  },
-  resizeEnd: function () {
-    if (!this._rs) return;
-    document.removeEventListener("mousemove", this._rsMove);
-    document.removeEventListener("mouseup", this._rsEnd);
-    document.removeEventListener("touchmove", this._rsMove);
-    document.removeEventListener("touchend", this._rsEnd);
-    var r = this._rs; this._rs = null;
-    if (r.cur != null && r.cur !== r.startDur) {
-      r.job.dur = r.cur;
-      Store.save();
-      toast("⏱ " + r.job.ref + " → " + fmtDur(r.cur));
-    }
-    this.renderAll();
-  },
-  bumpDur: function (jobId, delta) {
-    var st = Store.get(), job = null;
-    st.jobs.forEach(function (j) { if (j.id === jobId) job = j; });
-    if (!job) return;
-    var max = job.time != null ? (20 - job.time) * 60 : 12 * 60;
-    var d = (job.dur || 60) + delta;
-    if (d < 30) d = 30;
-    if (d > max) d = max;
-    job.dur = d;
-    Store.save(); this.renderAll();
-    toast("⏱ " + job.ref + " → " + fmtDur(d));
-  },
-
-  jobsTableHTML: function (jobs, full) {
-    if (!jobs.length) return '<div class="empty-note">No jobs yet — bookings from the customer site land here automatically.</div>';
-    var st = Store.get();
-    var rows = jobs.map(function (j) {
-      var c = findClient(j.clientId);
-      var crewSel = '<select class="mini-sel" aria-label="Assign crew" onchange="Office.setCrew(\'' + j.id + '\', this.value)">' +
-        '<option value="">Unassigned</option>' +
-        CREWS.map(function (cr) {
-          return '<option' + (j.crew === cr ? " selected" : "") + ">" + esc(cr) + "</option>";
-        }).join("") + "</select>";
-      var statSel = '<select class="mini-sel" aria-label="Set status" onchange="Office.setStatus(\'' + j.id + '\', this.value)">' +
-        ["Scheduled", "In Progress", "Done"].map(function (s) {
-          return '<option' + (j.status === s ? " selected" : "") + ">" + s + "</option>";
-        }).join("") + "</select>";
-      var hasInv = st.invoices.some(function (i) { return i.jobId === j.id; });
-      var invBtn = hasInv
-        ? '<span class="status-pill pill-paid">Invoiced</span>'
-        : '<button class="btn btn-ghost btn-sm" onclick="Office.makeInvoice(\'' + j.id + '\')">→ Invoice</button>';
-      var recur = j.seriesId ? ' <span class="recur-badge" title="Recurring series — continues automatically">🔁</span>' : "";
-      return "<tr>" +
-        "<td><b>" + esc(j.ref) + "</b>" + recur + "<br><span style='color:var(--ink-3);font-size:.78rem'>" + esc(j.service) + " · " + esc(j.freq) + "</span></td>" +
-        "<td>" + esc(clientName(c)) + "<br><span style='color:var(--ink-3);font-size:.78rem'>" + esc(c ? c.city : "") + "</span></td>" +
-        "<td>" + (j.date
-          ? esc(fmtDate(j.date)) + "<br><span style='color:var(--ink-3);font-size:.78rem'>" + esc((j.time != null ? fmtHour(j.time) : j.window) + " · " + fmtDur(j.dur)) + "</span>"
-          : '<span class="status-pill pill-quote">In queue</span>') + "</td>" +
-        "<td><b>" + money(j.price) + "</b></td>" +
-        "<td>" + crewSel + "</td>" +
-        "<td><span class='status-pill " + statusClass(j.status) + "'>" + esc(j.status) + "</span><br>" + statSel + "</td>" +
-        (full ? '<td><div class="tbl-actions">' + invBtn +
-          '<button class="del-btn" title="Delete job" aria-label="Delete job" onclick="Office.deleteJob(\'' + j.id + '\')">✕</button></div></td>' : "") +
-        "</tr>";
-    }).join("");
-    return '<table class="data"><thead><tr><th>Job</th><th>Client</th><th>When</th><th>Price</th><th>Crew</th><th>Status</th>' +
-      (full ? "<th>Actions</th>" : "") + "</tr></thead><tbody>" + rows + "</tbody></table>";
-  },
-
-  setCrew: function (jobId, crew) {
-    var st = Store.get();
-    st.jobs.forEach(function (j) { if (j.id === jobId) j.crew = crew; });
-    Store.save(); this.renderAll();
-    toast(crew ? "Crew assigned ✅" : "Crew unassigned");
-  },
-
-  setStatus: function (jobId, status) {
-    var st = Store.get();
-    var job = null;
-    st.jobs.forEach(function (j) { if (j.id === jobId) { j.status = status; job = j; } });
-    var extended = false;
-    // Recurring series: when a visit is done, keep the series rolling —
-    // if no future visit exists in this series, schedule the next one.
-    if (job && status === "Done" && job.seriesId) {
-      var hasFuture = st.jobs.some(function (j) {
-        return j.seriesId === job.seriesId && j.date > job.date && j.status !== "Done";
-      });
-      if (!hasFuture) {
-        var next = nextOccurrenceISO(job.date, job.freq);
-        if (next) {
-          st.jobs.push({
-            id: "j" + Date.now(), ref: Store.nextRef("CS-"), clientId: job.clientId,
-            service: job.service, freq: job.freq, date: next, window: job.window,
-            price: job.price, crew: job.crew, status: "Scheduled", notes: job.notes,
-            created: Store.todayISO(0), seriesId: job.seriesId, dur: job.dur || 60, time: job.time
-          });
-          extended = true;
-        }
-      }
-    }
-    Store.save(); this.renderAll();
-    toast(extended ? "Done ✓ — next 🔁 visit auto-scheduled for " + fmtDate(nextOccurrenceISO(job.date, job.freq)) : "Status → " + status);
-  },
-
-  deleteJob: function (jobId) {
-    var st = Store.get();
-    var job = null;
-    st.jobs.forEach(function (j) { if (j.id === jobId) job = j; });
-    if (!job) return;
-    if (!window.confirm("Delete job " + job.ref + "? This can't be undone.")) return;
-    st.jobs = st.jobs.filter(function (j) { return j.id !== jobId; });
-    Store.save(); this.renderAll();
-    toast("Job " + job.ref + " deleted");
-  },
-
-  makeInvoice: function (jobId) {
-    var st = Store.get();
-    var job = null;
-    st.jobs.forEach(function (j) { if (j.id === jobId) job = j; });
-    if (!job) return;
-    if (st.invoices.some(function (i) { return i.jobId === jobId; })) { toast("Already invoiced"); return; }
-    st.invoices.push({ id: "i" + Date.now(), jobId: job.id, ref: "INV-" + job.ref.replace(/^CS-/, ""),
-      clientId: job.clientId, amount: job.price, date: Store.todayISO(0), paid: false });
-    Store.save(); this.renderAll();
-    this.tab("invoices");
-    toast("Invoice created 🧾");
-  },
-
-  togglePaid: function (invId) {
-    var st = Store.get();
-    st.invoices.forEach(function (i) { if (i.id === invId) i.paid = !i.paid; });
-    Store.save(); this.renderAll();
-  },
-
-  closeQuote: function (qId) {
-    var st = Store.get();
-    st.quotes.forEach(function (q) { if (q.id === qId) q.status = "Handled"; });
-    Store.save(); this.renderAll();
-    toast("Quote marked handled");
-  },
-
-  // Convert a quote request into an unscheduled job in the queue (client auto-created).
-  quoteToJob: function (qId) {
-    var st = Store.get();
-    var q = null;
-    st.quotes.forEach(function (x) { if (x.id === qId) q = x; });
-    if (!q) return;
-    var raw = window.prompt("Quoted price for " + q.first + " " + q.last + " ($):", "180");
-    if (raw === null) return;
-    var price = Math.max(0, Math.round(Number(raw) || 0));
-    var client = null;
-    for (var i = 0; i < st.clients.length; i++) {
-      if (st.clients[i].email.toLowerCase() === q.email.toLowerCase()) { client = st.clients[i]; break; }
-    }
-    if (!client) {
-      client = { id: "c" + Date.now(), first: q.first, last: q.last, email: q.email, phone: q.phone,
-        address: q.address, city: q.city, zip: q.zip, gateCode: "", pets: "", prefs: "", notes: "From quote " + q.ref };
-      st.clients.push(client);
-    }
-    st.jobs.push({
-      id: "j" + Date.now(), ref: Store.nextRef("CS-"), clientId: client.id,
-      service: "Custom", freq: "One-time", date: "", window: "Morning (8–11 AM)",
-      price: price, crew: "", status: "Scheduled", notes: q.notes, created: Store.todayISO(0), dur: 120
-    });
-    q.status = "Handled";
-    Store.save(); this.renderAll();
-    this.tab("cal");
-    toast("Quote → job queue. Drag it onto the calendar 📋");
-  },
-
-  /* ----- DRAG & DROP SCHEDULING ----- */
-  dragJobId: null,
-  placeJobId: null, // tap-to-place fallback (touch devices)
-
-  dragStart: function (ev, jobId) {
-    this.dragJobId = jobId;
-    try { ev.dataTransfer.setData("text/plain", jobId); ev.dataTransfer.effectAllowed = "move"; } catch (e) {}
-  },
-  dragOverEl: function (ev) {
-    ev.preventDefault();
-    try { ev.dataTransfer.dropEffect = "move"; } catch (e) {}
-    ev.currentTarget.classList.add("dragover");
-  },
-  dragLeaveEl: function (ev) {
-    ev.currentTarget.classList.remove("dragover");
-  },
-  draggedId: function (ev) {
-    var id = "";
-    try { id = ev.dataTransfer.getData("text/plain"); } catch (e) {}
-    return id || this.dragJobId;
-  },
-  dropOnDay: function (ev, iso) {
-    ev.preventDefault(); ev.stopPropagation();
-    ev.currentTarget.classList.remove("dragover");
-    var id = this.draggedId(ev);
-    if (id) this.scheduleJob(id, iso, null);
-  },
-  dropOnSlot: function (ev, iso, hour) {
-    ev.preventDefault(); ev.stopPropagation();
-    ev.currentTarget.classList.remove("dragover");
-    var id = this.draggedId(ev);
-    if (id) this.scheduleJob(id, iso, hour);
-  },
-  dropOnQueue: function (ev) {
-    ev.preventDefault();
-    ev.currentTarget.classList.remove("dragover");
-    var id = this.draggedId(ev);
-    if (id) this.unscheduleJob(id);
-  },
-
-  scheduleJob: function (jobId, iso, hour) {
-    var st = Store.get();
-    var job = null;
-    st.jobs.forEach(function (j) { if (j.id === jobId) job = j; });
-    if (!job) return;
-    job.date = iso;
-    if (hour != null) { job.time = hour; job.window = windowForHour(hour); }
-    if (job.status === "Done") job.status = "Scheduled";
-    this.dragJobId = null; this.placeJobId = null;
-    this.calSel = iso;
-    Store.save(); this.renderAll();
-    toast("📅 " + job.ref + " → " + fmtDate(iso) + (hour != null ? " at " + fmtHour(hour) : ""));
-  },
-
-  unscheduleJob: function (jobId) {
-    var st = Store.get();
-    var job = null;
-    st.jobs.forEach(function (j) { if (j.id === jobId) job = j; });
-    if (!job) return;
-    job.date = ""; job.time = null; job.status = "Scheduled";
-    this.dragJobId = null; this.placeJobId = null;
-    Store.save(); this.renderAll();
-    toast("📋 " + job.ref + " moved back to the queue");
-  },
-
-  togglePlace: function (jobId) {
-    this.placeJobId = this.placeJobId === jobId ? null : jobId;
-    this.renderCalendar();
-  },
-
-  renderInvoices: function () {
-    var st = Store.get();
-    var el = document.getElementById("invTable");
-    if (!st.invoices.length) {
-      el.innerHTML = '<div class="empty-note">No invoices yet — open the Jobs tab and click “→ Invoice” on a job.</div>';
-      return;
-    }
-    var rows = st.invoices.slice().reverse().map(function (inv) {
-      var c = findClient(inv.clientId);
-      return "<tr>" +
-        "<td><b>" + esc(inv.ref) + "</b></td>" +
-        "<td>" + esc(clientName(c)) + "</td>" +
-        "<td>" + esc(fmtDate(inv.date)) + "</td>" +
-        "<td><b>" + money(inv.amount) + "</b></td>" +
-        "<td><span class='status-pill " + (inv.paid ? "pill-paid'>Paid" : "pill-unpaid'>Unpaid") + "</span></td>" +
-        '<td><div class="tbl-actions"><button class="btn btn-ghost btn-sm" onclick="Office.togglePaid(\'' + inv.id + '\')">' +
-        (inv.paid ? "Mark unpaid" : "Mark paid") + "</button>" +
-        '<button class="btn btn-ghost btn-sm" onclick="Stubs.payments()">💳 Charge card</button></div></td>' +
-        "</tr>";
-    }).join("");
-    el.innerHTML = '<table class="data"><thead><tr><th>Invoice</th><th>Client</th><th>Date</th><th>Amount</th><th>Status</th><th>Actions</th></tr></thead><tbody>' + rows + "</tbody></table>";
-  },
-
-  renderClients: function () {
-    var st = Store.get();
-    var el = document.getElementById("clientList");
-    if (!st.clients.length) {
-      el.innerHTML = '<div class="empty-note">No clients yet — they appear automatically when someone books.</div>';
-      return;
-    }
-    el.innerHTML = st.clients.map(function (c) {
-      var jobs = st.jobs.filter(function (j) { return j.clientId === c.id; });
-      var ltv = jobs.reduce(function (s, j) { return s + j.price; }, 0);
-      var hist = jobs.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; }).map(function (j) {
-        return "<li><b>" + esc(fmtDate(j.date)) + "</b> — " + esc(j.service) + " (" + esc(j.ref) + ") · " + money(j.price) +
-          ' · <span class="status-pill ' + statusClass(j.status) + '">' + esc(j.status) + "</span></li>";
-      }).join("");
-      return '<div class="client-card" id="cc-' + c.id + '">' +
-        '<div class="cc-head" onclick="Office.toggleClient(\'' + c.id + '\')">' +
-        '<span class="cc-av">' + esc((c.first[0] || "?") + (c.last[0] || "")) + "</span>" +
-        '<div><div class="cc-name">' + esc(clientName(c)) + '</div>' +
-        '<div class="cc-meta">' + esc(c.address + ", " + c.city + " " + c.zip) + " · " + esc(c.phone) + " · " + esc(c.email) + "</div></div>" +
-        '<div class="cc-ltv"><b>' + money(ltv) + '</b><span>lifetime · ' + jobs.length + ' job' + (jobs.length === 1 ? "" : "s") + "</span></div></div>" +
-        '<div class="cc-body"><div class="cc-grid">' +
-        '<div class="cc-field"><label>Gate / door code</label><input value="' + esc(c.gateCode) + '" onchange="Office.saveField(\'' + c.id + "','gateCode',this.value)\"></div>" +
-        '<div class="cc-field"><label>Pets</label><input value="' + esc(c.pets) + '" onchange="Office.saveField(\'' + c.id + "','pets',this.value)\"></div>" +
-        '<div class="cc-field"><label>Cleaning preferences</label><input value="' + esc(c.prefs) + '" onchange="Office.saveField(\'' + c.id + "','prefs',this.value)\"></div>" +
-        '<div class="cc-field"><label>Office notes</label><input value="' + esc(c.notes) + '" onchange="Office.saveField(\'' + c.id + "','notes',this.value)\"></div>" +
-        "</div>" +
-        '<div class="cc-field" style="margin-bottom:6px"><label>Job history</label></div>' +
-        (hist ? '<ul class="cc-hist">' + hist + "</ul>" : '<div class="cc-meta">No jobs yet.</div>') +
-        "</div></div>";
-    }).join("");
-  },
-
-  toggleClient: function (id) {
-    var card = document.getElementById("cc-" + id);
-    if (card) card.classList.toggle("open");
-  },
-
-  saveField: function (clientId, field, value) {
-    var st = Store.get();
-    st.clients.forEach(function (c) { if (c.id === clientId) c[field] = value; });
-    Store.save();
-    toast("Saved ✅");
-  }
-};
-
-/* ---------- SCROLL REVEAL ---------- */
-(function () {
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var els = document.querySelectorAll(".reveal");
-  if (reduce || !("IntersectionObserver" in window)) {
-    els.forEach(function (e) { e.classList.add("in"); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-    });
-  }, { threshold: 0.12 });
-  els.forEach(function (e) { io.observe(e); });
-})();
-
-/* ---------- PWA-STYLE MANIFEST (injected, keeps file self-contained) ---------- */
-(function () {
-  try {
-    var manifest = {
-      name: "ClearSpace Home Cleaning", short_name: "ClearSpace",
-      start_url: ".", display: "standalone",
-      background_color: "#fbfdfc", theme_color: "#059669",
-      icons: [{
-        src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23059669'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E",
-        sizes: "192x192", type: "image/svg+xml"
-      }]
-    };
-    var link = document.createElement("link");
-    link.rel = "manifest";
-    link.href = "data:application/manifest+json," + encodeURIComponent(JSON.stringify(manifest));
-    document.head.appendChild(link);
-  } catch (e) { /* non-fatal */ }
-})();
-
-/* ---------- SERVICE WORKER (offline support when hosted over http/https) ---------- */
-(function () {
-  if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
-    navigator.serviceWorker.register("./sw.js").catch(function () { /* not hosted with sw.js — fine */ });
-  }
-})();
-
-/* ---------- MISC WIRING ---------- */
-document.getElementById("modalBack").addEventListener("click", function (e) {
-  if (e.target === this) App.closeModal();
-});
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") App.closeModal();
-});
-document.getElementById("zipInput").addEventListener("keydown", function (e) {
-  if (e.key === "Enter") App.checkZip();
-});
-
-Est.init();
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
 </script>
 </body>
 </html>
