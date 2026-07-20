@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+/* Business card BACK — 3.5x2in trim + 0.125in bleed = 3.75x2.25in */
+@page { size: 3.75in 2.25in; margin: 0; }
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{width:3.75in;height:2.25in}
+.bleed{width:3.75in;height:2.25in;background:#ffffff;position:relative;overflow:hidden;font-family:Arial,Helvetica,sans-serif;color:#0b1f18}
+.bar{position:absolute;top:0;left:0;width:100%;height:.16in;background:linear-gradient(90deg,#10b981,#047857)}
+.safe{position:absolute;top:.3in;left:.3in;right:.3in;bottom:.28in;display:flex;flex-direction:column;justify-content:space-between}
+.headline{font-size:.15in;font-weight:800;color:#065f46;line-height:1.2}
+ul{list-style:none}
+li{font-size:.1in;color:#33473f;padding:.028in 0 .028in .18in;position:relative;line-height:1.25}
+li::before{content:"\2713";position:absolute;left:0;color:#059669;font-weight:800}
+.foot{display:flex;flex-direction:column;gap:.02in}
+.foot .e{font-size:.1in;color:#047857;font-weight:700}
+.foot .w{font-size:.095in;color:#5c6f67}
+</style>
+</head>
+<body>
+<div class="bleed">
+  <div class="bar"></div>
+  <div class="safe">
+    <div class="headline">A spotless home,<br>without lifting a finger.</div>
+    <ul>
+      <li>Standard, deep &amp; move-out cleaning</li>
+      <li>Recurring service &mdash; save up to 20%</li>
+      <li>Flat-rate pricing &middot; 48-hour guarantee</li>
+      <li>Instant online price in 30 seconds</li>
+    </ul>
+    <div class="foot">
+      <span class="e">&#9993; ClearSpaceCleaning113@gmail.com</span>
+      <span class="w">&#128241; (801) 433-7342 &middot; miguelcaudillo.github.io/ClearSpace</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

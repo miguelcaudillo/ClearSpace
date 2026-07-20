@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+/* Business card FRONT — 3.5x2in trim + 0.125in bleed = 3.75x2.25in */
+@page { size: 3.75in 2.25in; margin: 0; }
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+html,body{width:3.75in;height:2.25in}
+.bleed{width:3.75in;height:2.25in;background:linear-gradient(150deg,#047857 0%,#065f46 45%,#022c22 100%);position:relative;overflow:hidden;font-family:Arial,Helvetica,sans-serif;color:#fff}
+.bleed::after{content:"";position:absolute;width:2.2in;height:2.2in;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.32),transparent 70%);top:-1in;right:-.7in}
+/* safe area: 0.25in from bleed edge (0.125 bleed + 0.125 safety) */
+.safe{position:absolute;top:.28in;left:.3in;right:.3in;bottom:.28in;display:flex;flex-direction:column;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:.09in}
+.mark{width:.42in;height:.42in;border-radius:.12in;background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:.24in;line-height:1}
+.name{font-size:.2in;font-weight:800;letter-spacing:-.01in}
+.name b{font-weight:900}
+.sub{font-size:.088in;color:#cdeee1;margin-top:.02in}
+.phone{font-size:.26in;font-weight:800;letter-spacing:.005in}
+.tagrow{display:flex;align-items:center;gap:.12in;margin-top:.05in}
+.chip{font-size:.082in;font-weight:700;color:#d1fae5;background:rgba(255,255,255,.14);border-radius:.1in;padding:.03in .1in}
+.web{font-size:.1in;color:#a7f3d0;font-weight:600}
+</style>
+</head>
+<body>
+<div class="bleed">
+  <div class="safe">
+    <div class="brand">
+      <span class="mark">&#10022;</span>
+      <span><span class="name">Clear<b>Space</b></span><span class="sub">HOME CLEANING &middot; West Jordan, UT</span></span>
+    </div>
+    <div>
+      <div class="phone">(801) 433-7342</div>
+      <div class="tagrow"><span class="chip">English &amp; Espa&ntilde;ol</span><span class="chip">Licensed &amp; insured</span></div>
+    </div>
+    <div class="web">miguelcaudillo.github.io/ClearSpace</div>
+  </div>
+</div>
+</body>
+</html>
