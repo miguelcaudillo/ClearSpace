@@ -176,6 +176,13 @@ function head(title, desc) {
   "<title>" + title + " — ClearSpace Home Cleaning</title>\n" +
   '<meta name="description" content="' + desc + '">\n' +
   '<meta name="theme-color" content="#059669">\n' +
+  '<meta property="og:type" content="website">\n' +
+  '<meta property="og:site_name" content="ClearSpace Home Cleaning">\n' +
+  '<meta property="og:title" content="' + title + '">\n' +
+  '<meta property="og:description" content="' + desc + '">\n' +
+  '<meta property="og:image" content="https://miguelcaudillo.github.io/ClearSpace/assets/img/og-image.jpg">\n' +
+  '<meta name="twitter:card" content="summary_large_image">\n' +
+  '<meta name="twitter:image" content="https://miguelcaudillo.github.io/ClearSpace/assets/img/og-image.jpg">\n' +
   '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Crect width=\'100\' height=\'100\' rx=\'24\' fill=\'%23059669\'/%3E%3Ctext x=\'50\' y=\'68\' font-size=\'52\' text-anchor=\'middle\' fill=\'white\' font-family=\'Arial\'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">\n' +
   '<link rel="stylesheet" href="../assets/site.css">\n</head>\n<body>\n' +
   '<header class="site-header"><div class="wrap header-in">\n' +

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClearSpace — Print Materials (Flyer · Door Hanger · Business Card)</title>
+<style>
+:root{--em-800:#065f46;--em-700:#047857;--em-600:#059669;--em-500:#10b981;--em-50:#ecfdf5;--ink:#0b1f18;--ink-3:#5c6f67;--amber:#f59e0b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:#e7ece9;padding:24px}
+.bar{max-width:900px;margin:0 auto 18px;background:#fff;border-radius:10px;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.bar b{color:var(--em-700)}
+.bar button{background:var(--em-700);color:#fff;border:none;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer}
+.bar span{color:var(--ink-3);font-size:.85rem}
+.sheet{background:#fff;margin:0 auto 26px;box-shadow:0 4px 16px rgba(0,0,0,.12);position:relative;overflow:hidden}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
+.mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--em-500),var(--em-800));display:grid;place-items:center;color:#fff;font-size:1.1rem;flex:none}
+.mark.lg{width:54px;height:54px;font-size:1.5rem;border-radius:15px}
+
+/* ---- FLYER: 8.5x11 ---- */
+.flyer{width:8.5in;min-height:11in;padding:.7in .7in .5in}
+.flyer .hero{background:linear-gradient(150deg,var(--em-700),#022c22);color:#fff;border-radius:20px;padding:40px 38px;position:relative;overflow:hidden}
+.flyer .hero::after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.28),transparent 70%);top:-150px;right:-120px}
+.flyer h1{font-size:2.5rem;line-height:1.08;margin:22px 0 12px;letter-spacing:-.02em}
+.flyer .hl{color:#6ee7b7}
+.flyer .lede{font-size:1.05rem;color:#cdeee1;max-width:26ch}
+.flyer .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px}
+.flyer h2{color:var(--em-800);font-size:1.15rem;margin-bottom:12px;border-bottom:2px solid var(--em-50);padding-bottom:6px}
+.flyer ul{list-style:none}
+.flyer li{padding:6px 0 6px 26px;position:relative;font-size:1rem}
+.flyer li::before{content:"✓";position:absolute;left:0;color:var(--em-600);font-weight:800}
+.pricebox{background:var(--em-50);border:1.5px solid var(--em-500);border-radius:14px;padding:16px 20px;margin-top:14px}
+.pricebox .row{display:flex;justify-content:space-between;padding:5px 0;font-size:1rem}
+.pricebox .row b{color:var(--em-800)}
+.flyer .cta{margin-top:32px;background:var(--amber);border-radius:16px;padding:24px 30px;text-align:center}
+.flyer .cta .big{font-size:1.9rem;font-weight:800;color:#3d2800}
+.flyer .cta .ph{font-size:2.3rem;font-weight:800;color:#3d2800;letter-spacing:.01em}
+.flyer .cta .web{font-size:1.05rem;color:#5c4a10;margin-top:4px}
+.flyer .foot{text-align:center;color:var(--ink-3);font-size:.85rem;margin-top:20px}
+.es-tag{display:inline-block;background:rgba(255,255,255,.16);border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:700;margin-top:14px}
+
+/* ---- DOOR HANGER: ~4.25x11 with tear tabs ---- */
+.hanger{width:4.25in;min-height:11in;padding:.4in .38in;border:1px dashed #bbb}
+.hanger .hole{width:1.6in;height:1.6in;border:2px solid var(--em-500);border-radius:50%;margin:0 auto .2in;position:relative}
+.hanger .hole::after{content:"";position:absolute;top:-2px;left:50%;transform:translateX(-50%);width:.5in;height:.5in;background:#fff;border:2px solid var(--em-500);border-bottom:none;border-radius:50% 50% 0 0;margin-top:-.25in}
+.hanger h1{font-size:1.5rem;text-align:center;line-height:1.1;margin:10px 0}
+.hanger .hl{color:var(--em-700)}
+.hanger p{text-align:center;color:var(--ink-3);font-size:.92rem;margin-bottom:12px}
+.hanger ul{list-style:none;margin:14px 0}
+.hanger li{padding:5px 0 5px 22px;position:relative;font-size:.92rem}
+.hanger li::before{content:"✓";position:absolute;left:0;color:var(--em-600);font-weight:800}
+.hanger .cta{background:var(--em-700);color:#fff;border-radius:12px;padding:16px;text-align:center;margin:14px 0}
+.hanger .cta .ph{font-size:1.5rem;font-weight:800}
+.tabs{display:flex;border-top:1.5px dashed #999;margin-top:16px}
+.tab{flex:1;border-right:1px dashed #ccc;text-align:center;padding:10px 2px;font-size:.62rem;font-weight:700;color:var(--em-800);writing-mode:vertical-rl;transform:rotate(180deg);height:1.5in}
+.tab:last-child{border-right:none}
+
+/* ---- BUSINESS CARDS: 3.5x2, 10-up ---- */
+.cards{display:flex;flex-wrap:wrap;gap:.15in;width:8in;padding:.25in}
+.card{width:3.5in;height:2in;border:1px solid #ddd;border-radius:10px;padding:.2in .22in;display:flex;flex-direction:column;justify-content:space-between}
+.card.front{background:linear-gradient(150deg,var(--em-700),#022c22);color:#fff}
+.card.back{background:#fff}
+.card .ph{font-size:1.15rem;font-weight:800}
+.card .tag{font-size:.72rem;color:#cdeee1}
+.card.back h3{color:var(--em-800);font-size:.9rem;margin-bottom:6px}
+.card.back ul{list-style:none;font-size:.72rem;color:var(--ink-3);line-height:1.55}
+.card .web{font-size:.78rem;margin-top:auto}
+
+@media print{
+  body{background:#fff;padding:0}
+  .bar{display:none}
+  .sheet{box-shadow:none;margin:0;page-break-after:always}
+  .hanger{border:1px dashed #999}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <b>ClearSpace print materials</b>
+  <button onclick="window.print()">🖨 Print / Save as PDF</button>
+  <span>3 sheets: full flyer · door hanger (with tear-off tabs) · business cards. For pro printing, "Save as PDF" and upload to Vistaprint/Staples.</span>
+</div>
+
+<!-- ============ FLYER ============ -->
+<div class="sheet flyer">
+  <div class="hero">
+    <div class="brand"><span class="mark lg">✦</span><span>Clear<span style="font-weight:900">Space</span> <span style="font-weight:500;font-size:.8rem;opacity:.85">HOME CLEANING</span></span></div>
+    <h1>A spotless home,<br><span class="hl">without lifting a finger.</span></h1>
+    <p class="lede">Professional house cleaning across West Jordan &amp; the Salt Lake valley.</p>
+    <span class="es-tag">🗣️ Hablamos Español</span>
+  </div>
+
+  <div class="cols">
+    <div>
+      <h2>What we do</h2>
+      <ul>
+        <li>Standard &amp; recurring cleaning</li>
+        <li>Deep cleans (top to bottom)</li>
+        <li>Move-in / move-out cleans</li>
+        <li>Same trusted crew every visit</li>
+        <li>Flat-rate pricing, no surprises</li>
+        <li>48-hour re-clean guarantee</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Starting prices</h2>
+      <div class="pricebox">
+        <div class="row"><span>🧹 Standard clean</span><b>from $120</b></div>
+        <div class="row"><span>✨ Deep clean</span><b>from $220</b></div>
+        <div class="row"><span>📦 Move-out clean</span><b>from $280</b></div>
+        <div class="row"><span>🔁 Recurring</span><b>save up to 20%</b></div>
+      </div>
+      <p style="font-size:.82rem;color:var(--ink-3);margin-top:8px">Get your exact price in 30 seconds online — no phone call needed.</p>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="big">Free quote today · Cotización gratis</div>
+    <div class="ph">📞 (801) 433-7342</div>
+    <div class="web">miguelcaudillo.github.io/ClearSpace</div>
+  </div>
+  <p class="foot">ClearSpace Home Cleaning · West Jordan, UT · Licensed &amp; insured · Serving West Jordan, Salt Lake City, South Jordan, Sandy, Riverton, Herriman, Taylorsville &amp; Murray</p>
+</div>
+
+<!-- ============ DOOR HANGER ============ -->
+<div class="sheet hanger">
+  <div class="hole"></div>
+  <div class="brand" style="justify-content:center;font-size:1.1rem"><span class="mark">✦</span><span>Clear<b>Space</b></span></div>
+  <h1>We just cleaned a home <span class="hl">on your street!</span></h1>
+  <p>Hi neighbor 👋 We're a local West Jordan cleaning company. <b>Hola vecino</b> — hablamos español.</p>
+  <ul>
+    <li>Flat-rate pricing you see up front</li>
+    <li>Standard, deep &amp; move-out cleans</li>
+    <li>Same crew every visit</li>
+    <li>48-hour re-clean guarantee</li>
+  </ul>
+  <div class="cta">
+    <div>Free quote · Cotización gratis</div>
+    <div class="ph">(801) 433-7342</div>
+    <div style="font-size:.8rem;margin-top:4px">miguelcaudillo.github.io/ClearSpace</div>
+  </div>
+  <p style="font-size:.72rem">Tear off our number 👇</p>
+  <div class="tabs">
+    <span class="tab">ClearSpace · (801) 433-7342</span>
+    <span class="tab">ClearSpace · (801) 433-7342</span>
+    <span class="tab">ClearSpace · (801) 433-7342</span>
+    <span class="tab">ClearSpace · (801) 433-7342</span>
+    <span class="tab">ClearSpace · (801) 433-7342</span>
+  </div>
+</div>
+
+<!-- ============ BUSINESS CARDS ============ -->
+<div class="sheet">
+  <div class="cards">
+    <div class="card front">
+      <div class="brand"><span class="mark">✦</span><span>Clear<b>Space</b></span></div>
+      <div>
+        <div style="font-size:.82rem;color:#cdeee1;margin-bottom:2px">Home Cleaning · West Jordan, UT</div>
+        <div class="ph">📞 (801) 433-7342</div>
+        <div class="tag">🗣️ English &amp; Español</div>
+      </div>
+      <div class="web">miguelcaudillo.github.io/ClearSpace</div>
+    </div>
+    <div class="card back">
+      <h3>A spotless home, without lifting a finger.</h3>
+      <ul>
+        <li>✓ Standard, deep &amp; move-out cleaning</li>
+        <li>✓ Recurring service — save up to 20%</li>
+        <li>✓ Flat-rate pricing · 48-hr guarantee</li>
+        <li>✓ Instant online price in 30 seconds</li>
+      </ul>
+      <div class="web" style="color:var(--em-700);font-weight:700">✉️ ClearSpaceCleaning113@gmail.com</div>
+    </div>
+  </div>
+  <p style="text-align:center;color:var(--ink-3);font-size:.82rem;padding:0 0 20px">Front &amp; back shown. Most print shops want them as two separate PDFs — print this page, or ask me to split them.</p>
+</div>
+
+</body>
+</html>

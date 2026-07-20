@@ -43,6 +43,13 @@ Everything built in this repo, where it lives, what only you can do, and the lau
 - `docs/checklists.html` — standard / deep / move-out room-by-room checklists.
 - `marketing/ghl-followup-sequence.md` — the 30-day GoHighLevel copy + build steps.
 - `marketing/gbp-kit.md` — Google Business Profile description, services, posts, review requests.
+- `marketing/verification-video-script.md` — script for Google's verification video.
+- `marketing/photo-shot-list.md` — the 12 photos to shoot for GBP + the website.
+- `marketing/print-materials.html` — printable flyer, door hanger (tear-off tabs), and business card. Open in a browser → Print/Save as PDF. **Note:** prices are typed into the flyer/card by hand — if you change rates in `pricing-config.js`, update this file too.
+- `marketing/social-media-kit.md` — bilingual Facebook / Instagram / Nextdoor launch posts.
+- `marketing/email-signature.html` — open it, click "Copy signature," paste into Gmail settings.
+- `assets/img/` — self-hosted placeholder photos + `og-image.jpg` (social-share preview) + `CREDITS.md`. Swap for real photos when you have them.
+- `404.html` — friendly not-found page.
 
 *(Print the `docs/*.html` files from a browser — each has a 🖨 Print button.)*
 
