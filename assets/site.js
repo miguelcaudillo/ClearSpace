@@ -74,7 +74,7 @@ function renderConfigPrices() {
    No backend needed for launch: leads are saved to localStorage
    (key clearspace_leads) AND — if FORM_ENDPOINT is set to a form service
    URL (e.g. Formspree) — POSTed there so you get an email. */
-var FORM_ENDPOINT = ""; // e.g. "https://formspree.io/f/xxxxxxx" — leave "" until you create one
+var FORM_ENDPOINT = "https://formspree.io/f/mpqvrogw"; // Formspree → ClearSpaceCleaning113@gmail.com
 
 function submitQuoteForm(formEl, errEl, okEl) {
   var data = {};
