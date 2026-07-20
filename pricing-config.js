@@ -20,7 +20,7 @@ var CLEARSPACE_CONFIG = {
   business: {
     name: "ClearSpace Home Cleaning",
     phone: "(801) 433-7342",
-    email: "ClearSpaceCleaning113@gmaill.com",  // ⚠️ CONFIRM: is this "gmaill" (double L) correct, or should it be gmail.com?
+    email: "ClearSpaceCleaning113@gmail.com",
     bookingUrl: "https://miguelcaudillo.github.io/ClearSpace/pricing.html",
     reviewUrl: "[YOUR GOOGLE REVIEW LINK]", // from Google Business Profile → "Ask for reviews"
     serviceCities: [

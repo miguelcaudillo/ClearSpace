@@ -104,10 +104,15 @@ function submitQuoteForm(formEl, errEl, okEl) {
   } catch (e) {}
 
   if (FORM_ENDPOINT) {
+    // Formspree-friendly extras: subject line + reply-to the customer.
+    var payload = {};
+    Object.keys(data).forEach(function (k) { payload[k] = data[k]; });
+    payload._subject = "New ClearSpace quote request — " + (data.name || "") + " (" + (data.service || "") + ")";
+    if (data.email) payload._replyto = data.email;
     fetch(FORM_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify(data)
+      body: JSON.stringify(payload)
     }).catch(function () {});
   }
 
