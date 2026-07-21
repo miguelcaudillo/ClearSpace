@@ -262,10 +262,33 @@ function autoReplyMessages(lead) {
   };
 }
 
+/* ---------- 6. REFERRAL ASK (send to happy customers) ---------- */
+function referralMessages(lead) {
+  var fn = firstName(lead.name);
+  var r = (BIZ.referral || { give: 20, get: 20 });
+  return {
+    sms_en: "Hi " + fn + "! So glad you loved your clean. 💚 Know a friend who could use one? Send them our way — they get $" + r.get + " off their first clean, and you get $" + r.give + " off your next one. Just have them mention your name when they book! – " + BIZ.name,
+    sms_es: "¡Hola " + fn + "! Nos alegra que le haya encantado su limpieza. 💚 ¿Conoce a alguien que necesite una? Recomiéndenos — su amigo recibe $" + r.get + " de descuento en su primera limpieza, y usted $" + r.give + " en la próxima suya. ¡Solo pídale que mencione su nombre al reservar! – " + BIZ.name,
+    email_subject_en: "Give $" + r.get + ", get $" + r.give + " — refer a friend to ClearSpace",
+    email_en: "Hi " + fn + ",\n\n" +
+      "Thank you for being a ClearSpace customer — it means the world to a local small business like ours.\n\n" +
+      "If you know someone who'd love a cleaner home, here's a little thank-you: refer a friend and they get $" + r.get + " off their first clean, and you get $" + r.give + " off your next one. There's no limit — refer as many friends as you like.\n\n" +
+      "Just have them mention your name when they book, or forward them our number: " + BIZ.phone + ".\n\n" +
+      "Thanks again,\n" + BIZ.name,
+    email_subject_es: "Recomiende y ambos ahorran — $" + r.get + " para su amigo, $" + r.give + " para usted",
+    email_es: "Hola " + fn + ":\n\n" +
+      "Gracias por ser cliente de ClearSpace — significa muchísimo para un pequeño negocio local como el nuestro.\n\n" +
+      "Si conoce a alguien que disfrutaría un hogar más limpio, aquí va un agradecimiento: recomiende a un amigo y él recibe $" + r.get + " de descuento en su primera limpieza, y usted $" + r.give + " en la próxima suya. Sin límite — recomiende a cuantos amigos guste.\n\n" +
+      "Solo pídale que mencione su nombre al reservar, o compártale nuestro número: " + BIZ.phone + ".\n\n" +
+      "Gracias de nuevo,\n" + BIZ.name
+  };
+}
+
 function allMessages(lead) {
   return {
     lead: lead,
     autoreply: autoReplyMessages(lead),
+    referral: referralMessages(lead),
     quote: quoteMessages(lead),
     confirmation: confirmationMessages(lead),
     reminder: reminderMessages(lead),
@@ -274,7 +297,7 @@ function allMessages(lead) {
 }
 
 module.exports = { autoReplyMessages: autoReplyMessages, quoteMessages: quoteMessages, confirmationMessages: confirmationMessages,
-  reminderMessages: reminderMessages, reviewMessages: reviewMessages, allMessages: allMessages };
+  reminderMessages: reminderMessages, reviewMessages: reviewMessages, referralMessages: referralMessages, allMessages: allMessages };
 
 /* ---------- CLI ---------- */
 if (require.main === module) {
@@ -302,7 +325,7 @@ if (require.main === module) {
       lead.service + " / " + lead.frequency + (lead.addons.length ? " — add-ons: " + lead.addons.join(", ") : "");
     console.log("\n" + "=".repeat(78) + "\n" + head + "\n" + "=".repeat(78));
     [["INSTANT AUTO-REPLY", m.autoreply], ["QUOTE", m.quote], ["BOOKING CONFIRMATION", m.confirmation],
-     ["DAY-BEFORE REMINDER", m.reminder], ["REVIEW REQUEST", m.review]].forEach(function (pair) {
+     ["DAY-BEFORE REMINDER", m.reminder], ["REVIEW REQUEST", m.review], ["REFERRAL ASK", m.referral]].forEach(function (pair) {
       console.log("\n––– " + pair[0] + " –––");
       var msg = pair[1];
       console.log("\n[SMS · EN]\n" + msg.sms_en);

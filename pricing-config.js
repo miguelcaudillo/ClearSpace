@@ -29,7 +29,10 @@ var CLEARSPACE_CONFIG = {
     ],
     // Any ZIP starting with one of these passes the service-area check.
     // 840xx / 841xx covers the Salt Lake valley.
-    zipPrefixes: ["840", "841"]
+    zipPrefixes: ["840", "841"],
+    // Referral program: your customer ("give") and the friend they send ("get")
+    // each save this many dollars. Edit the numbers to change the offer.
+    referral: { give: 20, get: 20 }
   },
 
   /* ---------- PRICING ---------- */

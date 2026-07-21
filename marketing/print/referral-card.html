@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+/* Referral cards — 3.5x2 each, front + back, print two-up */
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"Segoe UI",Arial,sans-serif;background:#e7ece9;padding:26px}
+.bar{max-width:760px;margin:0 auto 18px;background:#fff;border-radius:10px;padding:14px 18px;display:flex;gap:14px;align-items:center;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.bar b{color:#047857}.bar span{color:#5c6f67;font-size:.85rem}
+.bar button{background:#047857;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer;margin-left:auto}
+.row{display:flex;gap:28px;justify-content:center;flex-wrap:wrap}
+.wrap{display:flex;flex-direction:column;align-items:center;gap:10px}
+.lbl{font-weight:700;color:#047857;font-size:.85rem}
+.card{width:3.5in;height:2in;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 8px 22px rgba(2,44,34,.16);color:#fff;padding:.24in .26in;display:flex;flex-direction:column;font-family:"Segoe UI",Arial,sans-serif}
+.front{background:linear-gradient(145deg,#22c55e 0%,#0ea968 50%,#059669 100%);justify-content:center;text-align:center;align-items:center;gap:.04in}
+.front::after{content:"";position:absolute;width:2.2in;height:2.2in;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.24),transparent 70%);top:-1in;right:-.7in}
+.front>*{position:relative;z-index:1}
+.front .em{font-size:1.5rem}
+.front .give{font-family:"Avenir Next",Arial,sans-serif;font-weight:900;font-size:1.55rem;letter-spacing:-.01em;line-height:1.05}
+.front .give b{color:#043a2c}
+.front .sub{font-size:.7rem;color:#eafff6;font-weight:600;max-width:2.7in}
+.front .brand{margin-top:.05in;font-family:"Avenir Next",Arial,sans-serif;font-weight:800;font-size:.8rem}
+.front .brand b{font-weight:900}
+.back{background:#fff;color:#0b1f18}
+.back .h{font-family:"Avenir Next",Arial,sans-serif;font-weight:900;color:#065f46;font-size:.92rem;margin-bottom:.06in}
+.back ol{margin:0 0 .06in .16in;font-size:.66rem;color:#33473f;line-height:1.5}
+.back .ref{font-size:.66rem;color:#5c6f67;border-top:1px dashed #cbe4d8;padding-top:.05in}
+.back .ref b{color:#0b1f18}
+.back .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end}
+.back .ph{font-family:"Avenir Next",Arial,sans-serif;font-weight:900;color:#047857;font-size:.85rem}
+.back .web{font-size:.58rem;color:#5c6f67;text-align:right}
+@media print{.bar{display:none}body{background:#fff;padding:0}.row{gap:.3in;padding:.4in}}
+</style>
+</head>
+<body>
+<div class="bar"><b>ClearSpace referral card</b><span>Front &amp; back. Print, cut, and tuck one into every finished job. Edit the $20 amounts to match your config.</span><button onclick="window.print()">🖨 Print</button></div>
+<div class="row">
+  <div class="wrap"><span class="lbl">FRONT</span>
+    <div class="card front">
+      <div class="em">💚</div>
+      <div class="give">Give $20,<br><b>Get $20</b></div>
+      <div class="sub">Refer a friend to ClearSpace — they save $20 on their first clean, you save $20 on your next.</div>
+      <div class="brand">✦ Clear<b>Space</b> Home Cleaning</div>
+    </div>
+  </div>
+  <div class="wrap"><span class="lbl">BACK</span>
+    <div class="card back">
+      <div class="h">How it works</div>
+      <ol>
+        <li>Give this card to a friend or neighbor.</li>
+        <li>They mention your name when they book.</li>
+        <li>You both save $20. No limit — refer as many as you like!</li>
+      </ol>
+      <div class="ref">Referred by: <b>_____________________</b></div>
+      <div class="foot">
+        <div class="ph">📞 (801) 433-7342</div>
+        <div class="web">English &amp; Español<br>miguelcaudillo.github.io/ClearSpace</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
