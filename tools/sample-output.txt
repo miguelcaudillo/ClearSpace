@@ -6,10 +6,10 @@ LEAD 1: Sarah Jensen — West Jordan — 3bd/2ba, 1800 sq ft — deep / onetime 
 ––– QUOTE –––
 
 [SMS · EN]
-Hi Sarah, it's ClearSpace Home Cleaning! For your 3 bed / 2 bath home in West Jordan (1800 sq ft), a one-time deep clean comes to $391 per visit. Want to grab a day this week? Reply YES and we'll get you scheduled. – ClearSpace Home Cleaning [YOUR PHONE NUMBER]
+Hi Sarah, it's ClearSpace Home Cleaning! For your 3 bed / 2 bath home in West Jordan (1800 sq ft), a one-time deep clean comes to $391 per visit. Want to grab a day this week? Reply YES and we'll get you scheduled. – ClearSpace Home Cleaning (801) 433-7342
 
 [SMS · ES]
-Hola Sarah, ¡somos ClearSpace Home Cleaning! Para su hogar de 3 recámaras / 2 baños en West Jordan (1800 pies²), una limpieza profunda una sola vez le queda en $391 por visita. ¿Le gustaría agendar esta semana? Responda SÍ y le apartamos su día. – ClearSpace Home Cleaning [YOUR PHONE NUMBER]
+Hola Sarah, ¡somos ClearSpace Home Cleaning! Para su hogar de 3 recámaras / 2 baños en West Jordan (1800 pies²), una limpieza profunda una sola vez le queda en $391 por visita. ¿Le gustaría agendar esta semana? Responda SÍ y le apartamos su día. – ClearSpace Home Cleaning (801) 433-7342
 
 [EMAIL · EN] Subject: Your ClearSpace quote: $391 per visit
 Hi Sarah,
@@ -25,13 +25,13 @@ Thanks for reaching out to ClearSpace Home Cleaning! Here's your personalized qu
 
 That price is flat — no hourly surprises, and it includes our full room-by-room checklist (kitchen, bathrooms, bedrooms, floors, and a final walkthrough).
 
-Ready to pick a day? Just reply to this email or text us at [YOUR PHONE NUMBER] and we'll find a time that works for you.
+Ready to pick a day? Just reply to this email or text us at (801) 433-7342 and we'll find a time that works for you.
 
 You can also fine-tune your estimate anytime here: https://miguelcaudillo.github.io/ClearSpace/pricing.html
 
 Talk soon,
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER] · [YOUR EMAIL]
+(801) 433-7342 · ClearSpaceCleaning113@gmail.com
 
 [EMAIL · ES] Subject: Su cotización de ClearSpace: $391 por visita
 Hola Sarah:
@@ -47,13 +47,13 @@ Hola Sarah:
 
 El precio es fijo — sin sorpresas por hora, e incluye nuestra lista completa cuarto por cuarto (cocina, baños, recámaras, pisos y un recorrido final).
 
-¿Le gustaría elegir un día? Responda a este correo o envíenos un mensaje al [YOUR PHONE NUMBER] y encontramos el horario que mejor le convenga.
+¿Le gustaría elegir un día? Responda a este correo o envíenos un mensaje al (801) 433-7342 y encontramos el horario que mejor le convenga.
 
 También puede ajustar su estimado cuando guste aquí: https://miguelcaudillo.github.io/ClearSpace/pricing.html
 
 Hasta pronto,
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER] · [YOUR EMAIL]
+(801) 433-7342 · ClearSpaceCleaning113@gmail.com
 
 ––– BOOKING CONFIRMATION –––
 
@@ -78,7 +78,7 @@ Before we arrive:
   • Let us know about gate codes, parking, or entry instructions.
   • Picking up loose items ahead of time lets us spend every minute cleaning.
 
-Need to reschedule? Reply to this email or text [YOUR PHONE NUMBER] — no fees, we just appreciate a heads-up.
+Need to reschedule? Reply to this email or text (801) 433-7342 — no fees, we just appreciate a heads-up.
 
 See you soon,
 ClearSpace Home Cleaning
@@ -98,7 +98,7 @@ Antes de que lleguemos:
   • Avísenos de códigos de portón, estacionamiento o instrucciones de entrada.
   • Recoger objetos sueltos con anticipación nos permite dedicar cada minuto a limpiar.
 
-¿Necesita reagendar? Responda a este correo o mande mensaje al [YOUR PHONE NUMBER] — sin cargos, solo agradecemos el aviso.
+¿Necesita reagendar? Responda a este correo o mande mensaje al (801) 433-7342 — sin cargos, solo agradecemos el aviso.
 
 Nos vemos pronto,
 ClearSpace Home Cleaning
@@ -121,7 +121,7 @@ Quick checklist to get the most out of your clean:
   • Secure pets that prefer their space.
   • Leave entry instructions if you won't be home.
 
-Anything come up? Reply here or text [YOUR PHONE NUMBER] and we'll sort it out.
+Anything come up? Reply here or text (801) 433-7342 and we'll sort it out.
 
 See you tomorrow,
 ClearSpace Home Cleaning
@@ -136,7 +136,7 @@ Lista rápida para aprovechar al máximo su limpieza:
   • Asegure a las mascotas que prefieren su espacio.
   • Deje instrucciones de entrada si no estará en casa.
 
-¿Surgió algo? Responda aquí o mande mensaje al [YOUR PHONE NUMBER] y lo resolvemos.
+¿Surgió algo? Responda aquí o mande mensaje al (801) 433-7342 y lo resolvemos.
 
 Hasta mañana,
 ClearSpace Home Cleaning
@@ -162,7 +162,7 @@ Two quick things:
 Thanks again — it was a pleasure.
 
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER]
+(801) 433-7342
 
 [EMAIL · ES] Subject: ¿Cómo quedó su hogar hoy?
 Hola Sarah:
@@ -177,7 +177,7 @@ Dos cosas rápidas:
 Gracias de nuevo — fue un placer.
 
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER]
+(801) 433-7342
 
 ==============================================================================
 LEAD 2: Luis Ramírez — Taylorsville — 2bd/1ba, 1200 sq ft — standard / biweekly
@@ -186,10 +186,10 @@ LEAD 2: Luis Ramírez — Taylorsville — 2bd/1ba, 1200 sq ft — standard / bi
 ––– QUOTE –––
 
 [SMS · EN]
-Hi Luis, it's ClearSpace Home Cleaning! For your 2 bed / 1 bath home in Taylorsville (1200 sq ft), a bi-weekly standard clean comes to $135 per visit (that includes your 15% bi-weekly discount). Want to grab a day this week? Reply YES and we'll get you scheduled. – ClearSpace Home Cleaning [YOUR PHONE NUMBER]
+Hi Luis, it's ClearSpace Home Cleaning! For your 2 bed / 1 bath home in Taylorsville (1200 sq ft), a bi-weekly standard clean comes to $135 per visit (that includes your 15% bi-weekly discount). Want to grab a day this week? Reply YES and we'll get you scheduled. – ClearSpace Home Cleaning (801) 433-7342
 
 [SMS · ES]
-Hola Luis, ¡somos ClearSpace Home Cleaning! Para su hogar de 2 recámaras / 1 baño en Taylorsville (1200 pies²), una limpieza estándar quincenal le queda en $135 por visita (ya incluye su descuento quincenal del 15%). ¿Le gustaría agendar esta semana? Responda SÍ y le apartamos su día. – ClearSpace Home Cleaning [YOUR PHONE NUMBER]
+Hola Luis, ¡somos ClearSpace Home Cleaning! Para su hogar de 2 recámaras / 1 baño en Taylorsville (1200 pies²), una limpieza estándar quincenal le queda en $135 por visita (ya incluye su descuento quincenal del 15%). ¿Le gustaría agendar esta semana? Responda SÍ y le apartamos su día. – ClearSpace Home Cleaning (801) 433-7342
 
 [EMAIL · EN] Subject: Your ClearSpace quote: $135 per visit
 Hi Luis,
@@ -204,13 +204,13 @@ Thanks for reaching out to ClearSpace Home Cleaning! Here's your personalized qu
 
 That price is flat — no hourly surprises, and it includes our full room-by-room checklist (kitchen, bathrooms, bedrooms, floors, and a final walkthrough).
 
-Ready to pick a day? Just reply to this email or text us at [YOUR PHONE NUMBER] and we'll find a time that works for you.
+Ready to pick a day? Just reply to this email or text us at (801) 433-7342 and we'll find a time that works for you.
 
 You can also fine-tune your estimate anytime here: https://miguelcaudillo.github.io/ClearSpace/pricing.html
 
 Talk soon,
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER] · [YOUR EMAIL]
+(801) 433-7342 · ClearSpaceCleaning113@gmail.com
 
 [EMAIL · ES] Subject: Su cotización de ClearSpace: $135 por visita
 Hola Luis:
@@ -225,13 +225,13 @@ Hola Luis:
 
 El precio es fijo — sin sorpresas por hora, e incluye nuestra lista completa cuarto por cuarto (cocina, baños, recámaras, pisos y un recorrido final).
 
-¿Le gustaría elegir un día? Responda a este correo o envíenos un mensaje al [YOUR PHONE NUMBER] y encontramos el horario que mejor le convenga.
+¿Le gustaría elegir un día? Responda a este correo o envíenos un mensaje al (801) 433-7342 y encontramos el horario que mejor le convenga.
 
 También puede ajustar su estimado cuando guste aquí: https://miguelcaudillo.github.io/ClearSpace/pricing.html
 
 Hasta pronto,
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER] · [YOUR EMAIL]
+(801) 433-7342 · ClearSpaceCleaning113@gmail.com
 
 ––– BOOKING CONFIRMATION –––
 
@@ -256,7 +256,7 @@ Before we arrive:
   • Let us know about gate codes, parking, or entry instructions.
   • Picking up loose items ahead of time lets us spend every minute cleaning.
 
-Need to reschedule? Reply to this email or text [YOUR PHONE NUMBER] — no fees, we just appreciate a heads-up.
+Need to reschedule? Reply to this email or text (801) 433-7342 — no fees, we just appreciate a heads-up.
 
 See you soon,
 ClearSpace Home Cleaning
@@ -276,7 +276,7 @@ Antes de que lleguemos:
   • Avísenos de códigos de portón, estacionamiento o instrucciones de entrada.
   • Recoger objetos sueltos con anticipación nos permite dedicar cada minuto a limpiar.
 
-¿Necesita reagendar? Responda a este correo o mande mensaje al [YOUR PHONE NUMBER] — sin cargos, solo agradecemos el aviso.
+¿Necesita reagendar? Responda a este correo o mande mensaje al (801) 433-7342 — sin cargos, solo agradecemos el aviso.
 
 Nos vemos pronto,
 ClearSpace Home Cleaning
@@ -299,7 +299,7 @@ Quick checklist to get the most out of your clean:
   • Secure pets that prefer their space.
   • Leave entry instructions if you won't be home.
 
-Anything come up? Reply here or text [YOUR PHONE NUMBER] and we'll sort it out.
+Anything come up? Reply here or text (801) 433-7342 and we'll sort it out.
 
 See you tomorrow,
 ClearSpace Home Cleaning
@@ -314,7 +314,7 @@ Lista rápida para aprovechar al máximo su limpieza:
   • Asegure a las mascotas que prefieren su espacio.
   • Deje instrucciones de entrada si no estará en casa.
 
-¿Surgió algo? Responda aquí o mande mensaje al [YOUR PHONE NUMBER] y lo resolvemos.
+¿Surgió algo? Responda aquí o mande mensaje al (801) 433-7342 y lo resolvemos.
 
 Hasta mañana,
 ClearSpace Home Cleaning
@@ -340,7 +340,7 @@ Two quick things:
 Thanks again — it was a pleasure.
 
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER]
+(801) 433-7342
 
 [EMAIL · ES] Subject: ¿Cómo quedó su hogar hoy?
 Hola Luis:
@@ -355,7 +355,7 @@ Dos cosas rápidas:
 Gracias de nuevo — fue un placer.
 
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER]
+(801) 433-7342
 
 ==============================================================================
 LEAD 3: Amber Whitfield — Sandy — 4bd/3ba, 2600 sq ft — moveout / onetime — add-ons: fridge, oven, cabinets
@@ -364,10 +364,10 @@ LEAD 3: Amber Whitfield — Sandy — 4bd/3ba, 2600 sq ft — moveout / onetime 
 ––– QUOTE –––
 
 [SMS · EN]
-Hi Amber, it's ClearSpace Home Cleaning! For your 4 bed / 3 bath home in Sandy (2600 sq ft), a one-time move-in/out clean comes to $637 per visit. Want to grab a day this week? Reply YES and we'll get you scheduled. – ClearSpace Home Cleaning [YOUR PHONE NUMBER]
+Hi Amber, it's ClearSpace Home Cleaning! For your 4 bed / 3 bath home in Sandy (2600 sq ft), a one-time move-in/out clean comes to $637 per visit. Want to grab a day this week? Reply YES and we'll get you scheduled. – ClearSpace Home Cleaning (801) 433-7342
 
 [SMS · ES]
-Hola Amber, ¡somos ClearSpace Home Cleaning! Para su hogar de 4 recámaras / 3 baños en Sandy (2600 pies²), una limpieza de mudanza una sola vez le queda en $637 por visita. ¿Le gustaría agendar esta semana? Responda SÍ y le apartamos su día. – ClearSpace Home Cleaning [YOUR PHONE NUMBER]
+Hola Amber, ¡somos ClearSpace Home Cleaning! Para su hogar de 4 recámaras / 3 baños en Sandy (2600 pies²), una limpieza de mudanza una sola vez le queda en $637 por visita. ¿Le gustaría agendar esta semana? Responda SÍ y le apartamos su día. – ClearSpace Home Cleaning (801) 433-7342
 
 [EMAIL · EN] Subject: Your ClearSpace quote: $637 per visit
 Hi Amber,
@@ -383,13 +383,13 @@ Thanks for reaching out to ClearSpace Home Cleaning! Here's your personalized qu
 
 That price is flat — no hourly surprises, and it includes our full room-by-room checklist (kitchen, bathrooms, bedrooms, floors, and a final walkthrough).
 
-Ready to pick a day? Just reply to this email or text us at [YOUR PHONE NUMBER] and we'll find a time that works for you.
+Ready to pick a day? Just reply to this email or text us at (801) 433-7342 and we'll find a time that works for you.
 
 You can also fine-tune your estimate anytime here: https://miguelcaudillo.github.io/ClearSpace/pricing.html
 
 Talk soon,
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER] · [YOUR EMAIL]
+(801) 433-7342 · ClearSpaceCleaning113@gmail.com
 
 [EMAIL · ES] Subject: Su cotización de ClearSpace: $637 por visita
 Hola Amber:
@@ -405,13 +405,13 @@ Hola Amber:
 
 El precio es fijo — sin sorpresas por hora, e incluye nuestra lista completa cuarto por cuarto (cocina, baños, recámaras, pisos y un recorrido final).
 
-¿Le gustaría elegir un día? Responda a este correo o envíenos un mensaje al [YOUR PHONE NUMBER] y encontramos el horario que mejor le convenga.
+¿Le gustaría elegir un día? Responda a este correo o envíenos un mensaje al (801) 433-7342 y encontramos el horario que mejor le convenga.
 
 También puede ajustar su estimado cuando guste aquí: https://miguelcaudillo.github.io/ClearSpace/pricing.html
 
 Hasta pronto,
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER] · [YOUR EMAIL]
+(801) 433-7342 · ClearSpaceCleaning113@gmail.com
 
 ––– BOOKING CONFIRMATION –––
 
@@ -436,7 +436,7 @@ Before we arrive:
   • Let us know about gate codes, parking, or entry instructions.
   • Picking up loose items ahead of time lets us spend every minute cleaning.
 
-Need to reschedule? Reply to this email or text [YOUR PHONE NUMBER] — no fees, we just appreciate a heads-up.
+Need to reschedule? Reply to this email or text (801) 433-7342 — no fees, we just appreciate a heads-up.
 
 See you soon,
 ClearSpace Home Cleaning
@@ -456,7 +456,7 @@ Antes de que lleguemos:
   • Avísenos de códigos de portón, estacionamiento o instrucciones de entrada.
   • Recoger objetos sueltos con anticipación nos permite dedicar cada minuto a limpiar.
 
-¿Necesita reagendar? Responda a este correo o mande mensaje al [YOUR PHONE NUMBER] — sin cargos, solo agradecemos el aviso.
+¿Necesita reagendar? Responda a este correo o mande mensaje al (801) 433-7342 — sin cargos, solo agradecemos el aviso.
 
 Nos vemos pronto,
 ClearSpace Home Cleaning
@@ -479,7 +479,7 @@ Quick checklist to get the most out of your clean:
   • Secure pets that prefer their space.
   • Leave entry instructions if you won't be home.
 
-Anything come up? Reply here or text [YOUR PHONE NUMBER] and we'll sort it out.
+Anything come up? Reply here or text (801) 433-7342 and we'll sort it out.
 
 See you tomorrow,
 ClearSpace Home Cleaning
@@ -494,7 +494,7 @@ Lista rápida para aprovechar al máximo su limpieza:
   • Asegure a las mascotas que prefieren su espacio.
   • Deje instrucciones de entrada si no estará en casa.
 
-¿Surgió algo? Responda aquí o mande mensaje al [YOUR PHONE NUMBER] y lo resolvemos.
+¿Surgió algo? Responda aquí o mande mensaje al (801) 433-7342 y lo resolvemos.
 
 Hasta mañana,
 ClearSpace Home Cleaning
@@ -520,7 +520,7 @@ Two quick things:
 Thanks again — it was a pleasure.
 
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER]
+(801) 433-7342
 
 [EMAIL · ES] Subject: ¿Cómo quedó su hogar hoy?
 Hola Amber:
@@ -535,4 +535,166 @@ Dos cosas rápidas:
 Gracias de nuevo — fue un placer.
 
 ClearSpace Home Cleaning
-[YOUR PHONE NUMBER]
+(801) 433-7342
+
+==============================================================================
+LEAD 4: Rosa Delgado — Herriman — 3bd/2ba, 2200 sq ft — organizing / onetime
+==============================================================================
+
+––– QUOTE –––
+
+[SMS · EN]
+Hi Rosa, it's ClearSpace Home Cleaning! Thanks for your home organizing request. Every space is different, so we quote organizing after a quick look — free and no obligation. What days work for a 15-minute walkthrough (in person or a video call)? – ClearSpace Home Cleaning (801) 433-7342
+
+[SMS · ES]
+Hola Rosa, ¡somos ClearSpace Home Cleaning! Gracias por su solicitud de organización. Cada espacio es distinto, así que cotizamos la organización después de verlo — gratis y sin compromiso. ¿Qué días le funcionan para un recorrido de 15 minutos (en persona o videollamada)? – ClearSpace Home Cleaning (801) 433-7342
+
+[EMAIL · EN] Subject: Your ClearSpace organizing request
+Hi Rosa,
+
+Thanks for reaching out to ClearSpace Home Cleaning about home organizing!
+
+Organizing projects vary a lot — a pantry is a different job than a garage or a whole-home reset — so instead of a one-size price, we do a quick free walkthrough (in person or over video), then give you a flat quote with no obligation.
+
+What days and times work for you this week? Just reply here or text (801) 433-7342.
+
+Talk soon,
+ClearSpace Home Cleaning
+(801) 433-7342 · ClearSpaceCleaning113@gmail.com
+
+[EMAIL · ES] Subject: Su solicitud de organización con ClearSpace
+Hola Rosa:
+
+¡Gracias por contactar a ClearSpace Home Cleaning sobre organización del hogar!
+
+Los proyectos de organización varían mucho — una despensa es distinto a una cochera o a toda la casa — así que en vez de un precio único, hacemos un breve recorrido gratis (en persona o por video) y le damos una cotización fija sin compromiso.
+
+¿Qué días y horarios le funcionan esta semana? Responda aquí o mande mensaje al (801) 433-7342.
+
+Hasta pronto,
+ClearSpace Home Cleaning
+(801) 433-7342 · ClearSpaceCleaning113@gmail.com
+
+––– BOOKING CONFIRMATION –––
+
+[SMS · EN]
+You're booked, Rosa! 🎉 Home Organizing on Friday, August 1, arrival window 9:00–11:00 AM. Total: $380. We'll text you the day before to confirm. Need to change anything? Just reply here. – ClearSpace Home Cleaning
+
+[SMS · ES]
+¡Su cita está confirmada, Rosa! 🎉 Organización del Hogar el Friday, August 1, ventana de llegada 9:00–11:00 AM. Total: $380. Le escribimos un día antes para confirmar. ¿Necesita cambiar algo? Responda a este mensaje. – ClearSpace Home Cleaning
+
+[EMAIL · EN] Subject: Booking confirmed — Home Organizing on Friday, August 1
+Hi Rosa,
+
+Your cleaning is officially on the calendar. Here are the details:
+
+  Service: Home Organizing
+  Date: Friday, August 1
+  Arrival window: 9:00–11:00 AM
+  Total: $380
+
+Before we arrive:
+  • Please secure any pets that aren't comfortable with visitors.
+  • Let us know about gate codes, parking, or entry instructions.
+  • Picking up loose items ahead of time lets us spend every minute cleaning.
+
+Need to reschedule? Reply to this email or text (801) 433-7342 — no fees, we just appreciate a heads-up.
+
+See you soon,
+ClearSpace Home Cleaning
+
+[EMAIL · ES] Subject: Cita confirmada — Organización del Hogar el Friday, August 1
+Hola Rosa:
+
+Su limpieza ya está en el calendario. Estos son los detalles:
+
+  Servicio: Organización del Hogar
+  Fecha: Friday, August 1
+  Ventana de llegada: 9:00–11:00 AM
+  Total: $380
+
+Antes de que lleguemos:
+  • Por favor asegure a las mascotas que no se sientan cómodas con visitas.
+  • Avísenos de códigos de portón, estacionamiento o instrucciones de entrada.
+  • Recoger objetos sueltos con anticipación nos permite dedicar cada minuto a limpiar.
+
+¿Necesita reagendar? Responda a este correo o mande mensaje al (801) 433-7342 — sin cargos, solo agradecemos el aviso.
+
+Nos vemos pronto,
+ClearSpace Home Cleaning
+
+––– DAY-BEFORE REMINDER –––
+
+[SMS · EN]
+Hi Rosa! Friendly reminder: your home organizing is tomorrow, Friday, August 1, arrival window 9:00–11:00 AM. Reply C to confirm or R to reschedule. See you soon! – ClearSpace Home Cleaning
+
+[SMS · ES]
+¡Hola Rosa! Recordatorio: su organización del hogar es mañana, Friday, August 1, ventana de llegada 9:00–11:00 AM. Responda C para confirmar o R para reagendar. ¡Hasta mañana! – ClearSpace Home Cleaning
+
+[EMAIL · EN] Subject: See you tomorrow — Home Organizing reminder
+Hi Rosa,
+
+Just a reminder that your Home Organizing is tomorrow, Friday, August 1, with an arrival window of 9:00–11:00 AM.
+
+Quick checklist to get the most out of your clean:
+  • Clear counters and floors of personal items where you can.
+  • Secure pets that prefer their space.
+  • Leave entry instructions if you won't be home.
+
+Anything come up? Reply here or text (801) 433-7342 and we'll sort it out.
+
+See you tomorrow,
+ClearSpace Home Cleaning
+
+[EMAIL · ES] Subject: Nos vemos mañana — recordatorio de su organización del hogar
+Hola Rosa:
+
+Le recordamos que su Organización del Hogar es mañana, Friday, August 1, con ventana de llegada de 9:00–11:00 AM.
+
+Lista rápida para aprovechar al máximo su limpieza:
+  • Despeje superficies y pisos de objetos personales donde pueda.
+  • Asegure a las mascotas que prefieren su espacio.
+  • Deje instrucciones de entrada si no estará en casa.
+
+¿Surgió algo? Responda aquí o mande mensaje al (801) 433-7342 y lo resolvemos.
+
+Hasta mañana,
+ClearSpace Home Cleaning
+
+––– REVIEW REQUEST –––
+
+[SMS · EN]
+Hi Rosa, thanks for letting us clean your home today! If anything isn't perfect, tell us and we'll make it right. And if you loved it, a quick Google review would mean the world to our small business: [YOUR GOOGLE REVIEW LINK] 💚 – ClearSpace Home Cleaning
+
+[SMS · ES]
+Hola Rosa, ¡gracias por dejarnos limpiar su hogar hoy! Si algo no quedó perfecto, díganos y lo corregimos. Y si le encantó, una breve reseña en Google significaría muchísimo para nuestro pequeño negocio: [YOUR GOOGLE REVIEW LINK] 💚 – ClearSpace Home Cleaning
+
+[EMAIL · EN] Subject: How did we do today?
+Hi Rosa,
+
+Thank you for trusting ClearSpace Home Cleaning with your home today — we hope walking in felt amazing.
+
+Two quick things:
+  1. If ANYTHING isn't up to standard, reply to this email within 48 hours and we'll come back and re-clean it, free.
+  2. If you're happy, would you take 60 seconds to leave us a Google review? As a new local business, every single one helps neighbors find us:
+     [YOUR GOOGLE REVIEW LINK]
+
+Thanks again — it was a pleasure.
+
+ClearSpace Home Cleaning
+(801) 433-7342
+
+[EMAIL · ES] Subject: ¿Cómo quedó su hogar hoy?
+Hola Rosa:
+
+Gracias por confiarle su hogar a ClearSpace Home Cleaning — esperamos que al entrar se haya sentido increíble.
+
+Dos cosas rápidas:
+  1. Si ALGO no quedó a la altura, responda a este correo dentro de 48 horas y regresamos a re-limpiarlo sin costo.
+  2. Si quedó contento, ¿nos regalaría 60 segundos para dejarnos una reseña en Google? Como negocio local nuevo, cada una nos ayuda a que más vecinos nos encuentren:
+     [YOUR GOOGLE REVIEW LINK]
+
+Gracias de nuevo — fue un placer.
+
+ClearSpace Home Cleaning
+(801) 433-7342

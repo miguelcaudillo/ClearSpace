@@ -30,8 +30,16 @@ var CONFIG = cfg.CLEARSPACE_CONFIG;
 var quoteFor = cfg.clearspaceQuote;
 var BIZ = CONFIG.business;
 
-function usd(n) { return "$" + n; }
+function usd(n) { return (n === null || n === undefined || n === "") ? "[TOTAL]" : "$" + n; }
 function firstName(name) { return String(name || "").trim().split(/\s+/)[0] || "there"; }
+
+/* Correct display label for any service, including organizing (which isn't in
+   the pricing config because it's quoted in person). */
+function serviceMeta(lead) {
+  if (lead.service === "organizing") return { en: "Home Organizing", es: "Organización del Hogar" };
+  var s = CONFIG.pricing.services[lead.service];
+  return s ? { en: s.en, es: s.es } : { en: "Cleaning", es: "Limpieza" };
+}
 
 /* Frequency phrasing used inside sentences. */
 var FREQ_PHRASE = {
@@ -45,8 +53,36 @@ function addonList(q, lang) {
   return q.addons.map(function (a) { return a[lang] + " (" + usd(a.price) + ")"; }).join(", ");
 }
 
+/* Home Organizing is quoted in person — no auto price. Also covers any
+   unknown service so a lead never gets a wrong computed number. */
+function isCustomQuote(lead) {
+  return lead.service === "organizing" || !CONFIG.pricing.services[lead.service];
+}
+
+function organizingMessages(lead) {
+  var fn = firstName(lead.name);
+  return {
+    total: null,
+    sms_en: "Hi " + fn + ", it's " + BIZ.name + "! Thanks for your home organizing request. Every space is different, so we quote organizing after a quick look — free and no obligation. What days work for a 15-minute walkthrough (in person or a video call)? – " + BIZ.name + " " + BIZ.phone,
+    sms_es: "Hola " + fn + ", ¡somos " + BIZ.name + "! Gracias por su solicitud de organización. Cada espacio es distinto, así que cotizamos la organización después de verlo — gratis y sin compromiso. ¿Qué días le funcionan para un recorrido de 15 minutos (en persona o videollamada)? – " + BIZ.name + " " + BIZ.phone,
+    email_subject_en: "Your ClearSpace organizing request",
+    email_en: "Hi " + fn + ",\n\n" +
+      "Thanks for reaching out to " + BIZ.name + " about home organizing!\n\n" +
+      "Organizing projects vary a lot — a pantry is a different job than a garage or a whole-home reset — so instead of a one-size price, we do a quick free walkthrough (in person or over video), then give you a flat quote with no obligation.\n\n" +
+      "What days and times work for you this week? Just reply here or text " + BIZ.phone + ".\n\n" +
+      "Talk soon,\n" + BIZ.name + "\n" + BIZ.phone + " · " + BIZ.email,
+    email_subject_es: "Su solicitud de organización con ClearSpace",
+    email_es: "Hola " + fn + ":\n\n" +
+      "¡Gracias por contactar a " + BIZ.name + " sobre organización del hogar!\n\n" +
+      "Los proyectos de organización varían mucho — una despensa es distinto a una cochera o a toda la casa — así que en vez de un precio único, hacemos un breve recorrido gratis (en persona o por video) y le damos una cotización fija sin compromiso.\n\n" +
+      "¿Qué días y horarios le funcionan esta semana? Responda aquí o mande mensaje al " + BIZ.phone + ".\n\n" +
+      "Hasta pronto,\n" + BIZ.name + "\n" + BIZ.phone + " · " + BIZ.email
+  };
+}
+
 /* ---------- 1. QUOTE ---------- */
 function quoteMessages(lead) {
+  if (isCustomQuote(lead)) return organizingMessages(lead);
   var q = quoteFor(lead);
   var fn = firstName(lead.name);
   var freqEn = (FREQ_PHRASE[lead.frequency] || FREQ_PHRASE.onetime).en;
@@ -108,6 +144,8 @@ function quoteMessages(lead) {
 /* ---------- 2. BOOKING CONFIRMATION ---------- */
 function confirmationMessages(lead) {
   var q = quoteFor(lead);
+  q.service = serviceMeta(lead);                              // correct label (incl. organizing)
+  if (isCustomQuote(lead)) q.total = lead.price;             // organizing uses the agreed price
   var fn = firstName(lead.name);
   var date = lead.date || "[DATE]";
   var win = lead.window || "[ARRIVAL WINDOW]";
@@ -149,6 +187,7 @@ function confirmationMessages(lead) {
 /* ---------- 3. DAY-BEFORE REMINDER ---------- */
 function reminderMessages(lead) {
   var q = quoteFor(lead);
+  q.service = serviceMeta(lead);                              // correct label (incl. organizing)
   var fn = firstName(lead.name);
   var date = lead.date || "[DATE]";
   var win = lead.window || "[ARRIVAL WINDOW]";
@@ -230,7 +269,9 @@ if (require.main === module) {
       { name: "Luis Ramírez", sqft: 1200, bedrooms: 2, bathrooms: 1, service: "standard",
         frequency: "biweekly", city: "Taylorsville", addons: [], date: "Monday, July 28", window: "1:00–3:00 PM" },
       { name: "Amber Whitfield", sqft: 2600, bedrooms: 4, bathrooms: 3, service: "moveout",
-        frequency: "onetime", city: "Sandy", addons: ["fridge", "oven", "cabinets"], date: "Saturday, July 26", window: "8:00–10:00 AM" }
+        frequency: "onetime", city: "Sandy", addons: ["fridge", "oven", "cabinets"], date: "Saturday, July 26", window: "8:00–10:00 AM" },
+      { name: "Rosa Delgado", sqft: 2200, bedrooms: 3, bathrooms: 2, service: "organizing",
+        frequency: "onetime", city: "Herriman", addons: [], price: 380, date: "Friday, August 1", window: "9:00–11:00 AM" }
     ];
   }
 
