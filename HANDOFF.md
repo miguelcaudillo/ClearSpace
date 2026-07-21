@@ -51,6 +51,9 @@ Everything built in this repo, where it lives, what only you can do, and the lau
 - `marketing/partner-outreach.md` — who to target and exact email/DM/text/in-person scripts to win partners.
 - `marketing/speed-to-lead-setup.md` — get a text the instant a lead arrives (Gmail → 8014337342@txt.att.net) + click-to-text is already live on the site.
 - `marketing/customer-autoreply-setup.md` — instant "we got your request" auto-reply (via GoHighLevel, or free Make.com interim).
+- `marketing/referral-program.md` + `print/referral-card.html/.pdf` — $20/$20 refer-a-friend program (amounts editable in `pricing-config.js`).
+- `marketing/gift-certificate.html` + `ClearSpace-Gift-Certificate.pdf` — printable gift certificate (holidays, realtor closing gifts).
+- `marketing/README.md` — **index of everything in the marketing folder** — start here to find things.
 - `marketing/email-signature.html` — open it, click "Copy signature," paste into Gmail settings.
 - `assets/img/` — self-hosted placeholder photos + `og-image.jpg` (social-share preview) + `CREDITS.md`. Swap for real photos when you have them.
 - `404.html` — friendly not-found page.
