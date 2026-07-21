@@ -60,11 +60,23 @@ function renderConfigPrices() {
     el.textContent = Math.round(maxDisc * 100) + "%";
   });
   var phone = CLEARSPACE_CONFIG.business.phone;
-  var telHref = "tel:" + phone.replace(/[^0-9+]/g, "");
+  var digits = phone.replace(/[^0-9+]/g, "");
+  var telHref = "tel:" + digits;
   document.querySelectorAll("[data-biz-phone]").forEach(function (el) {
     el.textContent = phone;
     if (el.tagName === "A") el.setAttribute("href", telHref);
   });
+  // Click-to-text: prefill a friendly SMS. data-es-sms swaps the body for Spanish.
+  var smsEn = "Hi ClearSpace! I'd like a cleaning quote for my home.";
+  var smsEs = "¡Hola ClearSpace! Quisiera una cotización de limpieza para mi hogar.";
+  function setSms() {
+    var body = Lang.get() === "es" ? smsEs : smsEn;
+    document.querySelectorAll("[data-biz-sms]").forEach(function (el) {
+      el.setAttribute("href", "sms:" + digits + "?&body=" + encodeURIComponent(body));
+    });
+  }
+  setSms();
+  document.addEventListener("langchange", setSms);
   document.querySelectorAll("[data-biz-email]").forEach(function (el) {
     el.textContent = CLEARSPACE_CONFIG.business.email;
   });
