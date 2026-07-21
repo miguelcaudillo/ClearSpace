@@ -35,6 +35,21 @@
   "knowsLanguage": ["en", "es"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Do I need to be home during the cleaning?","acceptedAnswer":{"@type":"Answer","text":"No. Many customers leave us entry instructions (a key, a code, or a smart lock) and come home to a clean house. Whatever you're comfortable with."}},
+    {"@type":"Question","name":"Do you bring your own supplies and equipment?","acceptedAnswer":{"@type":"Answer","text":"Yes — we arrive with everything we need. If you'd prefer specific products (unscented, eco-friendly, or your own), just let us know and we're happy to use them."}},
+    {"@type":"Question","name":"Are you licensed and insured?","acceptedAnswer":{"@type":"Answer","text":"We're a new local business setting up our license and business insurance; we'll update as soon as they're active. Ask us for the current status anytime."}},
+    {"@type":"Question","name":"How does your pricing work?","acceptedAnswer":{"@type":"Answer","text":"Flat rate, not hourly. Use our calculator to see your exact price based on size, rooms, service type, and frequency — what you see is what you pay, no surprises."}},
+    {"@type":"Question","name":"What's the difference between a standard and a deep clean?","acceptedAnswer":{"@type":"Answer","text":"Standard keeps an already-maintained home fresh (kitchen, bathrooms, dusting, floors). Deep adds baseboards, vents, tile, behind furniture, and more — ideal for a first visit or a seasonal reset."}},
+    {"@type":"Question","name":"Do you offer service in Spanish?","acceptedAnswer":{"@type":"Answer","text":"Absolutely — we serve you in English and Spanish, from the quote to the crew."}},
+    {"@type":"Question","name":"What if I'm not satisfied?","acceptedAnswer":{"@type":"Answer","text":"Tell us within 48 hours and we'll come back and re-clean the area free. Our goal is for walking into your home to feel amazing, every time."}}
+  ]
+}
+</script>
 <style>
 /* Landing-only styles */
 .hero{padding:70px 0 60px;position:relative;overflow:hidden}
@@ -65,6 +80,14 @@
 .quote-side h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:12px}
 .quote-side p{color:var(--ink-3);margin-bottom:22px}
 .quote-side .hc-line{border-top:none;padding:7px 0}
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-1);overflow:hidden}
+.faq-item summary{cursor:pointer;list-style:none;padding:16px 20px;font-family:var(--font-head);font-weight:700;font-size:1rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.4rem;font-weight:400;color:var(--em-600);transition:transform .2s;flex:none}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item summary:hover{color:var(--em-700)}
+.faq-item p{padding:0 20px 18px;color:var(--ink-2);font-size:.96rem;line-height:1.6}
 </style>
 </head>
 <body>
@@ -200,6 +223,24 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow" data-es="Preguntas frecuentes">FAQ</span>
+    <h2 class="section-title" data-es="Preguntas frecuentes">Frequently asked questions</h2>
+    <p class="section-sub" data-es="Lo que los clientes nuevos suelen preguntar antes de reservar.">What new customers usually ask before booking.</p>
+    <div class="faq">
+      <details class="faq-item"><summary data-es="¿Necesito estar en casa durante la limpieza?">Do I need to be home during the cleaning?</summary><p data-es="No. Muchos clientes nos dejan instrucciones de entrada (llave, código o cerradura inteligente) y regresan a un hogar limpio. Como guste.">Nope. Many customers leave us entry instructions (a key, a code, or a smart lock) and come home to a clean house. Whatever you're comfortable with.</p></details>
+      <details class="faq-item"><summary data-es="¿Traen sus propios productos y equipo?">Do you bring your own supplies and equipment?</summary><p data-es="Sí — llegamos con todo lo necesario. Si prefiere productos específicos (sin aroma, ecológicos o los suyos), solo díganos y con gusto los usamos.">Yes — we arrive with everything we need. If you'd prefer specific products (unscented, eco-friendly, or your own), just let us know and we're happy to use them.</p></details>
+      <details class="faq-item"><summary data-es="¿Tienen licencia y seguro?">Are you licensed and insured?</summary><p data-es="Estamos estableciendo nuestra licencia y seguro comercial; actualizaremos esta página con los datos en cuanto estén activos. Pregúntenos por el estatus actual en cualquier momento.">We're a new local business setting up our license and business insurance; we'll update this page with the details as soon as they're active. Ask us for the current status anytime.</p></details>
+      <details class="faq-item"><summary data-es="¿Cómo funciona el precio?">How does your pricing work?</summary><p data-es="Precio fijo, no por hora. Usa nuestra calculadora para ver tu precio exacto según el tamaño, los cuartos, el tipo de servicio y la frecuencia — lo que ves es lo que pagas, sin sorpresas.">Flat rate, not hourly. Use our calculator to see your exact price based on size, rooms, service type, and frequency — what you see is what you pay, no surprises.</p></details>
+      <details class="faq-item"><summary data-es="¿Cuál es la diferencia entre limpieza estándar y profunda?">What's the difference between a standard and a deep clean?</summary><p data-es="La estándar mantiene un hogar que ya está en buen estado (cocina, baños, polvo, pisos). La profunda agrega zoclos, rejillas, azulejo, detrás de los muebles y más — ideal para la primera visita o un reinicio de temporada.">Standard keeps an already-maintained home fresh (kitchen, bathrooms, dusting, floors). Deep adds baseboards, vents, tile, behind furniture, and more — ideal for a first visit or a seasonal reset.</p></details>
+      <details class="faq-item"><summary data-es="¿Ofrecen servicio en español?">Do you offer service in Spanish?</summary><p data-es="¡Claro! Atendemos en inglés y español — desde la cotización hasta el equipo de limpieza. Cambia el idioma con el botón EN/ES arriba.">Absolutely — we serve you in English and Spanish, from the quote to the crew. Switch the whole site with the EN/ES button up top.</p></details>
+      <details class="faq-item"><summary data-es="¿Qué pasa si no quedo satisfecho?">What if I'm not satisfied?</summary><p data-es="Avísenos dentro de 48 horas y regresamos a re-limpiar el área sin costo. Nuestra meta es que entrar a su hogar se sienta increíble, siempre.">Tell us within 48 hours and we'll come back and re-clean the area free. Our goal is for walking into your home to feel amazing, every time.</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- QUOTE FORM -->
 <section id="quote" style="background:linear-gradient(180deg,var(--em-50) 0,var(--bg) 100%);border-top:1px solid var(--em-100)">
   <div class="wrap quote-shell">
@@ -273,6 +314,7 @@
       <a id="footPhone" href="tel:8014337342">📞 <span data-biz-phone>(801) 433-7342</span></a>
       <a href="pricing.html" data-es="Precios">Pricing</a>
       <a href="#areas" data-es="Zonas de servicio">Service areas</a>
+      <a href="#faq" data-es="Preguntas frecuentes">FAQ</a>
       <a href="#quote" data-es="Cotización gratis">Free quote</a>
       <a href="app.html" style="font-weight:800;color:var(--em-700)" data-es="🔒 Oficina">🔒 Owner login</a>
     </div>
