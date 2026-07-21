@@ -210,6 +210,17 @@ function pricesRow() {
     '<span class="trust-badge">🔁 Recurring save up to <b>&nbsp;<span data-max-discount>—</span></b></span></div>';
 }
 
+/* Internal-linking block: links to the other cities' pages of the same type.
+   Good for SEO (crawl depth) and keeps visitors moving between areas. */
+function nearby(current, type) {
+  var others = CITIES.filter(function (x) { return x.slug !== current.slug; });
+  var links = others.map(function (x) {
+    return '<a class="area-chip" href="' + type + '-cleaning-' + x.slug + '.html"><span>📍</span>' + x.name + "</a>";
+  }).join("");
+  var label = type === "house" ? "House cleaning nearby" : "Move-out cleaning nearby";
+  return '<h2>' + label + "</h2><div class=\"area-grid\" style=\"margin-bottom:50px\">" + links + "</div>";
+}
+
 function housePage(c) {
   var desc = "Flat-rate house cleaning in " + c.name + ", Utah. Standard, deep, and recurring cleaning from a local bilingual crew. See your exact price online.";
   var bullets = c.h.bullets.map(function (b) { return "<li>" + b + "</li>"; }).join("");
@@ -224,7 +235,8 @@ function housePage(c) {
     "<h2>Every clean, guaranteed</h2>" +
     "<p>Every visit follows a written room-by-room checklist signed by the crew lead, service is available in English and Spanish, and if anything isn't right we re-clean it free within 48 hours. Prefer to talk it through? <a href='../index.html#quote'>Request a free quote</a> and we'll reply the same day.</p>" +
     CTA +
-    '<p style="margin-bottom:60px">Moving instead? See our <a href="move-out-cleaning-' + c.slug + '.html">move-out cleaning in ' + c.name + "</a>, or explore all our <a href='../index.html#areas'>Salt Lake valley service areas</a>.</p>" +
+    '<p style="margin-bottom:34px">Moving instead? See our <a href="move-out-cleaning-' + c.slug + '.html">move-out cleaning in ' + c.name + "</a>, or explore all our <a href='../index.html#areas'>Salt Lake valley service areas</a>.</p>" +
+    nearby(c, "house") +
     "</div>" + FOOT;
 }
 
@@ -240,7 +252,8 @@ function movePage(c) {
     "<h2>What the move-out spec covers</h2>" +
     "<ul><li>Inside all cabinets, drawers, and closets</li><li>Inside the oven and refrigerator</li><li>Full bathroom descale — tub, shower, glass, and fixtures</li><li>Baseboards, doors, frames, and switch plates</li><li>Interior windows, sills, tracks, and blinds</li><li>Wall scuff removal where paint allows</li><li>All floors vacuumed, mopped, and corner-detailed</li><li>Room-by-room photo walkthrough when we finish</li></ul>" +
     CTA +
-    '<p style="margin-bottom:60px">Staying put? See our <a href="house-cleaning-' + c.slug + '.html">house cleaning in ' + c.name + "</a> for standard, deep, and recurring service.</p>" +
+    '<p style="margin-bottom:34px">Staying put? See our <a href="house-cleaning-' + c.slug + '.html">house cleaning in ' + c.name + "</a> for standard, deep, and recurring service.</p>" +
+    nearby(c, "move-out") +
     "</div>" + FOOT;
 }
 
