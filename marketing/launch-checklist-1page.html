@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+:root{--g:#22c55e;--g6:#059669;--g7:#047857;--g8:#065f46;--g9:#064e3b;
+  --ink:#0b1f18;--ink2:#33473f;--ink3:#5c6f67;--line:#e3ede8;--mint:#ecfdf5;--mint2:#d1fae5;--amber:#f59e0b}
+body{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.4}
+.page{width:8.5in;height:11in;padding:.55in .6in;display:flex;flex-direction:column}
+
+.top{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,var(--g),var(--g8));color:#fff;border-radius:14px;padding:16px 20px;margin-bottom:16px}
+.top .brand{display:flex;align-items:center;gap:11px}
+.top .mk{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.18);border:1.4px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.top .bn{font-size:1.25rem;font-weight:800}.top .bn b{font-weight:900;color:var(--g9)}
+.top .bn small{display:block;font-size:.56rem;letter-spacing:.22em;color:var(--mint2);font-weight:600}
+.top .t{text-align:right}
+.top .t h1{font-size:1.15rem;font-weight:900;letter-spacing:-.01em}
+.top .t .st{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:3px 11px;margin-top:4px}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1}
+.col h2{font-size:1rem;font-weight:900;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.col h2 .tag{font-size:.58rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px}
+.done .tag{background:var(--mint);color:var(--g7);border:1px solid var(--mint2)}
+.todo .tag{background:#fff7ed;color:#b45309;border:1px solid #fed7aa}
+.col > .sub{color:var(--ink3);font-size:8.3pt;margin-bottom:10px}
+.blk{margin-bottom:11px}
+.blk h3{font-size:.68rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--g7);margin-bottom:4px}
+.ck{display:flex;gap:7px;padding:2.5px 0;font-size:8.8pt;line-height:1.3;align-items:flex-start}
+.bx{width:13px;height:13px;border-radius:4px;flex:none;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900}
+.bx.on{background:var(--g6);color:#fff}
+.bx.off{background:#fff;border:1.5px solid var(--amber)}
+.blk.p1 h3{color:#dc2626}.blk.p2 h3{color:#b45309}
+.ck .d{color:var(--ink3)}
+
+.ref{margin-top:14px;background:var(--mint);border:1px solid var(--mint2);border-radius:12px;padding:11px 15px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px 18px;font-size:8.4pt}
+.ref .r{display:flex;justify-content:space-between;border-bottom:1px dashed #b6e4cf;padding:2px 0}
+.ref .r span:first-child{color:var(--ink3)}.ref .r span:last-child{font-weight:700}
+.note{text-align:center;font-size:8.2pt;color:var(--ink3);margin-top:10px}
+.note b{color:var(--g8)}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top">
+    <div class="brand"><div class="mk">&#10022;</div><div class="bn">Clear<b>Space</b><small>HOME&nbsp;CLEANING</small></div></div>
+    <div class="t"><h1>Launch Checklist</h1><span class="st"><span class="dot"></span> LIVE &amp; ACCEPTING LEADS</span></div>
+  </div>
+
+  <div class="cols">
+    <!-- DONE -->
+    <div class="col done">
+      <h2>Done <span class="tag">Complete</span></h2>
+      <div class="sub">Built, verified &amp; live.</div>
+
+      <div class="blk"><h3>Website (EN/ES)</h3>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Landing page + quote form</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Instant price calculator</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>16 local SEO city pages</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Sitemap, SEO &amp; social previews</span></div>
+      </div>
+      <div class="blk"><h3>Pricing &amp; Comms</h3>
+        <div class="ck"><span class="bx on">&#10003;</span><span>One editable pricing config</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Quote/confirm/reminder/review msgs (SMS+email, EN+ES)</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Lead form &rarr; your Gmail (tested)</span></div>
+      </div>
+      <div class="blk"><h3>Docs &amp; Marketing</h3>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Agreement, intake form, checklists</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>GBP kit, GHL sequence, social kit</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Video script, photo &amp; ops checklists</span></div>
+      </div>
+      <div class="blk"><h3>Brand, Print &amp; Dashboard</h3>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Logo + unified green branding</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>Business card, flyer, door hanger</span></div>
+        <div class="ck"><span class="bx on">&#10003;</span><span>PIN-locked owner dashboard</span></div>
+      </div>
+    </div>
+
+    <!-- TO DO -->
+    <div class="col todo">
+      <h2>To Do <span class="tag">Your action</span></h2>
+      <div class="sub">Needs your accounts &amp; decisions.</div>
+
+      <div class="blk p1"><h3>&#9889; Launch-critical</h3>
+        <div class="ck"><span class="bx off"></span><span>Verify Google Business Profile <span class="d">(~5 days)</span></span></div>
+        <div class="ck"><span class="bx off"></span><span>Send me your Google review link</span></div>
+        <div class="ck"><span class="bx off"></span><span>Get licensed &amp; insured</span></div>
+      </div>
+      <div class="blk p2"><h3>Before volume</h3>
+        <div class="ck"><span class="bx off"></span><span>Lawyer review of the agreement</span></div>
+        <div class="ck"><span class="bx off"></span><span>Swap in real before/after photos</span></div>
+        <div class="ck"><span class="bx off"></span><span>Collect 5+ Google reviews</span></div>
+      </div>
+      <div class="blk"><h3>Growth (when ready)</h3>
+        <div class="ck"><span class="bx off"></span><span>Buy a domain (clearspaceutah.com)</span></div>
+        <div class="ck"><span class="bx off"></span><span>Set up GoHighLevel automation</span></div>
+        <div class="ck"><span class="bx off"></span><span>Synced backend / phone app</span></div>
+      </div>
+      <div class="blk"><h3>&#128640; Do first</h3>
+        <div class="ck"><span class="bx off"></span><span><b>Land your first 3&ndash;5 jobs</b> &mdash; canvass with flyers/door hangers; trade a small discount for a review + photos</span></div>
+        <div class="ck"><span class="bx off"></span><span><b>Post 1&ndash;2&times;/week</b> on Facebook, Instagram &amp; Nextdoor</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ref">
+    <div class="r"><span>Site</span><span>.../ClearSpace/</span></div>
+    <div class="r"><span>Dashboard</span><span>/app.html</span></div>
+    <div class="r"><span>PIN</span><span>7342</span></div>
+    <div class="r"><span>Phone</span><span>(801) 433-7342</span></div>
+    <div class="r"><span>Standard/Deep/Move</span><span>$120/$220/$280</span></div>
+    <div class="r"><span>Get to dashboard</span><span>Footer "Owner login"</span></div>
+  </div>
+  <div class="note"><b>Only open item:</b> your Google review link (after GBP verification). Everything else is live &amp; verified. &#10022;</div>
+
+</div>
+</body>
+</html>
