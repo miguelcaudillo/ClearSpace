@@ -32,7 +32,7 @@ Everything built in this repo, where it lives, what only you can do, and the lau
 - `sw.js` — offline service worker.
 
 **Your office tool (not linked from the public site)**
-- `app.html` — your original ClearSpace office dashboard (jobs, clients, calendar, invoices). Still fully works; reachable at `.../ClearSpace/app.html`. Note: it has its own built-in pricing separate from `pricing-config.js` — fine for now, worth unifying later.
+- `app.html` — your original ClearSpace office dashboard (jobs, clients, calendar, invoices). Reachable at `.../ClearSpace/app.html` or the footer "Owner login" link. **Login:** a passphrase is required every visit; only its SHA-256 hash is stored in the file (no plaintext), with a brute-force lockout (5 wrong tries → 60s lock, survives reloads). To change the passphrase, replace `OWNER_HASH` — the comment in `app.html` has the one-line command. Honest note: a client-side gate on a public page is a strong deterrent, not unbreakable security — but your data lives only in your browser, so there's no server to hack. Real enforced login comes with the future backend (Supabase Auth).
 
 **Business tools & templates**
 - `tools/quote-engine.js` — generates quote / confirmation / reminder / review messages, all in SMS + email × EN + ES. Run `node tools/quote-engine.js` to test.
@@ -47,6 +47,10 @@ Everything built in this repo, where it lives, what only you can do, and the lau
 - `marketing/photo-shot-list.md` — the 12 photos to shoot for GBP + the website.
 - `marketing/print-materials.html` — printable flyer, door hanger (tear-off tabs), and business card. Open in a browser → Print/Save as PDF. **Note:** prices are typed into the flyer/card by hand — if you change rates in `pricing-config.js`, update this file too.
 - `marketing/social-media-kit.md` — bilingual Facebook / Instagram / Nextdoor launch posts.
+- `marketing/partners-sheet.html` + `ClearSpace-Partner-Sheet.pdf` — B2B one-pager for realtors, property managers & Airbnb hosts (your best repeat-revenue channel). Print/hand out or attach.
+- `marketing/partner-outreach.md` — who to target and exact email/DM/text/in-person scripts to win partners.
+- `marketing/speed-to-lead-setup.md` — get a text the instant a lead arrives (Gmail → 8014337342@txt.att.net) + click-to-text is already live on the site.
+- `marketing/customer-autoreply-setup.md` — instant "we got your request" auto-reply (via GoHighLevel, or free Make.com interim).
 - `marketing/email-signature.html` — open it, click "Copy signature," paste into Gmail settings.
 - `assets/img/` — self-hosted placeholder photos + `og-image.jpg` (social-share preview) + `CREDITS.md`. Swap for real photos when you have them.
 - `404.html` — friendly not-found page.
