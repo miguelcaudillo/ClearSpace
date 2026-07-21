@@ -243,9 +243,29 @@ function reviewMessages(lead) {
   };
 }
 
+/* ---------- 5. INSTANT AUTO-REPLY (fires the moment a lead submits) ---------- */
+function autoReplyMessages(lead) {
+  var fn = firstName(lead.name);
+  return {
+    sms_en: "Hi " + fn + ", it's " + BIZ.name + "! 💚 Got your request — we'll text your exact price within the hour. Questions in the meantime? Just reply here.",
+    sms_es: "¡Hola " + fn + ", somos " + BIZ.name + "! 💚 Recibimos su solicitud — le enviamos su precio exacto dentro de una hora. ¿Preguntas mientras tanto? Responda aquí.",
+    email_subject_en: "We got your request — " + BIZ.name,
+    email_en: "Hi " + fn + ",\n\n" +
+      "Thanks for reaching out to " + BIZ.name + "! This is a quick automatic note to let you know we've got your request and a real person will text or email your exact price within the hour.\n\n" +
+      "Need us sooner? Text or call " + BIZ.phone + ".\n\n" +
+      "Talk soon,\n" + BIZ.name,
+    email_subject_es: "Recibimos su solicitud — " + BIZ.name,
+    email_es: "Hola " + fn + ":\n\n" +
+      "¡Gracias por contactar a " + BIZ.name + "! Este es un mensaje automático para avisarle que recibimos su solicitud y una persona real le enviará su precio exacto por mensaje o correo dentro de una hora.\n\n" +
+      "¿Nos necesita antes? Llame o mande mensaje al " + BIZ.phone + ".\n\n" +
+      "Hasta pronto,\n" + BIZ.name
+  };
+}
+
 function allMessages(lead) {
   return {
     lead: lead,
+    autoreply: autoReplyMessages(lead),
     quote: quoteMessages(lead),
     confirmation: confirmationMessages(lead),
     reminder: reminderMessages(lead),
@@ -253,7 +273,7 @@ function allMessages(lead) {
   };
 }
 
-module.exports = { quoteMessages: quoteMessages, confirmationMessages: confirmationMessages,
+module.exports = { autoReplyMessages: autoReplyMessages, quoteMessages: quoteMessages, confirmationMessages: confirmationMessages,
   reminderMessages: reminderMessages, reviewMessages: reviewMessages, allMessages: allMessages };
 
 /* ---------- CLI ---------- */
@@ -281,7 +301,7 @@ if (require.main === module) {
       lead.bedrooms + "bd/" + lead.bathrooms + "ba, " + lead.sqft + " sq ft — " +
       lead.service + " / " + lead.frequency + (lead.addons.length ? " — add-ons: " + lead.addons.join(", ") : "");
     console.log("\n" + "=".repeat(78) + "\n" + head + "\n" + "=".repeat(78));
-    [["QUOTE", m.quote], ["BOOKING CONFIRMATION", m.confirmation],
+    [["INSTANT AUTO-REPLY", m.autoreply], ["QUOTE", m.quote], ["BOOKING CONFIRMATION", m.confirmation],
      ["DAY-BEFORE REMINDER", m.reminder], ["REVIEW REQUEST", m.review]].forEach(function (pair) {
       console.log("\n––– " + pair[0] + " –––");
       var msg = pair[1];
