@@ -18,19 +18,12 @@ Nothing to do here — it's live.
 
 Right now, a quote request only lands in your Gmail. If you're inside a house cleaning, you won't see it for hours. This routes every new lead to your phone as a **text**, free, using a Gmail filter + your carrier's email-to-SMS address.
 
-### Step A — find your carrier's SMS-by-email address
-Your number is **(801) 433-7342**, so your address is `8014337342@` + your carrier's domain:
+### Step A — your carrier's SMS-by-email address
+**Carrier: AT&T (confirmed).** Your address is:
 
-| Carrier | Address to use |
-|---|---|
-| Verizon / Visible | 8014337342@vtext.com |
-| AT&T / Cricket | 8014337342@txt.att.net |
-| T-Mobile / Mint / Metro | 8014337342@tmomail.net |
-| Google Fi | 8014337342@msg.fi.google.com |
-| US Cellular | 8014337342@email.uscc.net |
-| Boost | 8014337342@sms.myboostmobile.com |
+> ### `8014337342@txt.att.net`
 
-*(Not sure of your carrier? Google "who is my cell carrier" or check your phone bill. Tell me and I'll confirm the exact address.)*
+Copy that exactly — you'll paste it in the next step.
 
 ### Step B — add it as a forwarding address in Gmail
 1. Gmail → ⚙️ **See all settings** → **Forwarding and POP/IMAP** → **Add a forwarding address**.
