@@ -86,6 +86,7 @@
           <div class="price-freq" id="priceFreq">one-time visit</div>
           <div class="price-break" id="priceBreak"></div>
           <a class="btn btn-primary" href="index.html#quote" data-es="Reservar esta limpieza →">Book this clean →</a>
+          <a class="btn btn-ghost" id="textEstimate" href="#" style="width:100%;margin-top:10px;background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.3)" data-es="💬 Envíanos este estimado">💬 Text us this estimate</a>
           <p class="price-note" data-es="Precio final confirmado antes de tu primera visita — sin cargos ocultos.">Final price confirmed before your first visit — no hidden fees.</p>
         </div>
       </div>
@@ -172,6 +173,15 @@ var Calc = (function () {
     if (q.discount) html += "<div class='br disc'><span>" + (es ? "Descuento " : "") + t(q.frequency).toLowerCase() + (es ? "" : " discount") + " −" + Math.round(q.discountPct * 100) + "%</span><span>−$" + q.discount + "</span></div>";
     html += "<div class='br tot'><span>" + (es ? "Total por visita" : "Total per visit") + "</span><span>$" + q.total + "</span></div>";
     document.getElementById("priceBreak").innerHTML = html;
+
+    // "Text us this estimate" — prefill an SMS with the exact selections + price.
+    var addonNames = q.addons.map(function (a) { return t(a); }).join(", ");
+    var body = es
+      ? "¡Hola ClearSpace! Estimé una limpieza en su sitio: " + t(q.service) + ", " + state.sqft.toLocaleString() + " pies², " + state.bedrooms + " rec/" + state.bathrooms + " baños, " + t(q.frequency).toLowerCase() + (addonNames ? ", extras: " + addonNames : "") + " — aprox. $" + q.total + ". Quisiera reservar o preguntar sobre esto."
+      : "Hi ClearSpace! I built an estimate on your site: " + t(q.service) + ", " + state.sqft.toLocaleString() + " sq ft, " + state.bedrooms + " bed/" + state.bathrooms + " bath, " + t(q.frequency).toLowerCase() + (addonNames ? ", add-ons: " + addonNames : "") + " — about $" + q.total + ". I'd like to book or ask about this.";
+    var digits = (CLEARSPACE_CONFIG.business.phone || "").replace(/[^0-9+]/g, "");
+    var btn = document.getElementById("textEstimate");
+    if (btn) btn.setAttribute("href", "sms:" + digits + "?&body=" + encodeURIComponent(body));
   }
 
   function step(key, dir) {
