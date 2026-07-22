@@ -45,6 +45,18 @@
 
   function localState() { try { return localStorage.getItem(STATE_KEY) || ""; } catch (e) { return ""; } }
 
+  // Canonical JSON (keys sorted) so we can compare a local copy against the
+  // cloud copy fairly — Postgres/jsonb reorders object keys, which would
+  // otherwise make identical data look "different".
+  function stable(v) {
+    if (v === null || typeof v !== "object") return JSON.stringify(v);
+    if (Array.isArray(v)) return "[" + v.map(stable).join(",") + "]";
+    return "{" + Object.keys(v).sort().map(function (k) { return JSON.stringify(k) + ":" + stable(v[k]); }).join(",") + "}";
+  }
+  function sameData(aObj, bStr) {
+    try { return stable(aObj) === stable(JSON.parse(bStr)); } catch (e) { return false; }
+  }
+
   function client() {
     if (sb) return sb;
     if (!window.supabase || !window.supabase.createClient) throw new Error("Supabase library didn't load.");
@@ -164,12 +176,17 @@
     try {
       var row = await pull();
       var local = localState();
-      if (row && JSON.stringify(row.state) !== local) {
+      if (row && !sameData(row.state, local)) {
+        // Cloud has a genuinely different copy — never auto-overwrite; let the
+        // owner choose (⬇ load it here, or ⬆ push this device up).
         panel.classList.add("open");
-        if (statusEl) { statusEl.style.color = "#b45309"; statusEl.textContent = "A different cloud copy exists — use ⬇ to load it, or ⬆ to overwrite the cloud with this device."; }
-      } else {
-        // in sync (or cloud empty) — auto-back up current device
+        if (statusEl) { statusEl.style.color = "#b45309"; statusEl.textContent = "A different cloud copy exists — use ⬇ to load it here, or ⬆ to overwrite the cloud with this device."; }
+      } else if (!row) {
+        // No cloud copy yet — save this device up as the first backup.
         push().then(setStatus).catch(function () {});
+      } else {
+        // Already in sync.
+        lastPushed = local; setStatus();
       }
     } catch (e) { setStatus(null, e); }
   }
