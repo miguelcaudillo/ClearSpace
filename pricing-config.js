@@ -8,6 +8,8 @@
 
    HOW TO EDIT: change the numbers, save, commit, push. Never edit
    prices inside the other files — they all read from here.
+   After editing, you can run:  node tools/test.js
+   to double-check the math still works (it prints ✓ for every check).
 
    All default numbers below were carried over from the original
    ClearSpace app (the $120/$220/$280 bases, room fees, discounts).
