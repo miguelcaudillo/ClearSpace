@@ -15,8 +15,8 @@
 (function () {
   "use strict";
 
-  var SUPABASE_URL = "";        // <-- paste your Project URL here
-  var SUPABASE_ANON_KEY = "";   // <-- paste your anon public key here
+  var SUPABASE_URL = "https://pshxdewfqowrkkpmqfdj.supabase.co";
+  var SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzaHhkZXdmcW93cmtrcG1xZmRqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MzIxMTcsImV4cCI6MjA5ODAwODExN30.ezifjkirOi8U1G4pRJ6h-VWeLWPDrbWgTBmHqLCdtR8";
 
   var STATE_KEY = "clearspace_v4";   // the app's local-storage key (do not change)
   var enabled = !!(SUPABASE_URL && SUPABASE_ANON_KEY);
