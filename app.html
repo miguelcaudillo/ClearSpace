@@ -465,11 +465,10 @@ var ClearSpaceUnlock = (function () {
      OWNER LOGIN — the passphrase is NEVER stored here, only its SHA-256 hash.
      To change it: hash your new passphrase and paste the result below. Run:
        node -e "console.log(require('crypto').createHash('sha256').update('YOUR PASSPHRASE').digest('hex'))"
-     Current hash is for the passphrase: 8120  (change to a strong one!)
      Required on every visit. Locks out after 5 wrong tries for 60 seconds
      (the lockout survives page reloads, so it can't be reset by refreshing).
      ========================================================================== */
-  var OWNER_HASH = "99c34d9d69328bbdeda236a07060f54fd238f4a231153d4f1e541b0c6ef21416";
+  var OWNER_HASH = "e2fe107f90e740a9c6c69a701f30023466c29fb862eaa93ed97430cf433100a4";
   var MAX_TRIES = 5, LOCK_MS = 60000, GATE_KEY = "cs_gate";
 
   /* Compact SHA-256 (ASCII), verified identical to Node's crypto. */
