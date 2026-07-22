@@ -978,6 +978,8 @@ var Store = (function () {
   }
   function save() {
     try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { /* storage full/blocked */ }
+    // Optional cloud backup (no-op unless Supabase sync is configured).
+    if (window.ClearSpaceSync && window.ClearSpaceSync.onSave) window.ClearSpaceSync.onSave();
   }
   function reset() { state = seed(); save(); }
   function nextRef(prefix) { state.seq += 1; return (prefix || "CS-") + state.seq; }
@@ -2025,5 +2027,7 @@ document.getElementById("zipInput").addEventListener("keydown", function (e) {
 
 Est.init();
 </script>
+<!-- Optional dashboard cloud sync (dormant until you add your Supabase keys in the file). -->
+<script src="assets/supabase-sync.js"></script>
 </body>
 </html>
