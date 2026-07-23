@@ -227,6 +227,7 @@ function head(title, desc, extraHead) {
 
 var FOOT = '\n<footer class="site-footer"><div class="wrap foot-in">' +
   '<a href="../index.html" class="brand"><span class="brand-mark">✦</span><span>Clear<b>Space</b></span></a>' +
+  '<div class="foot-links"><a href="../index.html">Home</a><a href="../pricing.html">Pricing</a><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div>' +
   "<p>© 2026 ClearSpace Home Cleaning · West Jordan, UT</p></div></footer>\n" +
   '<script src="../pricing-config.js"></script><script src="../assets/site.js"></script>\n</body>\n</html>\n';
 
