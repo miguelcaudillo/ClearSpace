@@ -169,8 +169,39 @@ var CITIES = [
   }
 ];
 
+/* Structured data: breadcrumb trail + the specific service offered here.
+   Helps Google understand each page and can enrich the search listing. */
+function structuredData(c, type) {
+  var base = "https://miguelcaudillo.github.io/ClearSpace";
+  var isHouse = type === "house";
+  var pageUrl = base + "/areas/" + type + "-cleaning-" + c.slug + ".html";
+  var serviceName = (isHouse ? "House Cleaning" : "Move-Out Cleaning") + " in " + c.name;
+  var data = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": base + "/" },
+          { "@type": "ListItem", "position": 2, "name": "Service areas", "item": base + "/#areas" },
+          { "@type": "ListItem", "position": 3, "name": c.name, "item": pageUrl }
+        ]
+      },
+      {
+        "@type": "Service",
+        "serviceType": serviceName,
+        "provider": { "@type": "HouseCleaningService", "name": "ClearSpace Home Cleaning", "telephone": "(801) 433-7342", "areaServed": c.name + ", UT" },
+        "areaServed": { "@type": "City", "name": c.name + ", Utah" },
+        "url": pageUrl,
+        "availableLanguage": ["English", "Spanish"]
+      }
+    ]
+  };
+  return '<script type="application/ld+json">\n' + JSON.stringify(data) + "\n</script>\n";
+}
+
 /* ---------- Template ---------- */
-function head(title, desc) {
+function head(title, desc, extraHead) {
   return '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
   "<title>" + title + " — ClearSpace Home Cleaning</title>\n" +
@@ -184,7 +215,9 @@ function head(title, desc) {
   '<meta name="twitter:card" content="summary_large_image">\n' +
   '<meta name="twitter:image" content="https://miguelcaudillo.github.io/ClearSpace/assets/img/og-image.jpg">\n' +
   '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Crect width=\'100\' height=\'100\' rx=\'24\' fill=\'%23059669\'/%3E%3Ctext x=\'50\' y=\'68\' font-size=\'52\' text-anchor=\'middle\' fill=\'white\' font-family=\'Arial\'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">\n' +
-  '<link rel="stylesheet" href="../assets/site.css">\n</head>\n<body>\n' +
+  '<link rel="stylesheet" href="../assets/site.css">\n' +
+  (extraHead || "") +
+  '</head>\n<body>\n' +
   '<header class="site-header"><div class="wrap header-in">\n' +
   '<a href="../index.html" class="brand"><span class="brand-mark">✦</span><span>Clear<b>Space</b><i class="brand-sub">HOME CLEANING</i></span></a>\n' +
   '<nav class="header-nav"><a href="../index.html#services" class="hide-m">Services</a><a href="../index.html#areas" class="hide-m">Areas</a><a href="../pricing.html" class="hide-m">Pricing</a>' +
@@ -224,7 +257,7 @@ function nearby(current, type) {
 function housePage(c) {
   var desc = "Flat-rate house cleaning in " + c.name + ", Utah. Standard, deep, and recurring cleaning from a local bilingual crew. See your exact price online.";
   var bullets = c.h.bullets.map(function (b) { return "<li>" + b + "</li>"; }).join("");
-  return head(c.h.title, desc) +
+  return head(c.h.title, desc, structuredData(c, "house")) +
     '<div class="wrap prose">' +
     '<p class="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html#areas">Service areas</a> › ' + c.name + "</p>" +
     "<h1>" + c.h.title + "</h1>" +
@@ -242,7 +275,7 @@ function housePage(c) {
 
 function movePage(c) {
   var desc = "Deposit-grade move-out and move-in cleaning in " + c.name + ", Utah. Inside cabinets, appliances, and closets — with a photo walkthrough. Flat-rate pricing online.";
-  return head(c.m.title, desc) +
+  return head(c.m.title, desc, structuredData(c, "move-out")) +
     '<div class="wrap prose">' +
     '<p class="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html#areas">Service areas</a> › ' + c.name + "</p>" +
     "<h1>" + c.m.title + "</h1>" +
