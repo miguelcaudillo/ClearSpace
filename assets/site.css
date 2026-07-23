@@ -1,4 +1,8 @@
 /* ClearSpace — shared site styles (landing, calculator, area pages) */
+/* Accessibility: honor users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
 :root{
   --em-950:#022c22; --em-900:#064e3b; --em-800:#065f46; --em-700:#047857;
   --em-600:#059669; --em-500:#10b981; --em-400:#34d399; --em-300:#6ee7b7;
