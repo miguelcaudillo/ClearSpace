@@ -109,12 +109,23 @@
     if (html != null) e.innerHTML = html;
     return e;
   }
+  // Turn raw Supabase errors into plain-language guidance.
+  function friendly(e) {
+    var msg = (e && (e.message || e.error_description || e.error)) || "Something went wrong.";
+    var code = e && e.code;
+    if (code === "PGRST205" || /Could not find the table/i.test(msg))
+      return "Cloud isn't set up yet — run supabase-schema.sql in Supabase (see docs/backend-setup.md).";
+    if (/Invalid login credentials/i.test(msg)) return "Wrong email or password.";
+    if (/Email not confirmed/i.test(msg)) return "Confirm your email, or turn off email confirmation in Supabase → Auth.";
+    if (/Failed to fetch|NetworkError|load the cloud library/i.test(msg)) return "Can't reach the cloud (offline?). Try again.";
+    return "⚠ " + msg;
+  }
   var panel, statusEl;
   function setStatus(_, errObj) {
     if (!statusEl) return;
-    if (errObj) { statusEl.textContent = "⚠ " + (errObj.message || "Sync error"); statusEl.style.color = "#dc2626"; return; }
+    if (errObj) { statusEl.textContent = friendly(errObj); statusEl.style.color = "#b45309"; return; }
     statusEl.style.color = "#065f46";
-    statusEl.textContent = session ? "☁ Signed in — auto-backup on. Last backup just now." : "Not signed in.";
+    statusEl.textContent = session ? "☁ Signed in — auto-backup is on." : "Not signed in.";
   }
 
   function renderPanelBody() {
