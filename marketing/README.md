@@ -11,6 +11,7 @@ Everything here is ready to use. Grouped by what you're trying to do.
 | `social-media-kit.md` | Bilingual Facebook / Instagram / Nextdoor launch posts + posting rhythm |
 | `speed-to-lead-setup.md` | Get a text the instant a lead arrives (Gmail → your phone) |
 | `customer-autoreply-setup.md` | Instant "we got your request" auto-reply (GHL or free Make.com) |
+| `analytics-setup.md` | See your website traffic — free, privacy-friendly (GoatCounter) |
 
 ## 🤝 Grow through partners & referrals
 | File | What it's for |
