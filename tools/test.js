@@ -7,6 +7,9 @@
    ===================================================================== */
 "use strict";
 
+var fs = require("fs");
+var path = require("path");
+var crypto = require("crypto");
 var cfg = require("../pricing-config.js");
 var QE = require("./quote-engine.js");
 var q = cfg.clearspaceQuote;
@@ -74,6 +77,31 @@ var all = QE.allMessages(lead);
 ["autoreply", "referral", "quote", "confirmation", "reminder", "review"].forEach(function (k) {
   ok("allMessages has " + k, !!all[k]);
 });
+
+console.log("\nSECURITY & SYNC INTERNALS");
+// Dashboard SHA-256 must match Node's crypto (correctness). Uses neutral test
+// strings — never the real passphrase.
+try {
+  var appHtml = fs.readFileSync(path.join(__dirname, "..", "app.html"), "utf8");
+  var shaSrc = appHtml.match(/function sha256\(ascii\) \{[\s\S]*?\n  \}/)[0];
+  var sha256 = eval("(" + shaSrc + ")");
+  var samples = ["abc", "Test123!", "a longer phrase 42", ""];
+  ok("dashboard SHA-256 matches Node crypto", samples.every(function (s) {
+    return sha256(s) === crypto.createHash("sha256").update(s).digest("hex");
+  }));
+  ok("dashboard has a non-empty OWNER_HASH", /OWNER_HASH = "[a-f0-9]{64}"/.test(appHtml));
+} catch (e) { ok("dashboard SHA-256 check ran", false); }
+
+// Cloud-sync state comparison must be independent of object key order.
+try {
+  var syncSrc = fs.readFileSync(path.join(__dirname, "..", "assets", "supabase-sync.js"), "utf8");
+  var stableSrc = syncSrc.match(/function stable\(v\) \{[\s\S]*?\n  \}/)[0];
+  var stable = eval("(" + stableSrc + ")");
+  ok("sync stable() is key-order independent",
+    stable({ b: 1, a: 2, n: { y: 1, x: 2 }, arr: [1, 2] }) === stable({ a: 2, arr: [1, 2], b: 1, n: { x: 2, y: 1 } }));
+  ok("sync stable() detects real differences",
+    stable({ a: 1 }) !== stable({ a: 2 }));
+} catch (e) { ok("sync stable() check ran", false); }
 
 console.log("\n" + (fail === 0 ? "ALL " + pass + " TESTS PASSED ✅" : fail + " FAILED / " + pass + " passed ❌"));
 process.exit(fail === 0 ? 0 : 1);
