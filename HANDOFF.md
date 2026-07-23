@@ -33,7 +33,7 @@ Everything built in this repo, where it lives, what only you can do, and the lau
 
 **Your office tool (not linked from the public site)**
 - `app.html` — your original ClearSpace office dashboard (jobs, clients, calendar, invoices). Reachable at `.../ClearSpace/app.html` or the footer "Owner login" link. **Login:** a passphrase is required every visit; only its SHA-256 hash is stored in the file (no plaintext), with a brute-force lockout (5 wrong tries → 60s lock, survives reloads). To change the passphrase, replace `OWNER_HASH` — the comment in `app.html` has the one-line command. Honest note: a client-side gate on a public page is a strong deterrent, not unbreakable security — but your data lives only in your browser, so there's no server to hack.
-- **Optional cloud sync + real login (BUILT, off by default):** `assets/supabase-sync.js` + `supabase-schema.sql` + `docs/backend-setup.md`. Add your free Supabase keys to turn on cloud backup, phone↔laptop sync, and server-enforced login (genuinely secure). Dormant until keys are added — dashboard is unchanged until then. Follow `docs/backend-setup.md`, or send me your Supabase URL + anon key and I'll wire it in.
+- **Cloud sync + real login (BUILT, keys wired in — 2 steps left):** `assets/supabase-sync.js` (your Supabase project keys are in), `supabase-schema.sql`, `docs/backend-setup.md`. Your project is connected and reachable. **To finish:** (1) run `supabase-schema.sql` in Supabase → SQL Editor, and (2) Supabase → Authentication → Users → add your email + password. Then open the dashboard → ☁ Cloud button → sign in → cloud backup + phone↔laptop sync are on. Until you do those two steps, the dashboard works fine on local storage as before.
 
 **Business tools & templates**
 - `tools/quote-engine.js` — generates quote / confirmation / reminder / review messages, all in SMS + email × EN + ES. Run `node tools/quote-engine.js` to test.
@@ -58,6 +58,7 @@ Everything built in this repo, where it lives, what only you can do, and the lau
 - `marketing/email-signature.html` — open it, click "Copy signature," paste into Gmail settings.
 - `assets/img/` — self-hosted placeholder photos + `og-image.jpg` (social-share preview) + `CREDITS.md`. Swap for real photos when you have them.
 - `404.html` — friendly not-found page.
+- `privacy.html` / `terms.html` — bilingual Privacy Policy & Terms of Service (linked in the footer; have a lawyer review before relying on them).
 
 *(Print the `docs/*.html` files from a browser — each has a 🖨 Print button.)*
 
